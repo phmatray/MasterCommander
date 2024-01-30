@@ -1,8 +1,17 @@
 namespace MasterCommander.Commanders.Npm;
 
-public class NpmService(NpmCommandFactory npmCommandFactory, IConsole console)
-    : CommandOutputHandler(console)
+public class NpmService(
+    INpmCommandFactory npmCommandFactory, IConsole console)
+    : CommandOutputHandler(console), INpmService
 {
+    public async Task InitAsync(CancellationToken ct = default)
+    {
+        await npmCommandFactory
+            .Init()
+            .Observe(ct)
+            .ForEachAsync(HandleCommandEvent, ct);
+    }
+    
     public async Task InstallAsync(CancellationToken ct = default)
     {
         await npmCommandFactory

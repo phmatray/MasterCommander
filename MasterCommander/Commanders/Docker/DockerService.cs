@@ -1,7 +1,8 @@
 namespace MasterCommander.Commanders.Docker;
 
-public class DockerService(DockerCommandFactory dockerCommandFactory, IConsole console)
-    : CommandOutputHandler(console)
+public class DockerService(
+    IDockerCommandFactory dockerCommandFactory, IConsole console)
+    : CommandOutputHandler(console), IDockerService
 {
     public async Task BuildAsync(string dockerfilePath, string tag, CancellationToken ct = default)
     {

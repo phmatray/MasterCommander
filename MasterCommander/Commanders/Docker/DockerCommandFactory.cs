@@ -3,7 +3,7 @@ namespace MasterCommander.Commanders.Docker;
 public class DockerCommandFactory(
     string workingDirectory = ".",
     string executablePath = "docker")
-    : CommandRunner(workingDirectory, executablePath)
+    : CommandBuilder(workingDirectory, executablePath), IDockerCommandFactory
 {
     public Command Build(string dockerfilePath, string tag)
     {

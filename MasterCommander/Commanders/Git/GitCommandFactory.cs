@@ -3,7 +3,7 @@ namespace MasterCommander.Commanders.Git;
 public class GitCommandFactory(
     string workingDirectory = ".",
     string executablePath = "git")
-    : CommandRunner(workingDirectory, executablePath)
+    : CommandBuilder(workingDirectory, executablePath), IGitCommandFactory
 {
     public Command Init()
     {

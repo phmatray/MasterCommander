@@ -1,12 +1,15 @@
 namespace MasterCommander.Commanders.Dotnet;
 
-public class DotnetService(DotnetCommandFactory dotnetCommandFactory, IConsole console)
-    : CommandOutputHandler(console)
+public class DotnetService(
+    IDotnetCommandFactory dotnetCommandFactory, IConsole console)
+    : CommandOutputHandler(console), IDotnetService
 {
     public async Task NewAsync(string template, string name, CancellationToken ct = default)
     {
+        DotnetNewOptions options = new(template, name);
+        
         await dotnetCommandFactory
-            .New(template, name)
+            .New(options)
             .Observe(ct)
             .ForEachAsync(HandleCommandEvent, ct);
     }

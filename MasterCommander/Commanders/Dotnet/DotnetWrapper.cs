@@ -3,14 +3,11 @@ namespace MasterCommander.Commanders.Dotnet;
 public class DotnetCommandFactory(
     string workingDirectory = ".",
     string executablePath = "dotnet")
-    : CommandRunner(workingDirectory, executablePath)
+    : CommandBuilder(workingDirectory, executablePath), IDotnetCommandFactory
 {
-    public Command New(string template, string name)
+    public Command New(DotnetNewOptions options)
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(template);
-        ArgumentException.ThrowIfNullOrWhiteSpace(name);
-        
-        string[] arguments = ["new", template, "-n", name];
+        string[] arguments = options.ToArguments();
         return CreateCommand(arguments);
     }
 

@@ -1,6 +1,6 @@
 ﻿namespace MasterCommander.Integrations.Processes;
 
-public abstract class CommandRunner(string workingDirectory, string executablePath)
+public abstract class CommandBuilder(string workingDirectory, string executablePath)
 {
     protected readonly string WorkingDirectory = workingDirectory;
     protected readonly string ExecutablePath = executablePath;

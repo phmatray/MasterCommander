@@ -3,8 +3,14 @@ namespace MasterCommander.Commanders.Npm;
 public class NpmCommandFactory(
     string workingDirectory = ".",
     string executablePath = "npm")
-    : CommandRunner(workingDirectory, executablePath)
+    : CommandBuilder(workingDirectory, executablePath), INpmCommandFactory
 {
+    public Command Init()
+    {
+        string[] arguments = ["init"];
+        return CreateCommand(arguments);
+    }
+    
     public Command Install()
     {
         string[] arguments = ["install"];

@@ -1,7 +1,8 @@
 namespace MasterCommander.Commanders.Git;
 
-public class GitService(GitCommandFactory gitCommandFactory, IConsole console)
-    : CommandOutputHandler(console)
+public class GitService(
+    IGitCommandFactory gitCommandFactory, IConsole console)
+    : CommandOutputHandler(console), IGitService
 {
     public async Task InitAsync(CancellationToken ct = default)
     {
