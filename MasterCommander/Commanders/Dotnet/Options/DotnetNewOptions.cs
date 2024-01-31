@@ -1,4 +1,4 @@
-namespace MasterCommander.Commanders.Dotnet;
+namespace MasterCommander.Commanders.Dotnet.Options;
 
 public sealed record DotnetNewOptions
 {

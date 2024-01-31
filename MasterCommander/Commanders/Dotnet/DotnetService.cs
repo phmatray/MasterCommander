@@ -4,7 +4,7 @@ public class DotnetService(
     IDotnetCommandFactory dotnetCommandFactory, IConsole console)
     : CommandOutputHandler(console), IDotnetService
 {
-    public async Task NewAsync(string template, string name, CancellationToken ct = default)
+    public async Task NewAsync(string template, string name, bool force, CancellationToken ct = default)
     {
         DotnetNewOptions options = new(template, name);
         

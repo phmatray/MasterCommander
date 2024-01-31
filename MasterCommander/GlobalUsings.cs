@@ -6,6 +6,7 @@ global using CliWrap.Buffered;
 global using CliWrap.EventStream;
 global using MasterCommander.Commanders.Docker;
 global using MasterCommander.Commanders.Dotnet;
+global using MasterCommander.Commanders.Dotnet.Options;
 global using MasterCommander.Commanders.Git;
 global using MasterCommander.Commanders.Npm;
 global using MasterCommander.Integrations.Display;
