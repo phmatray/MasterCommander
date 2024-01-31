@@ -6,7 +6,7 @@ public class DotnetService(
 {
     public async Task NewAsync(string template, string name, bool force, CancellationToken ct = default)
     {
-        DotnetNewOptions options = new(template, name);
+        DotnetNewOptions options = new(template, name, force);
         
         await dotnetCommandFactory
             .New(options)
