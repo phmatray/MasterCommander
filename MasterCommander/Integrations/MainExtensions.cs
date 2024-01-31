@@ -7,7 +7,7 @@ public static class MainExtensions
 {
     private const string AppName = "MasterCommander";
     
-    public static ServiceProvider RegisterAppServices()
+    public static ServiceProvider RegisterAppServices(bool useColor = true)
     {
         var services = new ServiceCollection();
         
@@ -16,7 +16,14 @@ public static class MainExtensions
         var workingDirectory = CreateNewDirectory(homeDirectory, AppName, true);
         
         // outputs
-        services.AddScoped<IConsole, StandardConsole>();
+        if (useColor)
+        {
+            services.AddScoped<IConsole, SpectreConsole>();
+        }
+        else
+        {
+            services.AddScoped<IConsole, StandardConsole>();
+        }
         
         // factories
         services.AddScoped<IDockerCommandFactory, DockerCommandFactory>(

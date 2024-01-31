@@ -1,10 +1,12 @@
+using Spectre.Console;
+
 namespace MasterCommander.Integrations.Display;
 
-public class StandardConsole : IConsole
+public class SpectreConsole : IConsole
 {
     public void WriteLine(string message)
     {
-        Console.WriteLine(message);
+        AnsiConsole.MarkupLine(message);
     }
 
     public void WriteConsoleEvent(ConsoleEvent consoleEvent)
@@ -12,22 +14,22 @@ public class StandardConsole : IConsole
         switch (consoleEvent)
         {
             case StartedConsoleEvent started:
-                WriteLine($"Starting process (ID: {started.ProcessId})...");
+                WriteLine($"Starting process [yellow](ID: {started.ProcessId})[/]...");
                 break;
             case StandardOutputConsoleEvent stdOutput:
                 if (!string.IsNullOrWhiteSpace(stdOutput.Text))
                 {
-                    WriteLine($"> {stdOutput.Text.Trim()}");
+                    WriteLine($"[green]>[/] {stdOutput.Text.Trim()}");
                 }
                 break;
             case StandardErrorConsoleEvent stdError:
                 if (!string.IsNullOrWhiteSpace(stdError.Text))
                 {
-                    WriteLine($"Error: {stdError.Text.Trim()}");
+                    WriteLine($"[red]Error:[/] {stdError.Text.Trim()}");
                 }
                 break;
             case ExitedConsoleEvent exited:
-                WriteLine($"Process completed with exit code {exited.ExitCode}.\n");
+                WriteLine($"Process completed with exit code [yellow]{exited.ExitCode}[/].\n");
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(consoleEvent));
