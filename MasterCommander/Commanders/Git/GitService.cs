@@ -6,33 +6,25 @@ public class GitService(
 {
     public async Task InitAsync(CancellationToken ct = default)
     {
-        await gitCommandFactory
-            .Init()
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = gitCommandFactory.Init();
+        await ObserveCommandAsync(command, ct);
     }
-    
+
     public async Task StatusAsync(CancellationToken ct = default)
     {
-        await gitCommandFactory
-            .Status()
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = gitCommandFactory.Status();
+        await ObserveCommandAsync(command, ct);
     }
     
     public async Task CloneRepositoryAsync(string repositoryUrl, string localPath, CancellationToken ct = default)
     {
-        await gitCommandFactory
-            .CloneRepository(repositoryUrl, localPath)
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = gitCommandFactory.CloneRepository(repositoryUrl, localPath);
+        await ObserveCommandAsync(command, ct);
     }
     
     public async Task CommitAsync(string message, CancellationToken ct = default)
     {
-        await gitCommandFactory
-            .Commit(message)
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = gitCommandFactory.Commit(message);
+        await ObserveCommandAsync(command, ct);
     }
 }

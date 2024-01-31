@@ -1,8 +1,9 @@
 ﻿using MasterCommander.Integrations;
 using Microsoft.Extensions.DependencyInjection;
 
-WriteLine("MasterCommander");
-WriteLine("--------------\n");
+WriteLine("\n-----------------");
+WriteLine(" MasterCommander");
+WriteLine("-----------------\n");
 
 // get the required services
 var services = MainExtensions.RegisterAppServices();

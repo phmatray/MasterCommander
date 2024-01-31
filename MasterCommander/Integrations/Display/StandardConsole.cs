@@ -33,4 +33,9 @@ public class StandardConsole : IConsole
                 throw new ArgumentOutOfRangeException(nameof(consoleEvent));
         }
     }
+
+    public void WriteCommand(string command)
+    {
+        WriteLine($"Running command: {command}");
+    }
 }

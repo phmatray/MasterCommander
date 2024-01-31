@@ -13,11 +13,8 @@ public class DotnetService(
     public async Task NewAsync(string template, string name, bool force, CancellationToken ct = default)
     {
         DotnetNewOptions options = new(template, name, force);
-        
-        await dotnetCommandFactory
-            .New(options)
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = dotnetCommandFactory.New(options);
+        await ObserveCommandAsync(command, ct);
     }
 
     /// <summary>
@@ -25,10 +22,8 @@ public class DotnetService(
     /// </summary>
     public async Task BuildAsync(CancellationToken ct = default)
     {
-        await dotnetCommandFactory
-            .Build()
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = dotnetCommandFactory.Build();
+        await ObserveCommandAsync(command, ct);
     }
 
     /// <summary>
@@ -36,10 +31,8 @@ public class DotnetService(
     /// </summary>
     public async Task RunAsync(CancellationToken ct = default)
     {
-        await dotnetCommandFactory
-            .Run()
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = dotnetCommandFactory.Run();
+        await ObserveCommandAsync(command, ct);
     }
 
     /// <summary>
@@ -47,9 +40,7 @@ public class DotnetService(
     /// </summary>
     public async Task TestAsync(CancellationToken ct = default)
     {
-        await dotnetCommandFactory
-            .Test()
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = dotnetCommandFactory.Test();
+        await ObserveCommandAsync(command, ct);
     }
 }

@@ -6,33 +6,25 @@ public class DockerService(
 {
     public async Task BuildAsync(string dockerfilePath, string tag, CancellationToken ct = default)
     {
-        await dockerCommandFactory
-            .Build(dockerfilePath, tag)
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = dockerCommandFactory.Build(dockerfilePath, tag);
+        await ObserveCommandAsync(command, ct);
     }
     
     public async Task RunAsync(string image, string? containerName = null, CancellationToken ct = default)
     {
-        await dockerCommandFactory
-            .Run(image, containerName)
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = dockerCommandFactory.Run(image, containerName);
+        await ObserveCommandAsync(command, ct);
     }
-    
+
     public async Task StopAsync(string containerName, CancellationToken ct = default)
     {
-        await dockerCommandFactory
-            .Stop(containerName)
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = dockerCommandFactory.Stop(containerName);
+        await ObserveCommandAsync(command, ct);
     }
-    
+
     public async Task RemoveContainerAsync(string containerName, CancellationToken ct = default)
     {
-        await dockerCommandFactory
-            .RemoveContainer(containerName)
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
+        var command = dockerCommandFactory.RemoveContainer(containerName);
+        await ObserveCommandAsync(command, ct);
     }
 }

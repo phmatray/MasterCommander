@@ -35,4 +35,9 @@ public class SpectreConsole : IConsole
                 throw new ArgumentOutOfRangeException(nameof(consoleEvent));
         }
     }
+
+    public void WriteCommand(string command)
+    {
+        WriteLine($"[blue]Running command:[/] {command}");
+    }
 }

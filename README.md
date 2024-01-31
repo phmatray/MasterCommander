@@ -11,6 +11,16 @@ MasterCommander provides a unified interface to interact with various developmen
 - **Docker Support**: Manage Docker containers and images through simple commands.
 - **npm Packages**: Handle npm packages and run npm scripts within your projects.
 
+## Screenshots
+
+Write code, not commands. MasterCommander provides a simple, consistent interface for common development tasks.
+
+Use your favorite CLI tools without leaving your code editor:
+> ![MasterCommander Screenshot](./assets/img/program.png)
+
+Output from MasterCommander commands is displayed in a clean, readable format:
+> ![MasterCommander Screenshot](./assets/img/debug-output.png)
+
 ## Getting Started
 
 ### Prerequisites
