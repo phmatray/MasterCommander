@@ -7,14 +7,12 @@ public class DotnetCommandFactory(
 {
     public Command New(DotnetNewOptions options)
     {
-        IEnumerable<string> arguments = options.ToArguments();
-        return CreateCommand(arguments);
+        return CreateCommand(options.ToArguments());
     }
 
-    public Command Build()
+    public Command Build(DotnetBuildOptions options)
     {
-        string[] arguments = ["build"];
-        return CreateCommand(arguments);
+        return CreateCommand(options.ToArguments());
     }
 
     public Command Run()

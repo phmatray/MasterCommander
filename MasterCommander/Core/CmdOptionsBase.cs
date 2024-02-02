@@ -69,4 +69,11 @@ public abstract record CmdOptionsBase(params string[] InitialArguments)
             arguments.Add(value.ToString());
         }
     }
+
+    public string[] InitialArguments { get; init; } = InitialArguments;
+
+    public void Deconstruct(out string[] InitialArguments)
+    {
+        InitialArguments = this.InitialArguments;
+    }
 }

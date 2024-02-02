@@ -20,4 +20,6 @@ await dotnet.NewAsync(new DotnetNewGlobalJsonOptions { SdkVersion = "8.0.100" })
 await dotnet.NewAsync(new DotnetNewSolutionOptions { OutputName = "AppDemo" });
 await dotnet.NewAsync(new DotnetNewConsoleOptions { OutputName = "AppDemo.Console" });
 await dotnet.SlnAddAsync("AppDemo.Console/AppDemo.Console.csproj");
+await dotnet.BuildAsync();
+await dotnet.BuildAsync(new DotnetBuildOptions { Configuration = "Release" });
 await git.StatusAsync();

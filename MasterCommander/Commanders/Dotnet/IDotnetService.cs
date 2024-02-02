@@ -17,8 +17,11 @@ public interface IDotnetService
     /// <summary>
     /// Builds the .NET project.
     /// </summary>
+    /// <param name="options">The options to use.</param>
     /// <param name="ct">The cancellation token.</param>
-    Task BuildAsync(CancellationToken ct = default);
+    Task BuildAsync(
+        DotnetBuildOptions? options = null, 
+        CancellationToken ct = default);
 
     /// <summary>
     /// Runs the .NET project.
