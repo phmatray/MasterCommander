@@ -9,6 +9,7 @@ global using MasterCommander.Commanders.Dotnet;
 global using MasterCommander.Commanders.Dotnet.Build;
 global using MasterCommander.Commanders.Dotnet.New.Abstractions;
 global using MasterCommander.Commanders.Dotnet.New.Options;
+global using MasterCommander.Commanders.Dotnet.Run;
 global using MasterCommander.Commanders.Git;
 global using MasterCommander.Commanders.Npm;
 global using MasterCommander.Core;

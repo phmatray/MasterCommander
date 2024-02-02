@@ -26,8 +26,11 @@ public interface IDotnetService
     /// <summary>
     /// Runs the .NET project.
     /// </summary>
+    /// <param name="options">The options to use.</param>
     /// <param name="ct">The cancellation token.</param>
-    Task RunAsync(CancellationToken ct = default);
+    Task RunAsync(
+        DotnetRunOptions? options = null,
+        CancellationToken ct = default);
 
     /// <summary>
     /// Runs the tests in the .NET project.

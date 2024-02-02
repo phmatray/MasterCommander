@@ -15,10 +15,9 @@ public class DotnetCommandFactory(
         return CreateCommand(options.ToArguments());
     }
 
-    public Command Run()
+    public Command Run(DotnetRunOptions options)
     {
-        string[] arguments = ["run"];
-        return CreateCommand(arguments);
+        return CreateCommand(options.ToArguments());
     }
 
     public Command Test()

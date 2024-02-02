@@ -29,9 +29,12 @@ public class DotnetService(
     }
 
     /// <inheritdoc/>
-    public async Task RunAsync(CancellationToken ct = default)
+    public async Task RunAsync(
+        DotnetRunOptions? options = null,
+        CancellationToken ct = default)
     {
-        var command = dotnetCommandFactory.Run();
+        options ??= new DotnetRunOptions();
+        var command = dotnetCommandFactory.Run(options);
         await ObserveCommandAsync(command, ct);
     }
 
