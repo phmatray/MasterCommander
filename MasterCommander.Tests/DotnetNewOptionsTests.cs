@@ -18,7 +18,7 @@ public class DotnetNewOptionsTests
         var args = options.ToArguments();
 
         // Assert
-        args.Should().ContainInOrder("new", "console", "--force", "--language", "C#", "--name", "MyApp", "--framework", "net8.0");
+        args.Should().ContainInConsecutiveOrder("new", "console", "--force", "--language", "C#", "--name", "MyApp", "--framework", "net8.0");
     }
 
     [Fact]

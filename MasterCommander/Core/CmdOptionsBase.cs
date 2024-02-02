@@ -11,8 +11,17 @@ public abstract record CmdOptionsBase(params string[] initialArguments)
         var arguments = new List<string>(InitialArguments);
         var propertiesWithAttributes = ExtractPropertiesWithAttributes();
 
+        // Use a HashSet to keep track of properties that have already been processed
+        var processedProperties = new HashSet<string>();
+
         foreach (var item in propertiesWithAttributes)
         {
+            if (processedProperties.Contains(item.Property.Name))
+            {
+                // Skip if this property's command-line representation has already been processed
+                continue;
+            }
+            
             var value = item.Property.GetValue(this);
             if (value == null) continue;
             
@@ -21,6 +30,9 @@ public abstract record CmdOptionsBase(params string[] initialArguments)
             
             // Add argument based on the value type
             AddArgumentBasedOnValue(arguments, item.Attribute.Option, value);
+            
+            // Mark this property as processed to avoid processing other attributes (short/long forms) of the same property
+            processedProperties.Add(item.Property.Name);
         }
 
         return arguments;
