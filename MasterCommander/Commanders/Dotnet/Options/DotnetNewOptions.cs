@@ -1,32 +1,65 @@
 namespace MasterCommander.Commanders.Dotnet.Options;
 
-public sealed record DotnetNewOptions
+/// <summary>
+/// The dotnet new command creates a .NET project or other artifacts based on a template.
+/// The command calls the template engine to create the artifacts on disk based on the specified template and options.
+/// </summary>
+/// <param name="Template">The template to instantiate when the command is invoked. Each template might have specific options you can pass.</param>
+public sealed record DotnetNewOptions(string Template)
+    : CmdOptionsBase("new", Template)
 {
-    public string Template { get; init; }
+    /// <summary>
+    /// Displays a summary of what would happen if the given command were run if it would result in a template creation. Available since .NET Core 2.2 SDK.
+    /// </summary>
+    [CmdOption("--dry-run")]
+    [CmdOptionOrder(1)]
+    public bool DryRun { get; init; }
     
-    public string Name { get; init; }
-    
+    /// <summary>
+    /// Forces content to be generated even if it would change existing files. This is required when the template chosen would override existing files in the output directory.
+    /// </summary>
+    [CmdOption("--force")]
+    [CmdOptionOrder(2)]
     public bool Force { get; init; }
-
-    public DotnetNewOptions(string template, string name, bool force)
-    {
-        ArgumentException.ThrowIfNullOrWhiteSpace(template);
-        ArgumentException.ThrowIfNullOrWhiteSpace(name);
-
-        Template = template;
-        Name = name;
-        Force = force;
-    }
     
-    public string[] ToArguments()
-    {
-        var arguments = new List<string> {"new", Template, "-n", Name};
-
-        if (Force)
-        {
-            arguments.Add("--force");
-        }
-        
-        return arguments.ToArray();
-    }
+    /// <summary>
+    /// The language of the template to create. The language accepted varies by the template. Not valid for some templates.
+    /// </summary>
+    [CmdOption("--language")]
+    [CmdOption("-lang", true)]
+    [CmdOptionOrder(3)]
+    [CmdOptionValues(["C#", "F#", "VB"])]
+    public string? Language { get; init; }
+    
+    [CmdOption("--name")]
+    [CmdOption("-n", true)]
+    [CmdOptionOrder(4)]
+    public string? OutputName { get; init; }
+    
+    [CmdOption("--framework")]
+    [CmdOption("-f", true)]
+    [CmdOptionOrder(5)]
+    public string? Framework { get; init; }
+    
+    [CmdOption("--no-update-check")]
+    [CmdOptionOrder(6)]
+    public bool NoUpdateCheck { get; init; }
+    
+    [CmdOption("--output")]
+    [CmdOption("-o", true)]
+    [CmdOptionOrder(7)]
+    public string? OutputDirectory { get; init; }
+    
+    [CmdOption("--project")]
+    [CmdOptionOrder(8)]
+    public string? ProjectPath { get; init; }
+    
+    [CmdOption("--diagnostics")]
+    [CmdOptionOrder(9)]
+    public bool Diagnostics { get; init; }
+    
+    [CmdOption("--verbosity")]
+    [CmdOptionOrder(10)]
+    [CmdOptionValues(["quiet", "minimal", "normal", "diagnostic"])]
+    public string? Verbosity { get; init; }
 }

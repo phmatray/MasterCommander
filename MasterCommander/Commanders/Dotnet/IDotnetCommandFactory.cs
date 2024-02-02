@@ -6,4 +6,5 @@ public interface IDotnetCommandFactory
     Command Build();
     Command Run();
     Command Test();
+    Command SlnAdd(string csproj);
 }

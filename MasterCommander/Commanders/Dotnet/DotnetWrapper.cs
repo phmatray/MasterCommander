@@ -7,7 +7,7 @@ public class DotnetCommandFactory(
 {
     public Command New(DotnetNewOptions options)
     {
-        string[] arguments = options.ToArguments();
+        IEnumerable<string> arguments = options.ToArguments();
         return CreateCommand(arguments);
     }
 
@@ -26,6 +26,12 @@ public class DotnetCommandFactory(
     public Command Test()
     {
         string[] arguments = ["test"];
+        return CreateCommand(arguments);
+    }
+
+    public Command SlnAdd(string csproj)
+    {
+        string[] arguments = ["sln", "add", csproj];
         return CreateCommand(arguments);
     }
 }
