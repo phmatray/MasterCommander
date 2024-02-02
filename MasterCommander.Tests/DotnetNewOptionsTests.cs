@@ -51,4 +51,29 @@ public class DotnetNewOptionsTests
         act.Should().Throw<ArgumentException>()
             .WithMessage("Invalid value for Language. Valid options are: C#, F#, VB");
     }
+    
+    [Fact]
+    public void ToArguments_ShouldRespectExplicitOrder_AndHandleComplexPropertiesCorrectly()
+    {
+        // Arrange: Assuming 'Options' might evolve to include complex properties or more nuanced ordering requirements
+        var options = new DotnetNewOptions("webapi")
+        {
+            OutputName = "AdvancedAPI",
+            Framework = "net8.0",
+            Force = true,
+            Language = "F#"
+        };
+
+        // Act
+        var args = options.ToArguments();
+
+        // Assert
+        args.Should().ContainInConsecutiveOrder(
+            "new", "webapi", 
+            "--force", 
+            "--language", "F#", 
+            "--name", "AdvancedAPI", 
+            "--framework", "net8.0"
+        );
+    }
 }

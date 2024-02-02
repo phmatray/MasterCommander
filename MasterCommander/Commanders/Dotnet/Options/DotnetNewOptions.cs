@@ -25,19 +25,16 @@ public sealed record DotnetNewOptions(string Template)
     /// <summary>
     /// The language of the template to create. The language accepted varies by the template. Not valid for some templates.
     /// </summary>
-    [CmdOption("--language")]
-    [CmdOption("-lang", true)]
+    [CmdOption("-lang|--language")]
     [CmdOptionOrder(3)]
     [CmdOptionValues(["C#", "F#", "VB"])]
     public string? Language { get; init; }
     
-    [CmdOption("--name")]
-    [CmdOption("-n", true)]
+    [CmdOption("-n|--name")]
     [CmdOptionOrder(4)]
     public string? OutputName { get; init; }
     
-    [CmdOption("--framework")]
-    [CmdOption("-f", true)]
+    [CmdOption("-f|--framework")]
     [CmdOptionOrder(5)]
     public string? Framework { get; init; }
     
@@ -45,8 +42,7 @@ public sealed record DotnetNewOptions(string Template)
     [CmdOptionOrder(6)]
     public bool NoUpdateCheck { get; init; }
     
-    [CmdOption("--output")]
-    [CmdOption("-o", true)]
+    [CmdOption("-o|--output")]
     [CmdOptionOrder(7)]
     public string? OutputDirectory { get; init; }
     

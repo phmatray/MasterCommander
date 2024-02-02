@@ -2,10 +2,8 @@ using System.Reflection;
 
 namespace MasterCommander.Core;
 
-public abstract record CmdOptionsBase(params string[] initialArguments)
+public abstract record CmdOptionsBase(params string[] InitialArguments)
 {
-    protected IEnumerable<string> InitialArguments { get; } = [..initialArguments];
-    
     public IEnumerable<string> ToArguments()
     {
         var arguments = new List<string>(InitialArguments);
@@ -29,7 +27,7 @@ public abstract record CmdOptionsBase(params string[] initialArguments)
             ValidatePropertyValue(item.Property, value, item.CmdOptionValues);
             
             // Add argument based on the value type
-            AddArgumentBasedOnValue(arguments, item.Attribute.Option, value);
+            AddArgumentBasedOnValue(arguments, item.Attribute.LongOption, value);
             
             // Mark this property as processed to avoid processing other attributes (short/long forms) of the same property
             processedProperties.Add(item.Property.Name);
