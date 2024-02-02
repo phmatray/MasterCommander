@@ -1,19 +1,20 @@
+using System.Diagnostics;
+
 namespace MasterCommander.Integrations.Processes;
 
 public abstract class CommandOutputHandler(IConsole console)
 {
-    protected async Task ObserveCommandAsync(Command command, CancellationToken ct)
+    protected async Task ListenCommandAsync(Command command, CancellationToken ct)
     {
         console.WriteCommand(command.ToString());
+        var stopWatch = Stopwatch.StartNew();
         
-        await command
-            .Observe(ct)
-            .ForEachAsync(HandleCommandEvent, ct);
-    }
-    
-    protected void HandleCommandEvent(CommandEvent cmdEvent)
-    {
-        var consoleEvent = ConsoleEventFactory.CreateFrom(cmdEvent);
-        console.WriteConsoleEvent(consoleEvent);
+        await foreach (var commandEvent in command.ListenAsync(ct))
+        {
+            console.WriteConsoleEvent(ConsoleEventFactory.CreateFrom(commandEvent));
+        }
+        
+        stopWatch.Stop();
+        console.WriteConsoleEvent(ConsoleEventFactory.CreateFrom(stopWatch));
     }
 }

@@ -15,7 +15,7 @@ public class DotnetService(
     {
         options ??= new DotnetNewOptions("console");
         var command = dotnetCommandFactory.New(options);
-        await ObserveCommandAsync(command, ct);
+        await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc/>
@@ -25,7 +25,7 @@ public class DotnetService(
     {
         options ??= new DotnetBuildOptions();
         var command = dotnetCommandFactory.Build(options);
-        await ObserveCommandAsync(command, ct);
+        await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc/>
@@ -35,20 +35,20 @@ public class DotnetService(
     {
         options ??= new DotnetRunOptions();
         var command = dotnetCommandFactory.Run(options);
-        await ObserveCommandAsync(command, ct);
+        await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc/>
     public async Task TestAsync(CancellationToken ct = default)
     {
         var command = dotnetCommandFactory.Test();
-        await ObserveCommandAsync(command, ct);
+        await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc/>
     public async Task SlnAddAsync(string csproj, CancellationToken ct = default)
     {
         var command = dotnetCommandFactory.SlnAdd(csproj);
-        await ObserveCommandAsync(command, ct);
+        await ListenCommandAsync(command, ct);
     }
 }

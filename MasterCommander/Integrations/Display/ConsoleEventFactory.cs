@@ -1,7 +1,14 @@
+using System.Diagnostics;
+
 namespace MasterCommander.Integrations.Display;
 
 public static class ConsoleEventFactory
 {
+    public static ConsoleEvent CreateFrom(Stopwatch stopWatch)
+    {
+        return new ExecutionTimeConsoleEvent(stopWatch.Elapsed);
+    }
+    
     public static ConsoleEvent CreateFrom(CommandEvent cmdEvent)
     {
         return cmdEvent switch

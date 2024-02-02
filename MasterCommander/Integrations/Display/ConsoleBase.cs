@@ -18,6 +18,9 @@ public abstract class ConsoleBase
             case ExitedConsoleEvent exited:
                 WriteExitedConsoleEvent(exited);
                 break;
+            case ExecutionTimeConsoleEvent elapsed:
+                WriteElapsedConsoleEvent(elapsed);
+                break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(consoleEvent));
         }
@@ -27,4 +30,5 @@ public abstract class ConsoleBase
     protected abstract void WriteStandardOutputConsoleEvent(StandardOutputConsoleEvent stdOutput);
     protected abstract void WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent stdError);
     protected abstract void WriteExitedConsoleEvent(ExitedConsoleEvent exited);
+    protected abstract void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed);
 }

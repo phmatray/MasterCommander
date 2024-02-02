@@ -5,9 +5,16 @@ namespace MasterCommander.Integrations.Display;
 public sealed class SpectreConsole
     : ConsoleBase, IConsole
 {
-    public void WriteLine(string message)
+    public void WriteLine(string? message = null)
     {
-        AnsiConsole.MarkupLine(message);
+        if (message is not null)
+        {
+            AnsiConsole.MarkupLine(message);
+        }
+        else
+        {
+            AnsiConsole.WriteLine();
+        }
     }
 
     public void WriteCommand(string command)
@@ -44,7 +51,13 @@ public sealed class SpectreConsole
     protected override void WriteExitedConsoleEvent(ExitedConsoleEvent exited)
     {
         WriteLine(exited.ExitCode == 0
-            ? $"Process successfully completed with exit code [green]{exited.ExitCode}[/]."
-            : $"Process completed with exit code [red]{exited.ExitCode}[/].");
+            ? $"{Emoji.Known.CheckMark} Process successfully completed with exit code [green]{exited.ExitCode}[/]."
+            : $"{Emoji.Known.CrossMark} Process completed with exit code [red]{exited.ExitCode}[/].");
+    }
+
+    protected override void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed)
+    {
+        WriteLine($"{Emoji.Known.TimerClock} Elapsed time: [yellow]{elapsed.Elapsed}[/]");
+        WriteLine();
     }
 }

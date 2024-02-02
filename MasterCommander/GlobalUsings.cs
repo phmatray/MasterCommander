@@ -13,6 +13,7 @@ global using MasterCommander.Commanders.Dotnet.Run;
 global using MasterCommander.Commanders.Git;
 global using MasterCommander.Commanders.Npm;
 global using MasterCommander.Core;
+global using MasterCommander.Core.ConsoleEvents;
 global using MasterCommander.Integrations.Display;
 global using MasterCommander.Integrations.Processes;
 global using MasterCommander.Integrations.Processes.Exceptions;

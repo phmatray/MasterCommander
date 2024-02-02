@@ -3,9 +3,16 @@ namespace MasterCommander.Integrations.Display;
 public class StandardConsole
     : ConsoleBase, IConsole
 {
-    public void WriteLine(string message)
+    public void WriteLine(string? message = null)
     {
-        Console.WriteLine(message);
+        if (message is not null)
+        {
+            Console.WriteLine(message);
+        }
+        else
+        {
+            Console.WriteLine();
+        }
     }
 
     public void WriteCommand(string command)
@@ -43,6 +50,14 @@ public class StandardConsole
 
     protected override void WriteExitedConsoleEvent(ExitedConsoleEvent exited)
     {
-        WriteLine($"Process completed with exit code {exited.ExitCode}.\n");
+        WriteLine(exited.ExitCode == 0
+            ? $"Process successfully completed with exit code {exited.ExitCode}."
+            : $"Process completed with exit code {exited.ExitCode}.");
+    }
+
+    protected override void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed)
+    {
+        WriteLine($"Elapsed time: {elapsed.Elapsed}");
+        WriteLine();
     }
 }
