@@ -8,9 +8,9 @@ public class DotnetService(
     : CommandOutputHandler(console), IDotnetService
 {
     /// <inheritdoc/>
-    public async Task NewAsync(string template, string? outputName, bool force, CancellationToken ct = default)
+    public async Task NewAsync(DotnetNewOptions? options = null, CancellationToken ct = default)
     {
-        DotnetNewOptions options = new(template) { OutputName = outputName, Force = force };
+        options ??= new DotnetNewOptions("console");
         var command = dotnetCommandFactory.New(options);
         await ObserveCommandAsync(command, ct);
     }

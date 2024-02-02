@@ -1,3 +1,5 @@
+using MasterCommander.Commanders.Dotnet.New.Options;
+
 namespace MasterCommander.Tests;
 
 public class DotnetNewOptionsTests
@@ -6,7 +8,7 @@ public class DotnetNewOptionsTests
     public void ToArguments_ShouldGenerateCorrectArguments_WhenAllPropertiesAreSet()
     {
         // Arrange
-        var options = new DotnetNewOptions("console")
+        var options = new DotnetNewConsoleOptions
         {
             OutputName = "MyApp",
             Force = true,
@@ -56,7 +58,7 @@ public class DotnetNewOptionsTests
     public void ToArguments_ShouldRespectExplicitOrder_AndHandleComplexPropertiesCorrectly()
     {
         // Arrange: Assuming 'Options' might evolve to include complex properties or more nuanced ordering requirements
-        var options = new DotnetNewOptions("webapi")
+        var options = new DotnetNewWebApiOptions
         {
             OutputName = "AdvancedAPI",
             Framework = "net8.0",

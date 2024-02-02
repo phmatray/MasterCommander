@@ -1,11 +1,11 @@
-namespace MasterCommander.Commanders.Dotnet.Options;
+namespace MasterCommander.Commanders.Dotnet.New.Options;
 
 /// <summary>
 /// The dotnet new command creates a .NET project or other artifacts based on a template.
 /// The command calls the template engine to create the artifacts on disk based on the specified template and options.
 /// </summary>
 /// <param name="Template">The template to instantiate when the command is invoked. Each template might have specific options you can pass.</param>
-public sealed record DotnetNewOptions(string Template)
+public record DotnetNewOptions(string Template)
     : CmdOptionsBase("new", Template)
 {
     /// <summary>
@@ -33,10 +33,6 @@ public sealed record DotnetNewOptions(string Template)
     [CmdOption("-n|--name")]
     [CmdOptionOrder(4)]
     public string? OutputName { get; init; }
-    
-    [CmdOption("-f|--framework")]
-    [CmdOptionOrder(5)]
-    public string? Framework { get; init; }
     
     [CmdOption("--no-update-check")]
     [CmdOptionOrder(6)]

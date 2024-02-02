@@ -14,10 +14,10 @@ var npm = services.GetRequiredService<INpmService>();
 
 await git.InitAsync();
 await git.StatusAsync();
-await dotnet.NewAsync("gitignore");
-await dotnet.NewAsync("editorconfig");
-await dotnet.NewAsync("globaljson");
-await dotnet.NewAsync("sln", "AppDemo", true);
-await dotnet.NewAsync("console", "AppDemo.Console");
+await dotnet.NewAsync(new DotnetNewGitignoreOptions());
+await dotnet.NewAsync(new DotnetNewEditorConfigOptions());
+await dotnet.NewAsync(new DotnetNewGlobalJsonOptions { SdkVersion = "8.0.100" });
+await dotnet.NewAsync(new DotnetNewSolutionOptions { OutputName = "AppDemo" });
+await dotnet.NewAsync(new DotnetNewConsoleOptions { OutputName = "AppDemo.Console" });
 await dotnet.SlnAddAsync("AppDemo.Console/AppDemo.Console.csproj");
 await git.StatusAsync();

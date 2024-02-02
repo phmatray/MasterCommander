@@ -14,4 +14,8 @@
       <PackageReference Include="System.Reactive" Version="6.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Commanders\Dotnet\New\" />
+    </ItemGroup>
+
 </Project>
