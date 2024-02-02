@@ -2,42 +2,49 @@ using Spectre.Console;
 
 namespace MasterCommander.Integrations.Display;
 
-public class SpectreConsole : IConsole
+public sealed class SpectreConsole
+    : ConsoleBase, IConsole
 {
     public void WriteLine(string message)
     {
         AnsiConsole.MarkupLine(message);
     }
 
-    public void WriteConsoleEvent(ConsoleEvent consoleEvent)
-    {
-        switch (consoleEvent)
-        {
-            case StartedConsoleEvent started:
-                WriteLine($"Starting process [yellow](ID: {started.ProcessId})[/]...");
-                break;
-            case StandardOutputConsoleEvent stdOutput:
-                if (!string.IsNullOrWhiteSpace(stdOutput.Text))
-                {
-                    WriteLine($"[green]>[/] {stdOutput.Text.Trim()}");
-                }
-                break;
-            case StandardErrorConsoleEvent stdError:
-                if (!string.IsNullOrWhiteSpace(stdError.Text))
-                {
-                    WriteLine($"[red]Error:[/] {stdError.Text.Trim()}");
-                }
-                break;
-            case ExitedConsoleEvent exited:
-                WriteLine($"Process completed with exit code [yellow]{exited.ExitCode}[/].\n");
-                break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(consoleEvent));
-        }
-    }
-
     public void WriteCommand(string command)
     {
         WriteLine($"[blue]Running command:[/] {command}");
+    }
+    
+    public void WriteStartupMessage()
+    {
+        AnsiConsole.Write(new FigletText("MasterCommander"));
+    }
+
+    protected override void WriteStartedConsoleEvent(StartedConsoleEvent started)
+    {
+        WriteLine($"Starting process [yellow](ID: {started.ProcessId})[/]...");
+    }
+    
+    protected override void WriteStandardOutputConsoleEvent(StandardOutputConsoleEvent stdOutput)
+    {
+        if (!string.IsNullOrWhiteSpace(stdOutput.Text))
+        {
+            WriteLine($"[green]>[/] {stdOutput.Text.Trim()}");
+        }
+    }
+    
+    protected override void WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent stdError)
+    {
+        if (!string.IsNullOrWhiteSpace(stdError.Text))
+        {
+            WriteLine($"[red]Error:[/] {stdError.Text.Trim()}");
+        }
+    }
+    
+    protected override void WriteExitedConsoleEvent(ExitedConsoleEvent exited)
+    {
+        WriteLine(exited.ExitCode == 0
+            ? $"Process successfully completed with exit code [green]{exited.ExitCode}[/]."
+            : $"Process completed with exit code [red]{exited.ExitCode}[/].");
     }
 }

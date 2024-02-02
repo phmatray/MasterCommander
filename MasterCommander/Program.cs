@@ -1,14 +1,14 @@
 ﻿using MasterCommander.Integrations;
 using Microsoft.Extensions.DependencyInjection;
 
-WriteLine("\n-----------------");
-WriteLine(" MasterCommander");
-WriteLine("-----------------\n");
-
 // get the required services
 var services = MainExtensions.RegisterAppServices();
 var git = services.GetRequiredService<IGitService>();
 var dotnet = services.GetRequiredService<IDotnetService>();
+var console = services.GetRequiredService<IConsole>();
+
+// write the startup message
+console.WriteStartupMessage();
 
 // create a new .NET solution and console application
 await git.InitAsync();
