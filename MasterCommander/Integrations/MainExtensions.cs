@@ -1,5 +1,4 @@
 using Microsoft.Extensions.DependencyInjection;
-using static MasterCommander.Integrations.DirectoryHelper;
 
 namespace MasterCommander.Integrations;
 
@@ -7,13 +6,14 @@ public static class MainExtensions
 {
     private const string AppName = "MasterCommander";
     
-    public static ServiceProvider RegisterAppServices(bool useColor = true)
+    public static IProjectInitializationService RegisterAppServices(bool useColor = true)
     {
         var services = new ServiceCollection();
+        var directoryService = new DirectoryService();
         
         // get the working directory
-        var homeDirectory = GetHomeDirectory();
-        var workingDirectory = CreateNewDirectory(homeDirectory, AppName, true);
+        var homeDirectory = directoryService.GetHomeDirectory();
+        var workingDirectory = directoryService.CreateNewDirectory(homeDirectory, AppName, true);
         
         // outputs
         if (useColor)
@@ -38,12 +38,18 @@ public static class MainExtensions
         services.AddScoped<INpmCommandFactory, NpmCommandFactory>(
             _ => new NpmCommandFactory(workingDirectory));
         
-        // services
+        // core services
         services.AddScoped<IDockerService, DockerService>();
         services.AddScoped<IDotnetService, DotnetService>();
         services.AddScoped<IGitService, GitService>();
         services.AddScoped<INpmService, NpmService>();
+        
+        // higher level services
+        services.AddScoped<IProjectInitializationService, ProjectInitializationService>();
 
-        return services.BuildServiceProvider();
+        ServiceProvider serviceProvider = services.BuildServiceProvider();
+        var projectInitializationService = serviceProvider.GetRequiredService<IProjectInitializationService>();
+        
+        return projectInitializationService;
     }
 }

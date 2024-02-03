@@ -1,4 +1,4 @@
-namespace MasterCommander.Integrations.Display;
+namespace MasterCommander.Core.Display;
 
 public interface IConsole
 {

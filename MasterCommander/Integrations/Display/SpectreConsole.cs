@@ -7,57 +7,57 @@ public sealed class SpectreConsole
 {
     public void WriteLine(string? message = null)
     {
-        if (message is not null)
-        {
-            AnsiConsole.MarkupLine(message);
-        }
-        else
-        {
-            AnsiConsole.WriteLine();
-        }
+        AnsiConsole.MarkupLine(message ?? string.Empty);
+    }
+
+    public void WriteStartupMessage()
+    {
+        AnsiConsole
+            .Write(new Rule("[bold purple]MasterCommander[/]")
+            .RuleStyle(Style.Parse("purple"))
+            .Centered());
+        
+        AnsiConsole.WriteLine();
     }
 
     public void WriteCommand(string command)
     {
-        WriteLine($"[blue]Running command:[/] {command}");
-    }
-    
-    public void WriteStartupMessage()
-    {
-        AnsiConsole.Write(new FigletText("MasterCommander"));
+        WriteLine($"🚀 [bold purple]Executing Command:[/] [underline]{command}[/]");
     }
 
     protected override void WriteStartedConsoleEvent(StartedConsoleEvent started)
     {
-        WriteLine($"Starting process [yellow](ID: {started.ProcessId})[/]...");
+        WriteLine($"🔄 [dim]Starting Process: ID {started.ProcessId}...[/]");
     }
-    
+
     protected override void WriteStandardOutputConsoleEvent(StandardOutputConsoleEvent stdOutput)
     {
         if (!string.IsNullOrWhiteSpace(stdOutput.Text))
         {
-            WriteLine($"[green]>[/] {stdOutput.Text.Trim()}");
+            WriteLine($"[blue]=> {stdOutput.Text.Trim()}[/]");
         }
     }
-    
+
     protected override void WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent stdError)
     {
         if (!string.IsNullOrWhiteSpace(stdError.Text))
         {
-            WriteLine($"[red]Error:[/] {stdError.Text.Trim()}");
+            WriteLine($"[red]=> Error: {stdError.Text.Trim()}[/]");
         }
     }
-    
+
     protected override void WriteExitedConsoleEvent(ExitedConsoleEvent exited)
     {
-        WriteLine(exited.ExitCode == 0
-            ? $"{Emoji.Known.CheckMark} Process successfully completed with exit code [green]{exited.ExitCode}[/]."
-            : $"{Emoji.Known.CrossMark} Process completed with exit code [red]{exited.ExitCode}[/].");
+        var statusMessage = exited.ExitCode == 0
+            ? "[green]✅  Process successfully completed.[/]"
+            : $"[red]❌  Process completed with exit code {exited.ExitCode}.[/]";
+
+        WriteLine(statusMessage);
     }
 
     protected override void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed)
     {
-        WriteLine($"{Emoji.Known.TimerClock} Elapsed time: [yellow]{elapsed.Elapsed}[/]");
-        WriteLine();
+        WriteLine($"⏱️ [dim]Elapsed Time: {elapsed.ElapsedTime}[/]");
+        AnsiConsole.WriteLine(); // Adds a spacer line for better separation
     }
 }

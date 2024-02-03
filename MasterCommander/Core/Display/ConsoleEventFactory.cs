@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace MasterCommander.Integrations.Display;
+namespace MasterCommander.Core.Display;
 
 public static class ConsoleEventFactory
 {

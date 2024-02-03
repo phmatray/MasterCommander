@@ -57,7 +57,7 @@ public class StandardConsole
 
     protected override void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed)
     {
-        WriteLine($"Elapsed time: {elapsed.Elapsed}");
+        WriteLine($"Elapsed time: {elapsed.ElapsedTime}");
         WriteLine();
     }
 }

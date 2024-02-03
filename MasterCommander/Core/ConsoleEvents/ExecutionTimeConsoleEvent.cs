@@ -1,7 +1,7 @@
 namespace MasterCommander.Core.ConsoleEvents;
 
-public class ExecutionTimeConsoleEvent(TimeSpan elapsed) : ConsoleEvent
+public class ExecutionTimeConsoleEvent(TimeSpan elapsedTime) : ConsoleEvent
 {
-    public TimeSpan Elapsed { get; set; } = elapsed;
-    public override string ToString() => $"Elapsed time: {Elapsed}";
+    public TimeSpan ElapsedTime { get; set; } = elapsedTime;
+    public override string ToString() => $"Elapsed time: {ElapsedTime}";
 }
