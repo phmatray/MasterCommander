@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MasterCommander.Integrations;
@@ -6,7 +7,7 @@ public static class MainExtensions
 {
     private const string AppName = "MasterCommander";
     
-    public static IProjectInitializationService RegisterAppServices(bool useColor = true)
+    public static IProjectInitializationService RegisterAppServices()
     {
         var services = new ServiceCollection();
         var directoryService = new DirectoryService();
@@ -16,12 +17,14 @@ public static class MainExtensions
         var workingDirectory = directoryService.CreateNewDirectory(homeDirectory, AppName, true);
         
         // outputs
-        if (useColor)
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
+            // on OSX, use Spectre.Console for better rendering
             services.AddScoped<IConsole, SpectreConsole>();
         }
         else
         {
+            // on Windows, use StandardConsole
             services.AddScoped<IConsole, StandardConsole>();
         }
         

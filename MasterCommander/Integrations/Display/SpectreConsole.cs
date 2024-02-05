@@ -10,6 +10,11 @@ public sealed class SpectreConsole
         AnsiConsole.MarkupLine(message ?? string.Empty);
     }
 
+    public void WriteCommand(string command)
+    {
+        WriteLine($"🚀 [bold purple]Executing Command:[/] [underline]{command}[/]");
+    }
+
     public void WriteStartupMessage()
     {
         AnsiConsole
@@ -18,11 +23,6 @@ public sealed class SpectreConsole
             .Centered());
         
         AnsiConsole.WriteLine();
-    }
-
-    public void WriteCommand(string command)
-    {
-        WriteLine($"🚀 [bold purple]Executing Command:[/] [underline]{command}[/]");
     }
 
     protected override void WriteStartedConsoleEvent(StartedConsoleEvent started)

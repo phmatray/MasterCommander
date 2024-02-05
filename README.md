@@ -28,7 +28,7 @@ Output from MasterCommander commands is displayed in a clean, readable format:
 To use MasterCommander, ensure you have the following installed on your system:
 
 - Git
-- .NET SDK
+- .NET SDK (version 8.0.101 or later)
 - Docker (optional)
 - Node.js and npm (optional)
 

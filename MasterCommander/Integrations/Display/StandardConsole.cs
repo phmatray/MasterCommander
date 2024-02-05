@@ -17,7 +17,7 @@ public class StandardConsole
 
     public void WriteCommand(string command)
     {
-        WriteLine($"Running command: {command}");
+        WriteLine($"Executing Command: {command}");
     }
 
     public void WriteStartupMessage()
@@ -29,14 +29,14 @@ public class StandardConsole
 
     protected override void WriteStartedConsoleEvent(StartedConsoleEvent started)
     {
-        WriteLine($"Starting process (ID: {started.ProcessId})...");
+        WriteLine($"Starting Process: ID {started.ProcessId}...");
     }
 
     protected override void WriteStandardOutputConsoleEvent(StandardOutputConsoleEvent stdOutput)
     {
         if (!string.IsNullOrWhiteSpace(stdOutput.Text))
         {
-            WriteLine($"> {stdOutput.Text.Trim()}");
+            WriteLine($"=> {stdOutput.Text.Trim()}");
         }
     }
 
@@ -51,7 +51,7 @@ public class StandardConsole
     protected override void WriteExitedConsoleEvent(ExitedConsoleEvent exited)
     {
         WriteLine(exited.ExitCode == 0
-            ? $"Process successfully completed with exit code {exited.ExitCode}."
+            ? "Process successfully completed."
             : $"Process completed with exit code {exited.ExitCode}.");
     }
 
