@@ -12,8 +12,14 @@ public interface IDirectoryService
     /// <summary>
     /// Gets the path of the home directory for the current user.
     /// </summary>
-    /// <returns>The path of the home directory.</returns>
-    string GetHomeDirectory();
+    /// <value>The path of the home directory.</value>
+    string HomeDirectory { get; }
+
+    /// <summary>
+    /// Gets the working directory.
+    /// </summary>
+    /// <value>The working directory.</value>
+    string WorkingDirectory { get; }
 
     /// <summary>
     /// Creates a new directory within a specified base directory.
@@ -29,4 +35,38 @@ public interface IDirectoryService
     /// </summary>
     /// <param name="directoryPath">The path of the directory to clear.</param>
     void ClearDirectory(string directoryPath);
+
+    /// <summary>
+    /// Calculates the total size of a directory, including all its files and subdirectories.
+    /// </summary>
+    /// <param name="directoryPath">The path of the directory for which to calculate the size.</param>
+    /// <returns>The total size of the directory in bytes.</returns>
+    long CalculateDirectorySize(string directoryPath);
+
+    /// <summary>
+    /// Creates a temporary directory for use during application execution, which can optionally be cleaned up afterwards.
+    /// </summary>
+    /// <returns>The path to the newly created temporary directory.</returns>
+    string CreateTemporaryDirectory();
+
+    /// <summary>
+    /// Monitors a directory for any changes, such as file or subdirectory creation, deletion, or modification, and triggers a callback action when a change is detected.
+    /// </summary>
+    /// <param name="directoryPath">The path of the directory to watch.</param>
+    /// <param name="onChangeCallback">The callback action to trigger upon detecting a directory change.</param>
+    void WatchDirectory(string directoryPath, Action<FileSystemEventArgs> onChangeCallback);
+
+    /// <summary>
+    /// Compresses the specified directory into a ZIP file, including all its files and subdirectories.
+    /// </summary>
+    /// <param name="directoryPath">The path of the directory to compress.</param>
+    /// <param name="zipFilePath">The path where the resulting ZIP file should be saved.</param>
+    void CompressDirectory(string directoryPath, string zipFilePath);
+
+    /// <summary>
+    /// Decompresses a ZIP file into a specified directory, extracting all its contents.
+    /// </summary>
+    /// <param name="zipFilePath">The path of the ZIP file to decompress.</param>
+    /// <param name="directoryPath">The target directory path where the contents of the ZIP file will be extracted.</param>
+    void DecompressToDirectory(string zipFilePath, string directoryPath);
 }

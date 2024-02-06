@@ -2,22 +2,18 @@
 // Atypical Consulting SRL licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for full license information.
 
-using MasterCommander.Commanders.Dotnet.CmdBuild;
-using MasterCommander.Commanders.Dotnet.CmdNew.Options;
-using MasterCommander.Commanders.Dotnet.CmdRun;
-
 namespace MasterCommander.Commanders.Dotnet;
 
 /// <summary>
 /// A factory for creating .NET command instances.
 /// </summary>
-/// <param name="workingDirectory">The working directory for the command.</param>
-/// <param name="executablePath">The path to the dotnet executable.</param>
-public class DotnetCommandFactory(
-    string workingDirectory = ".",
-    string executablePath = "dotnet")
-    : CommandBuilder(workingDirectory, executablePath), IDotnetCommandFactory
+/// <param name="directoryService">The directory service to use for working directory operations.</param>
+public class DotnetCommandFactory(IDirectoryService directoryService)
+    : CommandBuilder(directoryService), IDotnetCommandFactory
 {
+    /// <inheritdoc />
+    protected override string ExecutablePath => "dotnet";
+
     /// <inheritdoc />
     public Command CreateCommandNew(DotnetNewOptions options)
     {

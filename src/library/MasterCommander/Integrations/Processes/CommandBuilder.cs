@@ -7,19 +7,18 @@ namespace MasterCommander.Integrations.Processes;
 /// <summary>
 /// Provides a base for building commands to execute external processes, encapsulating common configuration aspects.
 /// </summary>
-/// <param name="workingDirectory">The working directory for the command execution.</param>
-/// <param name="executablePath">The path to the executable that the command will run.</param>
-public abstract class CommandBuilder(string workingDirectory, string executablePath)
+/// <param name="directoryService">The directory service to use for working directory operations.</param>
+public abstract class CommandBuilder(IDirectoryService directoryService)
 {
     /// <summary>
     /// Gets the working directory for the command execution.
     /// </summary>
-    protected string WorkingDirectory { get; } = workingDirectory;
+    protected string WorkingDirectory => directoryService.WorkingDirectory;
 
     /// <summary>
     /// Gets the path to the executable that the command will run.
     /// </summary>
-    protected string ExecutablePath { get; } = executablePath;
+    protected abstract string ExecutablePath { get; }
 
     /// <summary>
     /// Creates a command with the specified arguments, configuring the executable path and working directory.

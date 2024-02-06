@@ -7,13 +7,13 @@ namespace MasterCommander.Commanders.Docker;
 /// <summary>
 /// Defines the interface for creating Docker command instances.
 /// </summary>
-/// <param name="workingDirectory">The working directory for the command.</param>
-/// <param name="executablePath">The path to the docker executable.</param>
-public class DockerCommandFactory(
-    string workingDirectory = ".",
-    string executablePath = "docker")
-    : CommandBuilder(workingDirectory, executablePath), IDockerCommandFactory
+/// <param name="directoryService">The directory service to use for working directory operations.</param>
+public class DockerCommandFactory(IDirectoryService directoryService)
+    : CommandBuilder(directoryService), IDockerCommandFactory
 {
+    /// <inheritdoc />
+    protected override string ExecutablePath => "docker";
+
     /// <inheritdoc />
     public Command CreateCommandBuild(string dockerfilePath, string tag)
     {

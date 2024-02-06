@@ -7,13 +7,13 @@ namespace MasterCommander.Commanders.Git;
 /// <summary>
 /// A factory for creating git command instances.
 /// </summary>
-/// <param name="workingDirectory">The working directory for the command.</param>
-/// <param name="executablePath">The path to the git executable.</param>
-public class GitCommandFactory(
-    string workingDirectory = ".",
-    string executablePath = "git")
-    : CommandBuilder(workingDirectory, executablePath), IGitCommandFactory
+/// <param name="directoryService">The directory service to use for working directory operations.</param>
+public class GitCommandFactory(IDirectoryService directoryService)
+    : CommandBuilder(directoryService), IGitCommandFactory
 {
+    /// <inheritdoc />
+    protected override string ExecutablePath => "git";
+
     /// <inheritdoc />
     public Command CreateCommandInit()
     {

@@ -2,10 +2,6 @@
 // Atypical Consulting SRL licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for full license information.
 
-using MasterCommander.Commanders.Dotnet.CmdBuild;
-using MasterCommander.Commanders.Dotnet.CmdNew.Options;
-using MasterCommander.Commanders.Dotnet.CmdRun;
-
 namespace MasterCommander.Commanders.Dotnet;
 
 /// <summary>

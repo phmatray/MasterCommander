@@ -12,22 +12,34 @@ namespace MasterCommander.Integrations;
 /// </summary>
 public static class MainExtensions
 {
-    private const string AppName = "MasterCommander";
-
     /// <summary>
-    /// Registers the application services.
+    /// Provides extension methods for setting up application services.
     /// </summary>
     /// <returns>The project initialization service.</returns>
     public static IProjectInitializationService RegisterAppServices()
     {
         var services = new ServiceCollection();
-        var directoryService = new DirectoryService();
 
-        // get the working directory
-        var homeDirectory = directoryService.GetHomeDirectory();
-        var workingDirectory = directoryService.CreateNewDirectory(homeDirectory, AppName, true);
+        ConfigureDirectoryService(services);
+        ConfigureConsole(services);
+        ConfigureFactories(services);
+        RegisterCoreServices(services);
 
-        // outputs
+        // Register higher-level services
+        services.AddScoped<IProjectInitializationService, ProjectInitializationService>();
+
+        var serviceProvider = services.BuildServiceProvider();
+        return serviceProvider.GetRequiredService<IProjectInitializationService>();
+    }
+
+    private static void ConfigureDirectoryService(IServiceCollection services)
+    {
+        services.AddSingleton<IDirectoryService, DirectoryService>();
+    }
+
+    private static void ConfigureConsole(IServiceCollection services)
+    {
+        // Conditional registration based on the OS platform
         if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
             // on OSX, use Spectre.Console for better rendering
@@ -38,32 +50,21 @@ public static class MainExtensions
             // on Windows, use StandardConsole
             services.AddScoped<IConsole, StandardConsole>();
         }
+    }
 
-        // factories
-        services.AddScoped<IDockerCommandFactory, DockerCommandFactory>(
-            _ => new DockerCommandFactory(workingDirectory));
+    private static void ConfigureFactories(IServiceCollection services)
+    {
+        services.AddScoped<IDockerCommandFactory, DockerCommandFactory>();
+        services.AddScoped<IDotnetCommandFactory, DotnetCommandFactory>();
+        services.AddScoped<IGitCommandFactory, GitCommandFactory>();
+        services.AddScoped<INpmCommandFactory, NpmCommandFactory>();
+    }
 
-        services.AddScoped<IDotnetCommandFactory, DotnetCommandFactory>(
-            _ => new DotnetCommandFactory(workingDirectory));
-
-        services.AddScoped<IGitCommandFactory, GitCommandFactory>(
-            _ => new GitCommandFactory(workingDirectory));
-
-        services.AddScoped<INpmCommandFactory, NpmCommandFactory>(
-            _ => new NpmCommandFactory(workingDirectory));
-
-        // core services
+    private static void RegisterCoreServices(IServiceCollection services)
+    {
         services.AddScoped<IDockerService, DockerService>();
         services.AddScoped<IDotnetService, DotnetService>();
         services.AddScoped<IGitService, GitService>();
         services.AddScoped<INpmService, NpmService>();
-
-        // higher level services
-        services.AddScoped<IProjectInitializationService, ProjectInitializationService>();
-
-        var serviceProvider = services.BuildServiceProvider();
-        var projectInitializationService = serviceProvider.GetRequiredService<IProjectInitializationService>();
-
-        return projectInitializationService;
     }
 }

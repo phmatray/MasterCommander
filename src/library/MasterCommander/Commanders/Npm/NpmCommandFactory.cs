@@ -7,13 +7,13 @@ namespace MasterCommander.Commanders.Npm;
 /// <summary>
 /// Provides npm related operations.
 /// </summary>
-/// <param name="workingDirectory">The working directory where the npm commands will be executed.</param>
-/// <param name="executablePath">The path to the npm executable.</param>
-public class NpmCommandFactory(
-    string workingDirectory = ".",
-    string executablePath = "npm")
-    : CommandBuilder(workingDirectory, executablePath), INpmCommandFactory
+/// <param name="directoryService">The directory service to use for working directory operations.</param>
+public class NpmCommandFactory(IDirectoryService directoryService)
+    : CommandBuilder(directoryService), INpmCommandFactory
 {
+    /// <inheritdoc />
+    protected override string ExecutablePath => "npm";
+
     /// <inheritdoc />
     public Command CreateCommandInit()
     {
