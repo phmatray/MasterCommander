@@ -56,11 +56,11 @@ public class CmdOptionAttribute : Attribute
     /// Gets the short form of the command option.
     /// </summary>
     /// <value>The short form of the command option, or null if not specified.</value>
-    public string ShortOption { get; } = string.Empty;
+    public string ShortOption { get; }
 
     /// <summary>
     /// Gets the long form of the command option.
     /// </summary>
     /// <value>The long form of the command option. This property is required and must be initialized.</value>
-    public string LongOption { get; } = string.Empty;
+    public string LongOption { get; }
 }
