@@ -1,11 +1,7 @@
 # MasterCommander
 
-<div style="display: flex;">
-    <img src="./assets/img/logo-mastercommander.png" alt="Logo MasterCommander" width="200">
-    <div style="margin-left: 20px;">
-        MasterCommander is a versatile command-line utility designed to streamline the workflow for developers working with multiple technology stacks. By integrating common operations for Git, .NET, Docker, and npm into a single application, MasterCommander enhances productivity and simplifies project setup and management tasks.
-    </div>
-</div>
+| ![Logo MasterCommander](./assets/img/logo-mastercommander.png) | MasterCommander is a versatile command-line utility designed to streamline the workflow for developers working with multiple technology stacks. By integrating common operations for Git, .NET, Docker, and npm into a single application, MasterCommander enhances productivity and simplifies project setup and management tasks. |
+|----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## Features
 
@@ -21,10 +17,31 @@ MasterCommander provides a unified interface to interact with various developmen
 Write code, not commands. MasterCommander provides a simple, consistent interface for common development tasks.
 
 Use your favorite CLI tools without leaving your code editor:
-> ![MasterCommander Screenshot](./assets/img/program.png)
+
+```csharp
+private const string SdkVersion = "8.0.101";
+private const string SolutionName = "AppDemo";
+private const string ConsoleProjectName = $"{SolutionName}.Console";
+private const string ConsoleProjectDirectory = $"src/{ConsoleProjectName}";
+private const string ConsoleCsproj = $"{ConsoleProjectDirectory}/{ConsoleProjectName}.csproj";
+
+await git.InitAsync();
+await git.StatusAsync();
+await dotnet.NewAsync(new DotnetNewGitignoreOptions());
+await dotnet.NewAsync(new DotnetNewEditorConfigOptions());
+await dotnet.NewAsync(new DotnetNewNuGetConfigOptions());
+await dotnet.NewAsync(new DotnetNewGlobalJsonOptions { SdkVersion = SdkVersion });
+await dotnet.NewAsync(new DotnetNewSolutionOptions { OutputName = SolutionName });
+await dotnet.NewAsync(new DotnetNewConsoleOptions { OutputName = ConsoleProjectName, OutputDirectory = ConsoleProjectDirectory });
+await dotnet.SlnAddAsync(ConsoleCsproj);
+await dotnet.BuildAsync();
+await dotnet.BuildAsync(new DotnetBuildOptions { Configuration = "Release" });
+await dotnet.RunAsync(new DotnetRunOptions { Project = ConsoleCsproj, Configuration = "Release" });
+``` 
+
 
 Output from MasterCommander commands is displayed in a clean, readable format:
-> ![MasterCommander Screenshot](./assets/img/debug-output.png)
+> ![MasterCommander Screenshot](./assets/img/output-spectre.png)
 
 ## Getting Started
 
