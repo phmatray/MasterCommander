@@ -94,8 +94,15 @@ public abstract record CmdOptionsBase(params string[] InitialArguments)
         }
         else if (value is not bool)
         {
+            var valueAsString = value.ToString();
+
+            if (string.IsNullOrWhiteSpace(valueAsString))
+            {
+                return;
+            }
+
             arguments.Add(option);
-            arguments.Add(value.ToString());
+            arguments.Add(valueAsString);
         }
     }
 }

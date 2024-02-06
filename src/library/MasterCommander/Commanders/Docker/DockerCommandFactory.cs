@@ -15,7 +15,7 @@ public class DockerCommandFactory(
     : CommandBuilder(workingDirectory, executablePath), IDockerCommandFactory
 {
     /// <inheritdoc />
-    public Command Build(string dockerfilePath, string tag)
+    public Command CreateCommandBuild(string dockerfilePath, string tag)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(dockerfilePath);
         ArgumentException.ThrowIfNullOrWhiteSpace(tag);
@@ -25,7 +25,7 @@ public class DockerCommandFactory(
     }
 
     /// <inheritdoc />
-    public Command Run(string image, string? containerName = null)
+    public Command CreateCommandRun(string image, string? containerName = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(image);
 
@@ -37,7 +37,7 @@ public class DockerCommandFactory(
     }
 
     /// <inheritdoc />
-    public Command Stop(string containerName)
+    public Command CreateCommandStop(string containerName)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(containerName);
 
@@ -46,7 +46,7 @@ public class DockerCommandFactory(
     }
 
     /// <inheritdoc />
-    public Command RemoveContainer(string containerName)
+    public Command CreateCommandRemoveContainer(string containerName)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(containerName);
 

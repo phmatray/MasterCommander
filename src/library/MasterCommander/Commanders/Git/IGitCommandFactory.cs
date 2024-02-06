@@ -13,13 +13,13 @@ public interface IGitCommandFactory
     /// Creates a command for initializing a new git repository.
     /// </summary>
     /// <returns>A command to initialize a git repository.</returns>
-    Command Init();
+    Command CreateCommandInit();
 
     /// <summary>
     /// Creates a command to check the status of the git repository.
     /// </summary>
     /// <returns>A command to display the status of the repository.</returns>
-    Command Status();
+    Command CreateCommandStatus();
 
     /// <summary>
     /// Creates a command for cloning a remote repository into a local directory.
@@ -27,12 +27,12 @@ public interface IGitCommandFactory
     /// <param name="repositoryUrl">The URL of the remote repository to clone.</param>
     /// <param name="localPath">The local directory path where the repository should be cloned.</param>
     /// <returns>A command to clone the repository.</returns>
-    Command CloneRepository(string repositoryUrl, string localPath);
+    Command CreateCommandCloneRepository(string repositoryUrl, string localPath);
 
     /// <summary>
     /// Creates a command for committing changes to the repository with a specific message.
     /// </summary>
     /// <param name="message">The commit message to use.</param>
     /// <returns>A command to commit changes to the repository.</returns>
-    Command Commit(string message);
+    Command CreateCommandCommit(string message);
 }

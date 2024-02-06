@@ -18,32 +18,32 @@ public interface IDotnetCommandFactory
     /// </summary>
     /// <param name="options">The options for creating a new .NET project or file.</param>
     /// <returns>A command to create a new .NET project or file.</returns>
-    Command New(DotnetNewOptions options);
+    Command CreateCommandNew(DotnetNewOptions options);
 
     /// <summary>
     /// Creates a new command to build a .NET project.
     /// </summary>
     /// <param name="options">The options for building the .NET project.</param>
     /// <returns>A command to build a .NET project.</returns>
-    Command Build(DotnetBuildOptions options);
+    Command CreateCommandBuild(DotnetBuildOptions options);
 
     /// <summary>
     /// Creates a new command to run a .NET project.
     /// </summary>
     /// <param name="options">The options for running the .NET project.</param>
     /// <returns>A command to run a .NET project.</returns>
-    Command Run(DotnetRunOptions options);
+    Command CreateCommandRun(DotnetRunOptions options);
 
     /// <summary>
     /// Creates a new command to run tests in a .NET project.
     /// </summary>
     /// <returns>A command to run tests in a .NET project.</returns>
-    Command Test();
+    Command CreateCommandTest();
 
     /// <summary>
     /// Creates a new command to add a C# project file (.csproj) to a solution (.sln).
     /// </summary>
     /// <param name="csproj">The path to the C# project file to add.</param>
     /// <returns>A command to add a C# project file to a solution.</returns>
-    Command SlnAdd(string csproj);
+    Command CreateCommandSlnAdd(string csproj);
 }

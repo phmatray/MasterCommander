@@ -15,21 +15,21 @@ public class GitCommandFactory(
     : CommandBuilder(workingDirectory, executablePath), IGitCommandFactory
 {
     /// <inheritdoc />
-    public Command Init()
+    public Command CreateCommandInit()
     {
         string[] arguments = ["init"];
         return CreateCommand(arguments);
     }
 
     /// <inheritdoc />
-    public Command Status()
+    public Command CreateCommandStatus()
     {
         string[] arguments = ["status"];
         return CreateCommand(arguments);
     }
 
     /// <inheritdoc />
-    public Command CloneRepository(string repositoryUrl, string localPath)
+    public Command CreateCommandCloneRepository(string repositoryUrl, string localPath)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(repositoryUrl);
         ArgumentException.ThrowIfNullOrWhiteSpace(localPath);
@@ -39,7 +39,7 @@ public class GitCommandFactory(
     }
 
     /// <inheritdoc />
-    public Command Commit(string message)
+    public Command CreateCommandCommit(string message)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(message);
 

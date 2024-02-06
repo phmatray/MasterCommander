@@ -44,7 +44,7 @@ public static class ConsoleEventFactory
     /// </summary>
     /// <param name="processId">The ID of the started process.</param>
     /// <returns>A console event for a started process.</returns>
-    private static ConsoleEvent CreateStartedEvent(int processId)
+    private static StartedConsoleEvent CreateStartedEvent(int processId)
     {
         return new StartedConsoleEvent(processId);
     }
@@ -54,7 +54,7 @@ public static class ConsoleEventFactory
     /// </summary>
     /// <param name="message">The message from standard output.</param>
     /// <returns>A console event containing the standard output message.</returns>
-    private static ConsoleEvent CreateStandardOutputEvent(string message)
+    private static StandardOutputConsoleEvent CreateStandardOutputEvent(string message)
     {
         return new StandardOutputConsoleEvent(message);
     }
@@ -64,7 +64,7 @@ public static class ConsoleEventFactory
     /// </summary>
     /// <param name="message">The message from standard error.</param>
     /// <returns>A console event containing the standard error message.</returns>
-    private static ConsoleEvent CreateStandardErrorEvent(string message)
+    private static StandardErrorConsoleEvent CreateStandardErrorEvent(string message)
     {
         return new StandardErrorConsoleEvent(message);
     }
@@ -74,7 +74,7 @@ public static class ConsoleEventFactory
     /// </summary>
     /// <param name="exitCode">The exit code of the process.</param>
     /// <returns>A console event for an exited process.</returns>
-    private static ConsoleEvent CreateExitedEvent(int exitCode)
+    private static ExitedConsoleEvent CreateExitedEvent(int exitCode)
     {
         return new ExitedConsoleEvent(exitCode);
     }

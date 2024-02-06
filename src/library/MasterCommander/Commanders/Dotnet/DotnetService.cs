@@ -22,7 +22,7 @@ public class DotnetService(
         CancellationToken ct = default)
     {
         options ??= new DotnetNewOptions("console");
-        var command = dotnetCommandFactory.New(options);
+        var command = dotnetCommandFactory.CreateCommandNew(options);
         await ListenCommandAsync(command, ct);
     }
 
@@ -32,7 +32,7 @@ public class DotnetService(
         CancellationToken ct = default)
     {
         options ??= new DotnetBuildOptions();
-        var command = dotnetCommandFactory.Build(options);
+        var command = dotnetCommandFactory.CreateCommandBuild(options);
         await ListenCommandAsync(command, ct);
     }
 
@@ -42,21 +42,21 @@ public class DotnetService(
         CancellationToken ct = default)
     {
         options ??= new DotnetRunOptions();
-        var command = dotnetCommandFactory.Run(options);
+        var command = dotnetCommandFactory.CreateCommandRun(options);
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc/>
     public async Task TestAsync(CancellationToken ct = default)
     {
-        var command = dotnetCommandFactory.Test();
+        var command = dotnetCommandFactory.CreateCommandTest();
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc/>
     public async Task SlnAddAsync(string csproj, CancellationToken ct = default)
     {
-        var command = dotnetCommandFactory.SlnAdd(csproj);
+        var command = dotnetCommandFactory.CreateCommandSlnAdd(csproj);
         await ListenCommandAsync(command, ct);
     }
 }

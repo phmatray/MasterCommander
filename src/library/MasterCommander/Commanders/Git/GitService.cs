@@ -17,28 +17,28 @@ public class GitService(
     /// <inheritdoc />
     public async Task InitAsync(CancellationToken ct = default)
     {
-        var command = gitCommandFactory.Init();
+        var command = gitCommandFactory.CreateCommandInit();
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc />
     public async Task StatusAsync(CancellationToken ct = default)
     {
-        var command = gitCommandFactory.Status();
+        var command = gitCommandFactory.CreateCommandStatus();
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc />
     public async Task CloneRepositoryAsync(string repositoryUrl, string localPath, CancellationToken ct = default)
     {
-        var command = gitCommandFactory.CloneRepository(repositoryUrl, localPath);
+        var command = gitCommandFactory.CreateCommandCloneRepository(repositoryUrl, localPath);
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc />
     public async Task CommitAsync(string message, CancellationToken ct = default)
     {
-        var command = gitCommandFactory.Commit(message);
+        var command = gitCommandFactory.CreateCommandCommit(message);
         await ListenCommandAsync(command, ct);
     }
 }

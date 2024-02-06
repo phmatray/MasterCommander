@@ -22,41 +22,33 @@ public class CmdOptionAttribute : Attribute
     /// <exception cref="ArgumentException">Thrown when the provided option does not start with '-' indicating an invalid format.</exception>
     public CmdOptionAttribute(string combinedOption)
     {
-        // Split the input on the delimiter, considering cases where there might not be a delimiter
         var options = combinedOption.Split(_separator, StringSplitOptions.RemoveEmptyEntries);
+        if (options.Length == 0)
+        {
+            throw new ArgumentException("No command options provided.", nameof(combinedOption));
+        }
 
-        // Assign the appropriate option based on its prefix
+        // Initialize LongOption and ShortOption with defaults
+        LongOption = string.Empty;
+        ShortOption = string.Empty;
+
+        // Assign options based on prefix
         foreach (var option in options)
         {
-            if (option.StartsWith("--", StringComparison.InvariantCulture))
+            if (option.StartsWith("--", StringComparison.Ordinal))
             {
                 LongOption = option;
             }
-            else if (option.StartsWith('-') && option.Length > 1)
+            else if (option.StartsWith('-'))
             {
-                // Check for short option validity
                 ShortOption = option;
             }
         }
 
-        // Handle cases where only one form is provided
-        if (options.Length == 1)
+        // Validation to ensure at least one option is provided correctly
+        if (string.IsNullOrEmpty(LongOption) && string.IsNullOrEmpty(ShortOption))
         {
-            var option = options[0];
-            if (!option.StartsWith('-'))
-            {
-                throw new ArgumentException("Invalid command option format. Options must start with '-' for short form or '--' for long form.", nameof(combinedOption));
-            }
-
-            // If it's a short option without a long option provided, or vice versa
-            if (option.StartsWith("--", StringComparison.InvariantCulture))
-            {
-                LongOption = option; // Long option provided without a short option
-            }
-            else if (option.StartsWith('-') && option.Length > 1)
-            {
-                ShortOption = option; // Short option provided without a long option
-            }
+            throw new ArgumentException("Invalid command option format. At least one of long or short option must be correctly provided.", nameof(combinedOption));
         }
     }
 
@@ -64,11 +56,11 @@ public class CmdOptionAttribute : Attribute
     /// Gets the short form of the command option.
     /// </summary>
     /// <value>The short form of the command option, or null if not specified.</value>
-    public string? ShortOption { get; private set; }
+    public string ShortOption { get; } = string.Empty;
 
     /// <summary>
     /// Gets the long form of the command option.
     /// </summary>
     /// <value>The long form of the command option. This property is required and must be initialized.</value>
-    public string LongOption { get; private set; }
+    public string LongOption { get; } = string.Empty;
 }

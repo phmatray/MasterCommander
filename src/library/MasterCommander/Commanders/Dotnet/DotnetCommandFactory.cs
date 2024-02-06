@@ -19,32 +19,32 @@ public class DotnetCommandFactory(
     : CommandBuilder(workingDirectory, executablePath), IDotnetCommandFactory
 {
     /// <inheritdoc />
-    public Command New(DotnetNewOptions options)
+    public Command CreateCommandNew(DotnetNewOptions options)
     {
         return CreateCommand(options.ToArguments());
     }
 
     /// <inheritdoc />
-    public Command Build(DotnetBuildOptions options)
+    public Command CreateCommandBuild(DotnetBuildOptions options)
     {
         return CreateCommand(options.ToArguments());
     }
 
     /// <inheritdoc />
-    public Command Run(DotnetRunOptions options)
+    public Command CreateCommandRun(DotnetRunOptions options)
     {
         return CreateCommand(options.ToArguments());
     }
 
     /// <inheritdoc />
-    public Command Test()
+    public Command CreateCommandTest()
     {
         string[] arguments = ["test"];
         return CreateCommand(arguments);
     }
 
     /// <inheritdoc />
-    public Command SlnAdd(string csproj)
+    public Command CreateCommandSlnAdd(string csproj)
     {
         string[] arguments = ["sln", "add", csproj];
         return CreateCommand(arguments);

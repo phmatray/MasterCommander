@@ -16,35 +16,35 @@ public class NpmService(
     /// <inheritdoc />
     public async Task InitAsync(CancellationToken ct = default)
     {
-        var command = npmCommandFactory.Init();
+        var command = npmCommandFactory.CreateCommandInit();
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc />
     public async Task InstallAsync(CancellationToken ct = default)
     {
-        var command = npmCommandFactory.Install();
+        var command = npmCommandFactory.CreateCommandInstall();
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc />
     public async Task UpdateAsync(CancellationToken ct = default)
     {
-        var command = npmCommandFactory.Update();
+        var command = npmCommandFactory.CreateCommandUpdate();
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc />
     public async Task StartAsync(CancellationToken ct = default)
     {
-        var command = npmCommandFactory.Start();
+        var command = npmCommandFactory.CreateCommandStart();
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc />
     public async Task RunScriptAsync(string scriptName, CancellationToken ct = default)
     {
-        var command = npmCommandFactory.RunScript(scriptName);
+        var command = npmCommandFactory.CreateCommandRunScript(scriptName);
         await ListenCommandAsync(command, ct);
     }
 }

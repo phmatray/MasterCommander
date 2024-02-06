@@ -13,30 +13,30 @@ public interface INpmCommandFactory
     /// Creates a command for initializing a new npm project.
     /// </summary>
     /// <returns>A command to initialize a new npm project.</returns>
-    Command Init();
+    Command CreateCommandInit();
 
     /// <summary>
     /// Creates a command for installing npm packages in the project.
     /// </summary>
     /// <returns>A command to install npm packages.</returns>
-    Command Install();
+    Command CreateCommandInstall();
 
     /// <summary>
     /// Creates a command for updating npm packages in the project.
     /// </summary>
     /// <returns>A command to update npm packages.</returns>
-    Command Update();
+    Command CreateCommandUpdate();
 
     /// <summary>
     /// Creates a command to start the npm project.
     /// </summary>
     /// <returns>A command to start the project.</returns>
-    Command Start();
+    Command CreateCommandStart();
 
     /// <summary>
     /// Creates a command to run a specific npm script defined in the project's package.json.
     /// </summary>
     /// <param name="scriptName">The name of the script to run.</param>
     /// <returns>A command to run the specified npm script.</returns>
-    Command RunScript(string scriptName);
+    Command CreateCommandRunScript(string scriptName);
 }

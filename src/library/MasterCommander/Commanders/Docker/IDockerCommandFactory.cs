@@ -15,7 +15,7 @@ public interface IDockerCommandFactory
     /// <param name="dockerfilePath">The path to the Dockerfile.</param>
     /// <param name="tag">The tag to assign to the built image.</param>
     /// <returns>A command to build a Docker image.</returns>
-    Command Build(string dockerfilePath, string tag);
+    Command CreateCommandBuild(string dockerfilePath, string tag);
 
     /// <summary>
     /// Creates a command to run a Docker container from an image.
@@ -23,19 +23,19 @@ public interface IDockerCommandFactory
     /// <param name="image">The Docker image to run.</param>
     /// <param name="containerName">Optional name for the container.</param>
     /// <returns>A command to run a Docker container.</returns>
-    Command Run(string image, string? containerName = null);
+    Command CreateCommandRun(string image, string? containerName = null);
 
     /// <summary>
     /// Creates a command to stop a running Docker container.
     /// </summary>
     /// <param name="containerName">The name of the container to stop.</param>
     /// <returns>A command to stop a Docker container.</returns>
-    Command Stop(string containerName);
+    Command CreateCommandStop(string containerName);
 
     /// <summary>
     /// Creates a command to remove a Docker container.
     /// </summary>
     /// <param name="containerName">The name of the container to remove.</param>
     /// <returns>A command to remove a Docker container.</returns>
-    Command RemoveContainer(string containerName);
+    Command CreateCommandRemoveContainer(string containerName);
 }

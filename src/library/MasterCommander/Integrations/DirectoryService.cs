@@ -2,6 +2,8 @@
 // Atypical Consulting SRL licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for full license information.
 
+using MasterCommander.Core.Exceptions;
+
 namespace MasterCommander.Integrations;
 
 /// <summary>
@@ -14,7 +16,7 @@ public class DirectoryService : IDirectoryService
     {
         return Environment.GetEnvironmentVariable("HOME")
                ?? Environment.GetEnvironmentVariable("USERPROFILE")
-               ?? throw new Exception("Could not find home directory");
+               ?? throw new HomeDirectoryNotFoundException();
     }
 
     /// <inheritdoc />

@@ -15,35 +15,35 @@ public class NpmCommandFactory(
     : CommandBuilder(workingDirectory, executablePath), INpmCommandFactory
 {
     /// <inheritdoc />
-    public Command Init()
+    public Command CreateCommandInit()
     {
         string[] arguments = ["init"];
         return CreateCommand(arguments);
     }
 
     /// <inheritdoc />
-    public Command Install()
+    public Command CreateCommandInstall()
     {
         string[] arguments = ["install"];
         return CreateCommand(arguments);
     }
 
     /// <inheritdoc />
-    public Command Update()
+    public Command CreateCommandUpdate()
     {
         string[] arguments = ["update"];
         return CreateCommand(arguments);
     }
 
     /// <inheritdoc />
-    public Command Start()
+    public Command CreateCommandStart()
     {
         string[] arguments = ["start"];
         return CreateCommand(arguments);
     }
 
     /// <inheritdoc />
-    public Command RunScript(string scriptName)
+    public Command CreateCommandRunScript(string scriptName)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(scriptName);
 

@@ -16,28 +16,28 @@ public class DockerService(
     /// <inheritdoc />
     public async Task BuildAsync(string dockerfilePath, string tag, CancellationToken ct = default)
     {
-        var command = dockerCommandFactory.Build(dockerfilePath, tag);
+        var command = dockerCommandFactory.CreateCommandBuild(dockerfilePath, tag);
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc />
     public async Task RunAsync(string image, string? containerName = null, CancellationToken ct = default)
     {
-        var command = dockerCommandFactory.Run(image, containerName);
+        var command = dockerCommandFactory.CreateCommandRun(image, containerName);
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc />
     public async Task StopAsync(string containerName, CancellationToken ct = default)
     {
-        var command = dockerCommandFactory.Stop(containerName);
+        var command = dockerCommandFactory.CreateCommandStop(containerName);
         await ListenCommandAsync(command, ct);
     }
 
     /// <inheritdoc />
     public async Task RemoveContainerAsync(string containerName, CancellationToken ct = default)
     {
-        var command = dockerCommandFactory.RemoveContainer(containerName);
+        var command = dockerCommandFactory.CreateCommandRemoveContainer(containerName);
         await ListenCommandAsync(command, ct);
     }
 }
