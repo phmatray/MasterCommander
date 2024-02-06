@@ -1,13 +1,18 @@
 # MasterCommander
 
-MasterCommander is a versatile command-line utility designed to streamline the workflow for developers working with multiple technology stacks. By integrating common operations for Git, .NET, Docker, and npm into a single application, MasterCommander enhances productivity and simplifies project setup and management tasks.
+<div style="display: flex;">
+    <img src="./assets/img/logo-mastercommander.png" alt="Logo MasterCommander" width="200">
+    <div style="margin-left: 20px;">
+        MasterCommander is a versatile command-line utility designed to streamline the workflow for developers working with multiple technology stacks. By integrating common operations for Git, .NET, Docker, and npm into a single application, MasterCommander enhances productivity and simplifies project setup and management tasks.
+    </div>
+</div>
 
 ## Features
 
 MasterCommander provides a unified interface to interact with various development tools, including:
 
+- **.NET Projects**: Easily create new .NET solutions and projects.
 - **Git Integration**: Initialize new repositories, check status, and more with built-in Git commands.
-- **.NET Core Projects**: Easily create new .NET solutions and projects.
 - **Docker Support**: Manage Docker containers and images through simple commands.
 - **npm Packages**: Handle npm packages and run npm scripts within your projects.
 
@@ -46,16 +51,16 @@ Or... open the project in Visual Studio (or JetBrains Rider) and run the applica
 
 Upon launching MasterCommander, the application will present you with a simple command-line interface. Here's a quick overview of available commands:
 
-- **Git Commands**:
-    - `git init`: Initialize a new Git repository.
-    - `git status`: Display the status of the current Git repository.
-    - `git clone`: Clone a remote Git repository.
-    - `git commit`: Commit changes to the current Git repository.
 - **.NET Commands**:
     - `dotnet new`: Create a new .NET solution or project.
     - `dotnet build`: Build a .NET project.
     - `dotnet run`: Run a .NET project.
     - `dotnet test`: Run unit tests for a .NET project.
+- **Git Commands**:
+    - `git init`: Initialize a new Git repository.
+    - `git status`: Display the status of the current Git repository.
+    - `git clone`: Clone a remote Git repository.
+    - `git commit`: Commit changes to the current Git repository.
 - **Docker Commands**:
     - `docker build`: Build a Docker image.
     - `docker run`: Run a Docker container.
