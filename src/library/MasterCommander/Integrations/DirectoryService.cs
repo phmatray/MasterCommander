@@ -25,29 +25,41 @@ public class DirectoryService : IDirectoryService
             ?? Environment.GetEnvironmentVariable(UserProfileEnvironmentVariable)
             ?? throw new InvalidOperationException("The home directory could not be determined.");
 
-        WorkingDirectory = CreateNewDirectory(HomeDirectory, WorkingDirectoryName, true);
+        MasterCommanderDirectory = CreateNewDirectory(HomeDirectory, WorkingDirectoryName, true);
     }
 
     /// <inheritdoc />
     public string HomeDirectory { get; }
 
     /// <inheritdoc />
-    public string WorkingDirectory { get; }
+    public string MasterCommanderDirectory { get; }
+
+    /// <inheritdoc />
+    public string? WorkingDirectory { get; set; }
+
+    /// <inheritdoc />
+    public void SetWorkingDirectory(string relativePath, bool createIfNotExists = false)
+    {
+        WorkingDirectory = createIfNotExists
+            ? CreateNewDirectory(MasterCommanderDirectory, relativePath, true)
+            : Path.Combine(MasterCommanderDirectory, relativePath);
+    }
 
     /// <inheritdoc />
     public string CreateNewDirectory(string baseDirectory, string newDirectoryName, bool overwrite = false)
     {
-        var workingDirectory = Path.Combine(baseDirectory, newDirectoryName);
-        if (!Directory.Exists(workingDirectory))
+        var newDirectory = Path.Combine(baseDirectory, newDirectoryName);
+
+        if (!Directory.Exists(newDirectory))
         {
-            Directory.CreateDirectory(workingDirectory);
+            Directory.CreateDirectory(newDirectory);
         }
         else if (overwrite)
         {
-            ClearDirectory(workingDirectory);
+            ClearDirectory(newDirectory);
         }
 
-        return workingDirectory;
+        return newDirectory;
     }
 
     /// <inheritdoc />

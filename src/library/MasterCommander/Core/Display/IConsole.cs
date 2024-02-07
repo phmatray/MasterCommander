@@ -31,4 +31,9 @@ public interface IConsole
     /// </summary>
     /// <param name="consoleEvent">The console event to write.</param>
     void WriteConsoleEvent(ConsoleEvent consoleEvent);
+
+    /// <summary>
+    /// Writes a completion message to the console. This is intended for final console output upon application completion.
+    /// </summary>
+    void WriteCompletionMessage();
 }

@@ -10,7 +10,8 @@ namespace MasterCommander.Integrations;
 /// <param name="git">The git service.</param>
 /// <param name="dotnet">The dotnet service.</param>
 /// <param name="console">The console service.</param>
-public class ProjectInitializationService(IGitService git, IDotnetService dotnet, IConsole console)
+public class ProjectInitializationService(
+    IGitService git, IDotnetService dotnet, IConsole console, IDirectoryService directory)
     : IProjectInitializationService
 {
     private const string SdkVersion = "8.0.101";
@@ -22,6 +23,8 @@ public class ProjectInitializationService(IGitService git, IDotnetService dotnet
     /// <inheritdoc />
     public async Task InitializeConsoleProjectAsync()
     {
+        SetWorkingDirectory();
+
         console.WriteStartupMessage();
 
         await git.InitAsync();
@@ -36,5 +39,24 @@ public class ProjectInitializationService(IGitService git, IDotnetService dotnet
         await dotnet.BuildAsync();
         await dotnet.BuildAsync(new DotnetBuildOptions { Configuration = "Release" });
         await dotnet.RunAsync(new DotnetRunOptions { Project = ConsoleCsproj, Configuration = "Release" });
+
+        CompressSolutionDirectory();
+    }
+
+    private void SetWorkingDirectory()
+    {
+        // Set the working directory to the solution directory
+        directory.SetWorkingDirectory(SolutionName, true);
+    }
+
+    private void CompressSolutionDirectory()
+    {
+        if (directory.WorkingDirectory == null)
+        {
+            return;
+        }
+
+        var zipPath = Path.Combine(directory.MasterCommanderDirectory, $"{SolutionName}.zip");
+        directory.CompressDirectory(directory.WorkingDirectory, zipPath);
     }
 }

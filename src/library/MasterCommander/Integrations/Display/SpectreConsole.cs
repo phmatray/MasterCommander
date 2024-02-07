@@ -36,6 +36,12 @@ public sealed class SpectreConsole
     }
 
     /// <inheritdoc />
+    public void WriteCompletionMessage()
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <inheritdoc />
     protected override void WriteStartedConsoleEvent(StartedConsoleEvent started)
     {
         WriteLine($"🔄 [dim]Starting Process: ID {started.ProcessId}...[/]");

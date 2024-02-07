@@ -16,10 +16,23 @@ public interface IDirectoryService
     string HomeDirectory { get; }
 
     /// <summary>
-    /// Gets the working directory.
+    /// Gets the path of the directory where MasterCommander stores its working files.
+    /// </summary>
+    /// <value>The path of the MasterCommander directory.</value>
+    string MasterCommanderDirectory { get; }
+
+    /// <summary>
+    /// Gets the working directory. This is the directory where commands will be executed.
     /// </summary>
     /// <value>The working directory.</value>
-    string WorkingDirectory { get; }
+    string? WorkingDirectory { get; }
+
+    /// <summary>
+    /// Sets the working directory to the directory where the specified solution is located.
+    /// </summary>
+    /// <param name="relativePath">The relative path from the MasterCommander directory to the solution directory.</param>
+    /// <param name="createIfNotExists">A value indicating whether the directory should be created if it does not exist.</param>
+    void SetWorkingDirectory(string relativePath, bool createIfNotExists = false);
 
     /// <summary>
     /// Creates a new directory within a specified base directory.

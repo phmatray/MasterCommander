@@ -11,11 +11,6 @@ namespace MasterCommander.Integrations.Processes;
 public abstract class CommandBuilder(IDirectoryService directoryService)
 {
     /// <summary>
-    /// Gets the working directory for the command execution.
-    /// </summary>
-    protected string WorkingDirectory => directoryService.WorkingDirectory;
-
-    /// <summary>
     /// Gets the path to the executable that the command will run.
     /// </summary>
     protected abstract string ExecutablePath { get; }
@@ -27,9 +22,10 @@ public abstract class CommandBuilder(IDirectoryService directoryService)
     /// <returns>A configured command.</returns>
     protected virtual Command CreateCommand(IEnumerable<string> arguments)
     {
+        var workingDirectory = GetWorkingDirectory();
         var command = Cli.Wrap(ExecutablePath)
             .WithArguments(arguments)
-            .WithWorkingDirectory(WorkingDirectory);
+            .WithWorkingDirectory(workingDirectory);
 
         return ConfigureCommand(command);
     }
@@ -44,5 +40,14 @@ public abstract class CommandBuilder(IDirectoryService directoryService)
     {
         // Allow derived classes to further configure the command
         return command;
+    }
+
+    /// <summary>
+    /// Gets the working directory for the command execution.
+    /// </summary>
+    private string GetWorkingDirectory()
+    {
+        return directoryService.WorkingDirectory
+               ?? directoryService.MasterCommanderDirectory;
     }
 }

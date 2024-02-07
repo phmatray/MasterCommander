@@ -31,6 +31,12 @@ public sealed class StandardConsole
     }
 
     /// <inheritdoc />
+    public void WriteCompletionMessage()
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <inheritdoc />
     protected override void WriteStartedConsoleEvent(StartedConsoleEvent started)
     {
         WriteLine($"Starting Process: ID {started.ProcessId}...");
@@ -60,6 +66,7 @@ public sealed class StandardConsole
         var statusMessage = exited.ExitCode == 0
             ? "Process successfully completed."
             : $"Process completed with exit code {exited.ExitCode}.";
+
         WriteLine(statusMessage);
     }
 
