@@ -10,6 +10,7 @@ namespace MasterCommander.Integrations;
 /// <param name="git">The git service.</param>
 /// <param name="dotnet">The dotnet service.</param>
 /// <param name="console">The console service.</param>
+/// <param name="directory">The directory service.</param>
 public class ProjectInitializationService(
     IGitService git, IDotnetService dotnet, IConsole console, IDirectoryService directory)
     : IProjectInitializationService

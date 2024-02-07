@@ -22,6 +22,13 @@ public interface IConsole
     void WriteCommand(string command);
 
     /// <summary>
+    /// Writes an action message to the console.
+    /// </summary>
+    /// <param name="action">The action to write.</param>
+    /// <param name="message">The message to write.</param>
+    void WriteAction(string action, string message);
+
+    /// <summary>
     /// Writes a startup message to the console. This is intended for initial console output upon application start.
     /// </summary>
     void WriteStartupMessage();
@@ -36,4 +43,34 @@ public interface IConsole
     /// Writes a completion message to the console. This is intended for final console output upon application completion.
     /// </summary>
     void WriteCompletionMessage();
+
+    /// <summary>
+    /// Writes a started console event to the output.
+    /// </summary>
+    /// <param name="started">The started console event to write.</param>
+    void WriteStartedConsoleEvent(StartedConsoleEvent started);
+
+    /// <summary>
+    /// Writes a standard output console event to the output.
+    /// </summary>
+    /// <param name="stdOutput">The standard output console event to write.</param>
+    void WriteStandardOutputConsoleEvent(StandardOutputConsoleEvent stdOutput);
+
+    /// <summary>
+    /// Writes a standard error console event to the output.
+    /// </summary>
+    /// <param name="stdError">The standard error console event to write.</param>
+    void WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent stdError);
+
+    /// <summary>
+    /// Writes an exited console event to the output.
+    /// </summary>
+    /// <param name="exited">The exited console event to write.</param>
+    void WriteExitedConsoleEvent(ExitedConsoleEvent exited);
+
+    /// <summary>
+    /// Writes an execution time console event to the output.
+    /// </summary>
+    /// <param name="elapsed">The execution time console event to write.</param>
+    void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed);
 }

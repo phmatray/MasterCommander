@@ -7,12 +7,24 @@ namespace MasterCommander.Core.Display;
 /// <summary>
 /// Serves as the base class for console output handling, providing a mechanism to write different types of console events.
 /// </summary>
-public abstract class ConsoleBase
+public abstract class ConsoleBase : IConsole
 {
-    /// <summary>
-    /// Writes the specified console event to the console. The specific type of event determines the method called to handle the output.
-    /// </summary>
-    /// <param name="consoleEvent">The console event to write.</param>
+    /// <inheritdoc />
+    public abstract void WriteLine(string? message = null);
+
+    /// <inheritdoc />
+    public abstract void WriteCommand(string command);
+
+    /// <inheritdoc />
+    public abstract void WriteAction(string action, string message);
+
+    /// <inheritdoc />
+    public abstract void WriteStartupMessage();
+
+    /// <inheritdoc />
+    public abstract void WriteCompletionMessage();
+
+    /// <inheritdoc />
     /// <exception cref="ArgumentOutOfRangeException">Thrown if the console event type is not recognized.</exception>
     public void WriteConsoleEvent(ConsoleEvent consoleEvent)
     {
@@ -38,33 +50,18 @@ public abstract class ConsoleBase
         }
     }
 
-    /// <summary>
-    /// Writes a started console event to the output.
-    /// </summary>
-    /// <param name="started">The started console event to write.</param>
-    protected abstract void WriteStartedConsoleEvent(StartedConsoleEvent started);
+    /// <inheritdoc />
+    public abstract void WriteStartedConsoleEvent(StartedConsoleEvent started);
 
-    /// <summary>
-    /// Writes a standard output console event to the output.
-    /// </summary>
-    /// <param name="stdOutput">The standard output console event to write.</param>
-    protected abstract void WriteStandardOutputConsoleEvent(StandardOutputConsoleEvent stdOutput);
+    /// <inheritdoc />
+    public abstract void WriteStandardOutputConsoleEvent(StandardOutputConsoleEvent stdOutput);
 
-    /// <summary>
-    /// Writes a standard error console event to the output.
-    /// </summary>
-    /// <param name="stdError">The standard error console event to write.</param>
-    protected abstract void WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent stdError);
+    /// <inheritdoc />
+    public abstract void WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent stdError);
 
-    /// <summary>
-    /// Writes an exited console event to the output.
-    /// </summary>
-    /// <param name="exited">The exited console event to write.</param>
-    protected abstract void WriteExitedConsoleEvent(ExitedConsoleEvent exited);
+    /// <inheritdoc />
+    public abstract void WriteExitedConsoleEvent(ExitedConsoleEvent exited);
 
-    /// <summary>
-    /// Writes an execution time console event to the output.
-    /// </summary>
-    /// <param name="elapsed">The execution time console event to write.</param>
-    protected abstract void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed);
+    /// <inheritdoc />
+    public abstract void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed);
 }

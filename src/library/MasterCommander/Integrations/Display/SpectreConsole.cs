@@ -9,23 +9,28 @@ namespace MasterCommander.Integrations.Display;
 /// <summary>
 /// Provides Spectre console output.
 /// </summary>
-public sealed class SpectreConsole
-    : ConsoleBase, IConsole
+public sealed class SpectreConsole : ConsoleBase
 {
     /// <inheritdoc />
-    public void WriteLine(string? message = null)
+    public override void WriteLine(string? message = null)
     {
         AnsiConsole.MarkupLine(message ?? string.Empty);
     }
 
     /// <inheritdoc />
-    public void WriteCommand(string command)
+    public override void WriteCommand(string command)
     {
         WriteLine($"🚀 [bold purple]Executing Command:[/] [underline]{command}[/]");
     }
 
     /// <inheritdoc />
-    public void WriteStartupMessage()
+    public override void WriteAction(string action, string message)
+    {
+        WriteLine($"🔧 [bold purple]{action}:[/] {message}");
+    }
+
+    /// <inheritdoc />
+    public override void WriteStartupMessage()
     {
         AnsiConsole
             .Write(new Rule("[bold purple]MasterCommander[/]")
@@ -36,19 +41,19 @@ public sealed class SpectreConsole
     }
 
     /// <inheritdoc />
-    public void WriteCompletionMessage()
+    public override void WriteCompletionMessage()
     {
         throw new NotImplementedException();
     }
 
     /// <inheritdoc />
-    protected override void WriteStartedConsoleEvent(StartedConsoleEvent started)
+    public override void WriteStartedConsoleEvent(StartedConsoleEvent started)
     {
         WriteLine($"🔄 [dim]Starting Process: ID {started.ProcessId}...[/]");
     }
 
     /// <inheritdoc />
-    protected override void WriteStandardOutputConsoleEvent(StandardOutputConsoleEvent stdOutput)
+    public override void WriteStandardOutputConsoleEvent(StandardOutputConsoleEvent stdOutput)
     {
         if (!string.IsNullOrWhiteSpace(stdOutput.Text))
         {
@@ -57,7 +62,7 @@ public sealed class SpectreConsole
     }
 
     /// <inheritdoc />
-    protected override void WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent stdError)
+    public override void WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent stdError)
     {
         if (!string.IsNullOrWhiteSpace(stdError.Text))
         {
@@ -66,7 +71,7 @@ public sealed class SpectreConsole
     }
 
     /// <inheritdoc />
-    protected override void WriteExitedConsoleEvent(ExitedConsoleEvent exited)
+    public override void WriteExitedConsoleEvent(ExitedConsoleEvent exited)
     {
         var statusMessage = exited.ExitCode == 0
             ? "[green]✅  Process successfully completed.[/]"
@@ -76,7 +81,7 @@ public sealed class SpectreConsole
     }
 
     /// <inheritdoc />
-    protected override void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed)
+    public override void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed)
     {
         WriteLine($"⏱️ [dim]Elapsed Time: {elapsed.ElapsedTime}[/]");
         AnsiConsole.WriteLine(); // Adds a spacer line for better separation

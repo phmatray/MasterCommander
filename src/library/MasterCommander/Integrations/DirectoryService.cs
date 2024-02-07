@@ -2,6 +2,7 @@
 // Atypical Consulting SRL licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for full license information.
 
+using System.Diagnostics;
 using System.IO.Compression;
 
 namespace MasterCommander.Integrations;
@@ -15,11 +16,16 @@ public class DirectoryService : IDirectoryService
     private const string HomeEnvironmentVariable = "HOME";
     private const string UserProfileEnvironmentVariable = "USERPROFILE";
 
+    private readonly IConsole _console;
+
     /// <summary>
     /// Initializes a new instance of the <see cref="DirectoryService"/> class.
     /// </summary>
-    public DirectoryService()
+    /// <param name="console">The console service.</param>
+    public DirectoryService(IConsole console)
     {
+        _console = console;
+
         HomeDirectory =
             Environment.GetEnvironmentVariable(HomeEnvironmentVariable)
             ?? Environment.GetEnvironmentVariable(UserProfileEnvironmentVariable)
@@ -115,12 +121,33 @@ public class DirectoryService : IDirectoryService
     /// <inheritdoc />
     public void CompressDirectory(string directoryPath, string zipFilePath)
     {
-        ZipFile.CreateFromDirectory(directoryPath, zipFilePath);
+        ExecuteDirectoryOperation(
+            () => ZipFile.CreateFromDirectory(directoryPath, zipFilePath),
+            $"Compressing directory {directoryPath} to {zipFilePath}...");
     }
 
     /// <inheritdoc />
     public void DecompressToDirectory(string zipFilePath, string directoryPath)
     {
-        ZipFile.ExtractToDirectory(zipFilePath, directoryPath);
+        ExecuteDirectoryOperation(
+            () => ZipFile.ExtractToDirectory(zipFilePath, directoryPath),
+            $"Decompressing directory {zipFilePath} to {directoryPath}...");
+    }
+
+    private void ExecuteDirectoryOperation(Action operation, string actionMessage)
+    {
+        try
+        {
+            _console.WriteAction("Directory operation", actionMessage);
+            var stopWatch = Stopwatch.StartNew();
+            operation.Invoke();
+            stopWatch.Stop();
+            _console.WriteElapsedConsoleEvent(new ExecutionTimeConsoleEvent(stopWatch.Elapsed));
+        }
+        catch (Exception e)
+        {
+            _console.WriteStandardErrorConsoleEvent(new StandardErrorConsoleEvent(e.Message));
+            throw; // Consider enriching the exception or handling specific cases.
+        }
     }
 }

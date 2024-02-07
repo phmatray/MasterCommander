@@ -7,23 +7,28 @@ namespace MasterCommander.Integrations.Display;
 /// <summary>
 /// Provides standard console output.
 /// </summary>
-public sealed class StandardConsole
-    : ConsoleBase, IConsole
+public sealed class StandardConsole : ConsoleBase
 {
     /// <inheritdoc />
-    public void WriteLine(string? message = null)
+    public override void WriteLine(string? message = null)
     {
         Console.WriteLine(message ?? string.Empty);
     }
 
     /// <inheritdoc />
-    public void WriteCommand(string command)
+    public override void WriteCommand(string command)
     {
         WriteLine($"Executing Command: {command}");
     }
 
     /// <inheritdoc />
-    public void WriteStartupMessage()
+    public override void WriteAction(string action, string message)
+    {
+        WriteLine($"{action}: {message}");
+    }
+
+    /// <inheritdoc />
+    public override void WriteStartupMessage()
     {
         WriteLine("\n-----------------");
         WriteLine(" MasterCommander");
@@ -31,19 +36,19 @@ public sealed class StandardConsole
     }
 
     /// <inheritdoc />
-    public void WriteCompletionMessage()
+    public override void WriteCompletionMessage()
     {
         throw new NotImplementedException();
     }
 
     /// <inheritdoc />
-    protected override void WriteStartedConsoleEvent(StartedConsoleEvent started)
+    public override void WriteStartedConsoleEvent(StartedConsoleEvent started)
     {
         WriteLine($"Starting Process: ID {started.ProcessId}...");
     }
 
     /// <inheritdoc />
-    protected override void WriteStandardOutputConsoleEvent(StandardOutputConsoleEvent stdOutput)
+    public override void WriteStandardOutputConsoleEvent(StandardOutputConsoleEvent stdOutput)
     {
         if (!string.IsNullOrWhiteSpace(stdOutput.Text))
         {
@@ -52,7 +57,7 @@ public sealed class StandardConsole
     }
 
     /// <inheritdoc />
-    protected override void WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent stdError)
+    public override void WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent stdError)
     {
         if (!string.IsNullOrWhiteSpace(stdError.Text))
         {
@@ -61,7 +66,7 @@ public sealed class StandardConsole
     }
 
     /// <inheritdoc />
-    protected override void WriteExitedConsoleEvent(ExitedConsoleEvent exited)
+    public override void WriteExitedConsoleEvent(ExitedConsoleEvent exited)
     {
         var statusMessage = exited.ExitCode == 0
             ? "Process successfully completed."
@@ -71,7 +76,7 @@ public sealed class StandardConsole
     }
 
     /// <inheritdoc />
-    protected override void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed)
+    public override void WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent elapsed)
     {
         WriteLine($"Elapsed time: {elapsed.ElapsedTime}");
         WriteLine();
