@@ -14,8 +14,4 @@
     <PackageReference Include="Spectre.Console" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Commanders\Dotnet\CmdNew\" />
-  </ItemGroup>
-
 </Project>

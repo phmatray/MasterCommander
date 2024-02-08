@@ -5,7 +5,7 @@
 using System.Runtime.InteropServices;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MasterCommander.Integrations;
+namespace MasterCommander;
 
 /// <summary>
 /// Represents the main extensions for the application.

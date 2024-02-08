@@ -16,5 +16,6 @@ global using MasterCommander.Core;
 global using MasterCommander.Core.ConsoleEvents;
 global using MasterCommander.Core.Display;
 global using MasterCommander.Core.Services;
+global using MasterCommander.Integrations;
 global using MasterCommander.Integrations.Display;
 global using MasterCommander.Integrations.Processes;
