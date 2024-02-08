@@ -2,6 +2,7 @@
 
   <!-- General -->
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <RootNamespace>MasterCommander</RootNamespace>
   </PropertyGroup>
 
@@ -10,12 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CliWrap" />
-    <PackageReference Include="Spectre.Console" />
+    <ProjectReference Include="..\..\library\MasterCommander\MasterCommander.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commanders\Dotnet\CmdNew\" />
+    <PackageReference Include="CliWrap" />
+    <PackageReference Include="Spectre.Console" />
   </ItemGroup>
 
 </Project>
