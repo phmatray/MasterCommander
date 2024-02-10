@@ -4,6 +4,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <RootNamespace>MasterCommander.ConsoleApp</RootNamespace>
+    <IsPackable>false</IsPackable>
     <NoWarn>IDE0005</NoWarn>
   </PropertyGroup>
 

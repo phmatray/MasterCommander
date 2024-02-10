@@ -7,13 +7,7 @@ namespace MasterCommander.Integrations;
 /// <summary>
 /// Represents the project initialization service.
 /// </summary>
-/// <param name="git">The git service.</param>
-/// <param name="dotnet">The dotnet service.</param>
-/// <param name="console">The console service.</param>
-/// <param name="directory">The directory service.</param>
-public class ProjectInitializationService(
-    IGitService git, IDotnetService dotnet, IConsole console, IDirectoryService directory)
-    : IProjectInitializationService
+public class ProjectInitializationService : IProjectInitializationService
 {
     private const string SdkVersion = "8.0.101";
     private const string SolutionName = "AppDemo";
@@ -21,25 +15,49 @@ public class ProjectInitializationService(
     private const string ConsoleProjectDirectory = $"src/{ConsoleProjectName}";
     private const string ConsoleCsproj = $"{ConsoleProjectDirectory}/{ConsoleProjectName}.csproj";
 
+    private readonly IGitService _git;
+    private readonly IDotnetService _dotnet;
+    private readonly IConsole _console;
+    private readonly IDirectoryService _directory;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ProjectInitializationService"/> class.
+    /// </summary>
+    /// <param name="git">The git service.</param>
+    /// <param name="dotnet">The dotnet service.</param>
+    /// <param name="console">The console service.</param>
+    /// <param name="directory">The directory service.</param>
+    public ProjectInitializationService(
+        IGitService git,
+        IDotnetService dotnet,
+        IConsole console,
+        IDirectoryService directory)
+    {
+        _git = git;
+        _dotnet = dotnet;
+        _console = console;
+        _directory = directory;
+    }
+
     /// <inheritdoc />
     public async Task InitializeConsoleProjectAsync()
     {
         SetWorkingDirectory();
 
-        console.WriteStartupMessage();
+        _console.WriteStartupMessage();
 
-        await git.InitAsync();
-        await git.StatusAsync();
-        await dotnet.NewAsync(new DotnetNewGitignoreOptions());
-        await dotnet.NewAsync(new DotnetNewEditorConfigOptions());
-        await dotnet.NewAsync(new DotnetNewNuGetConfigOptions());
-        await dotnet.NewAsync(new DotnetNewGlobalJsonOptions { SdkVersion = SdkVersion });
-        await dotnet.NewAsync(new DotnetNewSolutionOptions { OutputName = SolutionName });
-        await dotnet.NewAsync(new DotnetNewConsoleOptions { OutputName = ConsoleProjectName, OutputDirectory = ConsoleProjectDirectory });
-        await dotnet.SlnAddAsync(ConsoleCsproj);
-        await dotnet.BuildAsync();
-        await dotnet.BuildAsync(new DotnetBuildOptions { Configuration = "Release" });
-        await dotnet.RunAsync(new DotnetRunOptions { Project = ConsoleCsproj, Configuration = "Release" });
+        await _git.InitAsync();
+        await _git.StatusAsync();
+        await _dotnet.NewAsync(new DotnetNewGitignoreOptions());
+        await _dotnet.NewAsync(new DotnetNewEditorConfigOptions());
+        await _dotnet.NewAsync(new DotnetNewNuGetConfigOptions());
+        await _dotnet.NewAsync(new DotnetNewGlobalJsonOptions { SdkVersion = SdkVersion });
+        await _dotnet.NewAsync(new DotnetNewSolutionOptions { OutputName = SolutionName });
+        await _dotnet.NewAsync(new DotnetNewConsoleOptions { OutputName = ConsoleProjectName, OutputDirectory = ConsoleProjectDirectory });
+        await _dotnet.SlnAddAsync(ConsoleCsproj);
+        await _dotnet.BuildAsync();
+        await _dotnet.BuildAsync(new DotnetBuildOptions { Configuration = "Release" });
+        await _dotnet.RunAsync(new DotnetRunOptions { Project = ConsoleCsproj, Configuration = "Release" });
 
         CompressSolutionDirectory();
     }
@@ -47,17 +65,17 @@ public class ProjectInitializationService(
     private void SetWorkingDirectory()
     {
         // Set the working directory to the solution directory
-        directory.SetWorkingDirectory(SolutionName, true);
+        _directory.SetWorkingDirectory(SolutionName, true);
     }
 
     private void CompressSolutionDirectory()
     {
-        if (directory.WorkingDirectory == null)
+        if (_directory.WorkingDirectory == null)
         {
             return;
         }
 
-        var zipPath = Path.Combine(directory.MasterCommanderDirectory, $"{SolutionName}.zip");
-        directory.CompressDirectory(directory.WorkingDirectory, zipPath);
+        var zipPath = Path.Combine(_directory.MasterCommanderDirectory, $"{SolutionName}.zip");
+        _directory.CompressDirectory(_directory.WorkingDirectory, zipPath);
     }
 }

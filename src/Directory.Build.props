@@ -11,6 +11,10 @@
   <!-- Documentation -->
   <PropertyGroup>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DefaultDocumentationFolder>../../../docs/master-commander</DefaultDocumentationFolder>
+    <DefaultDocumentationLinksOutputFile>../../../docs/links</DefaultDocumentationLinksOutputFile>
+    <DefaultDocumentationAssemblyPageName>MasterCommander</DefaultDocumentationAssemblyPageName>
+    <DefaultDocumentationFileNameFactory>Name</DefaultDocumentationFileNameFactory>
   </PropertyGroup>
   
   <!-- Code Analysis -->
@@ -49,6 +53,13 @@
     <PackageIcon>icon.png</PackageIcon>
     <PackageTags>git, docker, cli, npm, devops utility, library, tool, dotnet, project-management, developers, workflow-automation</PackageTags>
   </PropertyGroup>
+
+  <!-- File inclusion -->
+  <ItemGroup>
+    <None Include="../../../Logo.png" Pack="true" PackagePath="" />
+    <None Include="../../../LICENSE" Pack="true" PackagePath="" />
+    <None Include="../../../README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
 
   <!-- MinVer Configuration -->
   <PropertyGroup>
