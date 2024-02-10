@@ -31,6 +31,24 @@
     <AnalysisModeStyle>All</AnalysisModeStyle>
     <AnalysisModeUsage>All</AnalysisModeUsage>
   </PropertyGroup>
+  
+  <!-- Packaging -->
+  <PropertyGroup>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <!--<PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>-->
+
+    <Authors>Philippe Matray</Authors>
+    <Description>
+      MasterCommander is a versatile command-line utility designed to streamline the workflow for developers working 
+      with multiple technology stacks. By integrating common operations for Git, .NET, Docker, and npm into a single 
+      application, MasterCommander enhances productivity and simplifies project setup and management tasks.
+    </Description>
+    <PackageProjectUrl>https://github.com/phmatray/MasterCommander</PackageProjectUrl>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>git, docker, cli, npm, devops utility, library, tool, dotnet, project-management, developers, workflow-automation</PackageTags>
+  </PropertyGroup>
 
   <!-- MinVer Configuration -->
   <PropertyGroup>
