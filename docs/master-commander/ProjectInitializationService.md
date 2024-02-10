@@ -14,9 +14,12 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 Implements [IProjectInitializationService](IProjectInitializationService.md 'MasterCommander.Core.Services.IProjectInitializationService')
 
+### Remarks
+Initializes a new instance of the [ProjectInitializationService](ProjectInitializationService.md 'MasterCommander.Integrations.ProjectInitializationService') class.
+
 | Constructors | |
 | :--- | :--- |
-| [ProjectInitializationService(IGitService, IDotnetService, IConsole, IDirectoryService)](ProjectInitializationService.ProjectInitializationService(IGitService,IDotnetService,IConsole,IDirectoryService).md 'MasterCommander.Integrations.ProjectInitializationService.ProjectInitializationService(MasterCommander.Commanders.Git.IGitService, MasterCommander.Commanders.Dotnet.IDotnetService, MasterCommander.Core.Display.IConsole, MasterCommander.Core.Services.IDirectoryService)') | Initializes a new instance of the [ProjectInitializationService](ProjectInitializationService.md 'MasterCommander.Integrations.ProjectInitializationService') class. |
+| [ProjectInitializationService(IGitService, IDotnetService, IConsole, IDirectoryService)](ProjectInitializationService.ProjectInitializationService(IGitService,IDotnetService,IConsole,IDirectoryService).md 'MasterCommander.Integrations.ProjectInitializationService.ProjectInitializationService(MasterCommander.Commanders.Git.IGitService, MasterCommander.Commanders.Dotnet.IDotnetService, MasterCommander.Core.Display.IConsole, MasterCommander.Core.Services.IDirectoryService)') | Represents the project initialization service. |
 
 | Methods | |
 | :--- | :--- |

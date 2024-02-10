@@ -3,7 +3,7 @@
 
 ## ProjectInitializationService(IGitService, IDotnetService, IConsole, IDirectoryService) Constructor
 
-Initializes a new instance of the [ProjectInitializationService](ProjectInitializationService.md 'MasterCommander.Integrations.ProjectInitializationService') class.
+Represents the project initialization service.
 
 ```csharp
 public ProjectInitializationService(MasterCommander.Commanders.Git.IGitService git, MasterCommander.Commanders.Dotnet.IDotnetService dotnet, MasterCommander.Core.Display.IConsole console, MasterCommander.Core.Services.IDirectoryService directory);
@@ -33,3 +33,6 @@ The console service.
 `directory` [IDirectoryService](IDirectoryService.md 'MasterCommander.Core.Services.IDirectoryService')
 
 The directory service.
+
+### Remarks
+Initializes a new instance of the [ProjectInitializationService](ProjectInitializationService.md 'MasterCommander.Integrations.ProjectInitializationService') class.

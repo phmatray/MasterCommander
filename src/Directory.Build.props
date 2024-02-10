@@ -50,15 +50,15 @@
     <PackageProjectUrl>https://github.com/phmatray/MasterCommander</PackageProjectUrl>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageIcon>icon.png</PackageIcon>
+    <PackageIcon>logo.png</PackageIcon>
     <PackageTags>git, docker, cli, npm, devops utility, library, tool, dotnet, project-management, developers, workflow-automation</PackageTags>
   </PropertyGroup>
 
   <!-- File inclusion -->
   <ItemGroup>
-    <None Include="../../../logo.png" Pack="true" PackagePath="" />
-    <None Include="../../../LICENSE" Pack="true" PackagePath="" />
-    <None Include="../../../README.md" Pack="true" PackagePath="" />
+    <None Include="../../../logo.png" Pack="true" PackagePath="\" Link="Properties/logo.png" />
+    <None Include="../../../LICENSE" Pack="true" PackagePath="\" Link="Properties/LICENSE" />
+    <None Include="../../../README.md" Pack="true" PackagePath="\" Link="Properties/README.md" />
   </ItemGroup>
 
   <!-- MinVer Configuration -->
