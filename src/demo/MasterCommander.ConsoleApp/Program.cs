@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 // create a new .NET solution and console application
 await MainExtensions
-    .RegisterAppServices()
+    .CreateMasterCommanderServices()
     .BuildServiceProvider()
     .GetRequiredService<IProjectInitializationService>()
     .InitializeConsoleProjectAsync();

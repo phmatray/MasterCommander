@@ -13,13 +13,12 @@ namespace MasterCommander;
 public static class MainExtensions
 {
     /// <summary>
-    /// Provides extension methods for setting up application services.
+    /// Adds the MasterCommander services to the specified <see cref="IServiceCollection"/>.
     /// </summary>
-    /// <returns>The project initialization service.</returns>
-    public static ServiceCollection RegisterAppServices()
+    /// <param name="services">The <see cref="IServiceCollection"/> to add the services to.</param>
+    /// <returns>The <see cref="IServiceCollection"/> so that additional calls can be chained.</returns>
+    public static IServiceCollection AddMasterCommanderServices(this IServiceCollection services)
     {
-        var services = new ServiceCollection();
-
         ConfigureDirectoryService(services);
         ConfigureConsole(services);
         ConfigureFactories(services);
@@ -29,6 +28,16 @@ public static class MainExtensions
         services.AddScoped<IProjectInitializationService, ProjectInitializationService>();
 
         return services;
+    }
+
+    /// <summary>
+    /// Provides extension methods for setting up application services.
+    /// </summary>
+    /// <returns>The project initialization service.</returns>
+    public static IServiceCollection CreateMasterCommanderServices()
+    {
+        var services = new ServiceCollection();
+        return services.AddMasterCommanderServices();
     }
 
     private static void ConfigureDirectoryService(IServiceCollection services)

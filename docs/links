@@ -1,5 +1,6 @@
 
-M:MasterCommander.MainExtensions.RegisterAppServices|MainExtensions.RegisterAppServices().md|RegisterAppServices()
+M:MasterCommander.MainExtensions.AddMasterCommanderServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)|MainExtensions.AddMasterCommanderServices(thisIServiceCollection).md|AddMasterCommanderServices(this IServiceCollection)
+M:MasterCommander.MainExtensions.CreateMasterCommanderServices|MainExtensions.CreateMasterCommanderServices().md|CreateMasterCommanderServices()
 N:MasterCommander|MasterCommander.md#MasterCommander|MasterCommander
 T:MasterCommander.MainExtensions|MainExtensions.md|MainExtensions
 P:MasterCommander.Integrations.DirectoryService.HomeDirectory|DirectoryService.HomeDirectory.md|HomeDirectory
