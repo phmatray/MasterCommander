@@ -1,7 +1,5 @@
 # MasterCommander
 
----
-
 Write code, not commands. MasterCommander provides a simple, consistent interface for common development tasks.
 
 | ![Logo MasterCommander](https://raw.githubusercontent.com/phmatray/MasterCommander/main/logo.png)                  | MasterCommander is a versatile command-line utility designed to streamline the workflow for developers working with multiple technology stacks. By integrating common operations for Git, .NET, Docker, and npm into a single application, MasterCommander enhances productivity and simplifies project setup and management tasks. |
@@ -17,6 +15,7 @@ Write code, not commands. MasterCommander provides a simple, consistent interfac
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/phmatray/MasterCommander)](https://github.com/phmatray/MasterCommander/pulls)
 [![GitHub contributors](https://img.shields.io/github/contributors/phmatray/MasterCommander)](https://github.com/phmatray/MasterCommander/graphs/contributors)
 [![GitHub last commit](https://img.shields.io/github/last-commit/phmatray/MasterCommander)](https://github.com/phmatray/MasterCommander/commits/master)
+
 [![codecov](https://codecov.io/gh/phmatray/MasterCommander/branch/main/graph/badge.svg?token=041C4QKW6O)](https://app.codecov.io/gh/phmatray/MasterCommander/tree/main)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/84e2475f22a04bc1bed551f081029e82)](https://app.codacy.com/gh/phmatray/MasterCommander/dashboard)
 
@@ -34,8 +33,8 @@ Write code, not commands. MasterCommander provides a simple, consistent interfac
     * [Roadmap (next features)](#roadmap-next-features)
   * [📥 Installation](#-installation)
     * [📋 Prerequisites](#-prerequisites)
-    * [🚀 From Source](#-from-source)
       * [We use the latest C# features](#we-use-the-latest-c-features)
+    * [🚀 From Source](#-from-source)
     * [📦 NuGet Packages](#-nuget-packages)
   * [📊 Code Quality](#-code-quality)
     * [🧪 Tests Specifications](#-tests-specifications)
@@ -46,6 +45,8 @@ Write code, not commands. MasterCommander provides a simple, consistent interfac
   * [✉️ Contact](#-contact)
   * [📜 License](#-license)
 <!-- TOC -->
+
+---
 
 ## 🏁 Getting started
 
