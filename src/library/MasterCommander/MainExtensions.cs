@@ -16,7 +16,7 @@ public static class MainExtensions
     /// Provides extension methods for setting up application services.
     /// </summary>
     /// <returns>The project initialization service.</returns>
-    public static IProjectInitializationService RegisterAppServices()
+    public static ServiceCollection RegisterAppServices()
     {
         var services = new ServiceCollection();
 
@@ -28,8 +28,7 @@ public static class MainExtensions
         // Register higher-level services
         services.AddScoped<IProjectInitializationService, ProjectInitializationService>();
 
-        var serviceProvider = services.BuildServiceProvider();
-        return serviceProvider.GetRequiredService<IProjectInitializationService>();
+        return services;
     }
 
     private static void ConfigureDirectoryService(IServiceCollection services)

@@ -6,9 +6,9 @@
 Provides extension methods for setting up application services.
 
 ```csharp
-public static MasterCommander.Core.Services.IProjectInitializationService RegisterAppServices();
+public static Microsoft.Extensions.DependencyInjection.ServiceCollection RegisterAppServices();
 ```
 
 #### Returns
-[IProjectInitializationService](IProjectInitializationService.md 'MasterCommander.Core.Services.IProjectInitializationService')  
+[Microsoft.Extensions.DependencyInjection.ServiceCollection](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceCollection 'Microsoft.Extensions.DependencyInjection.ServiceCollection')  
 The project initialization service.

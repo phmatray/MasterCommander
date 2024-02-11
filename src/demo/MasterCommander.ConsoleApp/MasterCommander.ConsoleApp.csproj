@@ -8,8 +8,14 @@
     <NoWarn>IDE0005</NoWarn>
   </PropertyGroup>
 
+  <!-- Project references -->
   <ItemGroup>
     <ProjectReference Include="..\..\library\MasterCommander\MasterCommander.csproj" />
+  </ItemGroup>
+
+  <!-- Dependencies -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
   </ItemGroup>
 
 </Project>

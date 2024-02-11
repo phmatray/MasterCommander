@@ -34,15 +34,15 @@ Write code, not commands. MasterCommander provides a simple, consistent interfac
     * [Roadmap (next features)](#roadmap-next-features)
   * [📥 Installation](#-installation)
     * [📋 Prerequisites](#-prerequisites)
-    * [From NuGet](#from-nuget)
-    * [From Source](#from-source)
-    * [🚀 We use the latest C# features](#-we-use-the-latest-c-features)
+    * [🚀 From Source](#-from-source)
+      * [We use the latest C# features](#we-use-the-latest-c-features)
     * [📦 NuGet Packages](#-nuget-packages)
-    * [🧪 Tests Specifications](#-tests-specifications)
   * [📊 Code Quality](#-code-quality)
-  * [❓ Issues and Feature Requests](#-issues-and-feature-requests)
+    * [🧪 Tests Specifications](#-tests-specifications)
   * [🤝 Contributing](#-contributing)
-  * [🌟 Contributors](#-contributors)
+    * [How to contribute?](#how-to-contribute)
+    * [Contributors](#contributors)
+  * [❓ Issues and Feature Requests](#-issues-and-feature-requests)
   * [✉️ Contact](#-contact)
   * [📜 License](#-license)
 <!-- TOC -->
@@ -123,15 +123,15 @@ To use MasterCommander, ensure you have the following installed on your system:
 - Docker (optional)
 - Node.js and npm (optional)
 
-### From NuGet
+#### We use the latest C# features
 
-To install MasterCommander, you can use the NuGet package manager. Run the following command in your terminal:
+This library targets .NET 8.0 and uses the latest C# features. It is written in C# 12.0 and uses the new `init`
+properties, `record` types, `switch` expressions, `using` declarations and more.
 
-```shell
-dotnet add package MasterCommander --version 1.0.0-alpha.0.40
-```
+I invite you to read the [C# 12.0 documentation](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12) to
+learn more about these features.
 
-### From Source
+### 🚀 From Source
 
 You can also build MasterCommander from source. Follow these steps to get started:
 
@@ -140,16 +140,13 @@ You can also build MasterCommander from source. Follow these steps to get starte
 3. Run the application with `dotnet run` from within the source directory.
 4. Or... open the project in Visual Studio (or JetBrains Rider) and run the application from the IDE.
 
-
-### 🚀 We use the latest C# features
-
-This library targets .NET 8.0 and uses the latest C# features. It is written in C# 12.0 and uses the new `init`
-properties, `record` types, `switch` expressions, `using` declarations and more.
-
-I invite you to read the [C# 12.0 documentation](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12) to
-learn more about these features.
-
 ### 📦 NuGet Packages
+
+To install MasterCommander, you can use the NuGet package manager. Run the following command in your terminal:
+
+```shell
+dotnet add package MasterCommander --version 1.0.0-alpha.0.40
+```
 
 | Package Name                         | NuGet Version Badge                                                                                            | NuGet Downloads Badge                                                                                           | Package Explorer                                       |
 |--------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
