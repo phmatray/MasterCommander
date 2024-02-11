@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Integrations.Processes](MasterCommander.Integrations.Processes.md 'MasterCommander.Integrations.Processes').[CommandBuilder](CommandBuilder.md 'MasterCommander.Integrations.Processes.CommandBuilder')
+### [MasterCommander.Integrations.Processes](MasterCommander.md#MasterCommander.Integrations.Processes 'MasterCommander.Integrations.Processes').[CommandBuilder](CommandBuilder.md 'MasterCommander.Integrations.Processes.CommandBuilder')
 
 ## CommandBuilder.ExecutablePath Property
 

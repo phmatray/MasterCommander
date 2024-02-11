@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core](MasterCommander.Core.md 'MasterCommander.Core').[CmdOptionAttribute](CmdOptionAttribute.md 'MasterCommander.Core.CmdOptionAttribute')
+### [MasterCommander.Core](MasterCommander.md#MasterCommander.Core 'MasterCommander.Core').[CmdOptionAttribute](CmdOptionAttribute.md 'MasterCommander.Core.CmdOptionAttribute')
 
 ## CmdOptionAttribute.LongOption Property
 

@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core](MasterCommander.Core.md 'MasterCommander.Core').[CmdOptionValuesAttribute](CmdOptionValuesAttribute.md 'MasterCommander.Core.CmdOptionValuesAttribute')
+### [MasterCommander.Core](MasterCommander.md#MasterCommander.Core 'MasterCommander.Core').[CmdOptionValuesAttribute](CmdOptionValuesAttribute.md 'MasterCommander.Core.CmdOptionValuesAttribute')
 
 ## CmdOptionValuesAttribute.ValidOptions Property
 

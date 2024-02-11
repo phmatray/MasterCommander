@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.ConsoleEvents](MasterCommander.Core.ConsoleEvents.md 'MasterCommander.Core.ConsoleEvents').[ExecutionTimeConsoleEvent](ExecutionTimeConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.ExecutionTimeConsoleEvent')
+### [MasterCommander.Core.ConsoleEvents](MasterCommander.md#MasterCommander.Core.ConsoleEvents 'MasterCommander.Core.ConsoleEvents').[ExecutionTimeConsoleEvent](ExecutionTimeConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.ExecutionTimeConsoleEvent')
 
 ## ExecutionTimeConsoleEvent.ElapsedTime Property
 

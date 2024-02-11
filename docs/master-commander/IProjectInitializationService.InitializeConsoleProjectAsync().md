@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Services](MasterCommander.Core.Services.md 'MasterCommander.Core.Services').[IProjectInitializationService](IProjectInitializationService.md 'MasterCommander.Core.Services.IProjectInitializationService')
+### [MasterCommander.Core.Services](MasterCommander.md#MasterCommander.Core.Services 'MasterCommander.Core.Services').[IProjectInitializationService](IProjectInitializationService.md 'MasterCommander.Core.Services.IProjectInitializationService')
 
 ## IProjectInitializationService.InitializeConsoleProjectAsync() Method
 

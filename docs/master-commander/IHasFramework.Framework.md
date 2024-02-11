@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdNew.Abstractions](MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.md 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions').[IHasFramework](IHasFramework.md 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasFramework')
+### [MasterCommander.Commanders.Dotnet.CmdNew.Abstractions](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Abstractions 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions').[IHasFramework](IHasFramework.md 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasFramework')
 
 ## IHasFramework.Framework Property
 

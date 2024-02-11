@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Integrations.Display](MasterCommander.Integrations.Display.md 'MasterCommander.Integrations.Display').[SpectreConsole](SpectreConsole.md 'MasterCommander.Integrations.Display.SpectreConsole')
+### [MasterCommander.Integrations.Display](MasterCommander.md#MasterCommander.Integrations.Display 'MasterCommander.Integrations.Display').[SpectreConsole](SpectreConsole.md 'MasterCommander.Integrations.Display.SpectreConsole')
 
 ## SpectreConsole.WriteStartupMessage() Method
 

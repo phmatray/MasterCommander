@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Git](MasterCommander.Commanders.Git.md 'MasterCommander.Commanders.Git').[IGitService](IGitService.md 'MasterCommander.Commanders.Git.IGitService')
+### [MasterCommander.Commanders.Git](MasterCommander.md#MasterCommander.Commanders.Git 'MasterCommander.Commanders.Git').[IGitService](IGitService.md 'MasterCommander.Commanders.Git.IGitService')
 
 ## IGitService.CommitAsync(string, CancellationToken) Method
 

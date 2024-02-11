@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core](MasterCommander.Core.md 'MasterCommander.Core').[CmdOptionOrderAttribute](CmdOptionOrderAttribute.md 'MasterCommander.Core.CmdOptionOrderAttribute')
+### [MasterCommander.Core](MasterCommander.md#MasterCommander.Core 'MasterCommander.Core').[CmdOptionOrderAttribute](CmdOptionOrderAttribute.md 'MasterCommander.Core.CmdOptionOrderAttribute')
 
 ## CmdOptionOrderAttribute(int) Constructor
 

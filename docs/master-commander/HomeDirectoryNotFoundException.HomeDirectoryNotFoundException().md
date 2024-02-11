@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Exceptions](MasterCommander.Core.Exceptions.md 'MasterCommander.Core.Exceptions').[HomeDirectoryNotFoundException](HomeDirectoryNotFoundException.md 'MasterCommander.Core.Exceptions.HomeDirectoryNotFoundException')
+### [MasterCommander.Core.Exceptions](MasterCommander.md#MasterCommander.Core.Exceptions 'MasterCommander.Core.Exceptions').[HomeDirectoryNotFoundException](HomeDirectoryNotFoundException.md 'MasterCommander.Core.Exceptions.HomeDirectoryNotFoundException')
 
 ## HomeDirectoryNotFoundException() Constructor
 

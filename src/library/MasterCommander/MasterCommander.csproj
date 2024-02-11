@@ -22,7 +22,4 @@
     <PackageReference Include="CliWrap" />
     <PackageReference Include="Spectre.Console" />
   </ItemGroup>
-
-  <ItemGroup>
-  </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Services](MasterCommander.Core.Services.md 'MasterCommander.Core.Services')
+### [MasterCommander.Core.Services](MasterCommander.md#MasterCommander.Core.Services 'MasterCommander.Core.Services')
 
 ## IProjectInitializationService Interface
 

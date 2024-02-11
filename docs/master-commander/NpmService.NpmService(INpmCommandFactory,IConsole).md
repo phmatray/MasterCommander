@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Npm](MasterCommander.Commanders.Npm.md 'MasterCommander.Commanders.Npm').[NpmService](NpmService.md 'MasterCommander.Commanders.Npm.NpmService')
+### [MasterCommander.Commanders.Npm](MasterCommander.md#MasterCommander.Commanders.Npm 'MasterCommander.Commanders.Npm').[NpmService](NpmService.md 'MasterCommander.Commanders.Npm.NpmService')
 
 ## NpmService(INpmCommandFactory, IConsole) Constructor
 

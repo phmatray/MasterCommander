@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander](MasterCommander.md 'MasterCommander').[MainExtensions](MainExtensions.md 'MasterCommander.MainExtensions')
+### [MasterCommander](MasterCommander.md#MasterCommander 'MasterCommander').[MainExtensions](MainExtensions.md 'MasterCommander.MainExtensions')
 
 ## MainExtensions.RegisterAppServices() Method
 

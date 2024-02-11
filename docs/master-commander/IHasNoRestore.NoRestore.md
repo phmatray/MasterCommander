@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdNew.Abstractions](MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.md 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions').[IHasNoRestore](IHasNoRestore.md 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasNoRestore')
+### [MasterCommander.Commanders.Dotnet.CmdNew.Abstractions](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Abstractions 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions').[IHasNoRestore](IHasNoRestore.md 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasNoRestore')
 
 ## IHasNoRestore.NoRestore Property
 

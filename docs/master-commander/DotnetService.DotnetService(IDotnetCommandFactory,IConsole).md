@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet](MasterCommander.Commanders.Dotnet.md 'MasterCommander.Commanders.Dotnet').[DotnetService](DotnetService.md 'MasterCommander.Commanders.Dotnet.DotnetService')
+### [MasterCommander.Commanders.Dotnet](MasterCommander.md#MasterCommander.Commanders.Dotnet 'MasterCommander.Commanders.Dotnet').[DotnetService](DotnetService.md 'MasterCommander.Commanders.Dotnet.DotnetService')
 
 ## DotnetService(IDotnetCommandFactory, IConsole) Constructor
 

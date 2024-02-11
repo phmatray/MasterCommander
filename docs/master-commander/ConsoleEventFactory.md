@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Display](MasterCommander.Core.Display.md 'MasterCommander.Core.Display')
+### [MasterCommander.Core.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander.Core.Display')
 
 ## ConsoleEventFactory Class
 

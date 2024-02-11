@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.ConsoleEvents](MasterCommander.Core.ConsoleEvents.md 'MasterCommander.Core.ConsoleEvents').[StandardErrorConsoleEvent](StandardErrorConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.StandardErrorConsoleEvent')
+### [MasterCommander.Core.ConsoleEvents](MasterCommander.md#MasterCommander.Core.ConsoleEvents 'MasterCommander.Core.ConsoleEvents').[StandardErrorConsoleEvent](StandardErrorConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.StandardErrorConsoleEvent')
 
 ## StandardErrorConsoleEvent.ToString() Method
 

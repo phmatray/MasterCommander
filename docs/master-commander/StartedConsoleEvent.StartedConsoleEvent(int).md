@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.ConsoleEvents](MasterCommander.Core.ConsoleEvents.md 'MasterCommander.Core.ConsoleEvents').[StartedConsoleEvent](StartedConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.StartedConsoleEvent')
+### [MasterCommander.Core.ConsoleEvents](MasterCommander.md#MasterCommander.Core.ConsoleEvents 'MasterCommander.Core.ConsoleEvents').[StartedConsoleEvent](StartedConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.StartedConsoleEvent')
 
 ## StartedConsoleEvent(int) Constructor
 

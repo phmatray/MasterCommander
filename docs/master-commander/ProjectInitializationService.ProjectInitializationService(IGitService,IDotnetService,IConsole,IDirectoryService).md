@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Integrations](MasterCommander.Integrations.md 'MasterCommander.Integrations').[ProjectInitializationService](ProjectInitializationService.md 'MasterCommander.Integrations.ProjectInitializationService')
+### [MasterCommander.Integrations](MasterCommander.md#MasterCommander.Integrations 'MasterCommander.Integrations').[ProjectInitializationService](ProjectInitializationService.md 'MasterCommander.Integrations.ProjectInitializationService')
 
 ## ProjectInitializationService(IGitService, IDotnetService, IConsole, IDirectoryService) Constructor
 

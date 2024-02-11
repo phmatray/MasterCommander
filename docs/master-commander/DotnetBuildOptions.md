@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdBuild](MasterCommander.Commanders.Dotnet.CmdBuild.md 'MasterCommander.Commanders.Dotnet.CmdBuild')
+### [MasterCommander.Commanders.Dotnet.CmdBuild](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdBuild 'MasterCommander.Commanders.Dotnet.CmdBuild')
 
 ## DotnetBuildOptions Class
 

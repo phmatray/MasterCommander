@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Display](MasterCommander.Core.Display.md 'MasterCommander.Core.Display').[IConsole](IConsole.md 'MasterCommander.Core.Display.IConsole')
+### [MasterCommander.Core.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander.Core.Display').[IConsole](IConsole.md 'MasterCommander.Core.Display.IConsole')
 
 ## IConsole.WriteStartedConsoleEvent(StartedConsoleEvent) Method
 

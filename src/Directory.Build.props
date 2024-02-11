@@ -15,6 +15,11 @@
     <DefaultDocumentationLinksOutputFile>../../../docs/links</DefaultDocumentationLinksOutputFile>
     <DefaultDocumentationAssemblyPageName>MasterCommander</DefaultDocumentationAssemblyPageName>
     <DefaultDocumentationFileNameFactory>Name</DefaultDocumentationFileNameFactory>
+    <DefaultDocumentationGeneratedPages>Assembly,Types,Members</DefaultDocumentationGeneratedPages>
+    <DefaultDocumentationNamespaceDocItem>
+      <DefaultDocumentationSections>Title|summary|TableOfContents</DefaultDocumentationSections>
+      <Markdown.TableOfContentsModes>IncludeKind,IncludeSummary</Markdown.TableOfContentsModes>
+    </DefaultDocumentationNamespaceDocItem>
   </PropertyGroup>
   
   <!-- Code Analysis -->

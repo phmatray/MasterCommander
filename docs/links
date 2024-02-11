@@ -1,6 +1,6 @@
 
 M:MasterCommander.MainExtensions.RegisterAppServices|MainExtensions.RegisterAppServices().md|RegisterAppServices()
-N:MasterCommander|MasterCommander.md|MasterCommander
+N:MasterCommander|MasterCommander.md#MasterCommander|MasterCommander
 T:MasterCommander.MainExtensions|MainExtensions.md|MainExtensions
 P:MasterCommander.Integrations.DirectoryService.HomeDirectory|DirectoryService.HomeDirectory.md|HomeDirectory
 P:MasterCommander.Integrations.DirectoryService.MasterCommanderDirectory|DirectoryService.MasterCommanderDirectory.md|MasterCommanderDirectory
@@ -14,7 +14,7 @@ M:MasterCommander.Integrations.DirectoryService.CreateTemporaryDirectory|Directo
 M:MasterCommander.Integrations.DirectoryService.WatchDirectory(System.String,System.Action{System.IO.FileSystemEventArgs})|DirectoryService.WatchDirectory(string,Action_FileSystemEventArgs_).md|WatchDirectory(string, Action<FileSystemEventArgs>)
 M:MasterCommander.Integrations.DirectoryService.CompressDirectory(System.String,System.String)|DirectoryService.CompressDirectory(string,string).md|CompressDirectory(string, string)
 M:MasterCommander.Integrations.DirectoryService.DecompressToDirectory(System.String,System.String)|DirectoryService.DecompressToDirectory(string,string).md|DecompressToDirectory(string, string)
-N:MasterCommander.Integrations|MasterCommander.Integrations.md|MasterCommander.Integrations
+N:MasterCommander.Integrations|MasterCommander.md#MasterCommander.Integrations|MasterCommander.Integrations
 T:MasterCommander.Integrations.DirectoryService|DirectoryService.md|DirectoryService
 M:MasterCommander.Integrations.ProjectInitializationService.#ctor(MasterCommander.Commanders.Git.IGitService,MasterCommander.Commanders.Dotnet.IDotnetService,MasterCommander.Core.Display.IConsole,MasterCommander.Core.Services.IDirectoryService)|ProjectInitializationService.ProjectInitializationService(IGitService,IDotnetService,IConsole,IDirectoryService).md|ProjectInitializationService(IGitService, IDotnetService, IConsole, IDirectoryService)
 M:MasterCommander.Integrations.ProjectInitializationService.InitializeConsoleProjectAsync|ProjectInitializationService.InitializeConsoleProjectAsync().md|InitializeConsoleProjectAsync()
@@ -24,7 +24,7 @@ M:MasterCommander.Integrations.Processes.CommandBuilder.#ctor(MasterCommander.Co
 M:MasterCommander.Integrations.Processes.CommandBuilder.CreateCommand(System.Collections.Generic.IEnumerable{System.String})|CommandBuilder.CreateCommand(IEnumerable_string_).md|CreateCommand(IEnumerable<string>)
 M:MasterCommander.Integrations.Processes.CommandBuilder.ConfigureCommand(CliWrap.Command)|CommandBuilder.ConfigureCommand(Command).md|ConfigureCommand(Command)
 M:MasterCommander.Integrations.Processes.CommandBuilder.GetWorkingDirectory|CommandBuilder.GetWorkingDirectory().md|GetWorkingDirectory()
-N:MasterCommander.Integrations.Processes|MasterCommander.Integrations.Processes.md|MasterCommander.Integrations.Processes
+N:MasterCommander.Integrations.Processes|MasterCommander.md#MasterCommander.Integrations.Processes|MasterCommander.Integrations.Processes
 T:MasterCommander.Integrations.Processes.CommandBuilder|CommandBuilder.md|CommandBuilder
 M:MasterCommander.Integrations.Processes.CommandOutputHandler.#ctor(MasterCommander.Core.Display.IConsole)|CommandOutputHandler.CommandOutputHandler(IConsole).md|CommandOutputHandler(IConsole)
 M:MasterCommander.Integrations.Processes.CommandOutputHandler.ListenCommandAsync(CliWrap.Command,System.Threading.CancellationToken)|CommandOutputHandler.ListenCommandAsync(Command,CancellationToken).md|ListenCommandAsync(Command, CancellationToken)
@@ -39,7 +39,7 @@ M:MasterCommander.Integrations.Display.SpectreConsole.WriteStandardOutputConsole
 M:MasterCommander.Integrations.Display.SpectreConsole.WriteStandardErrorConsoleEvent(MasterCommander.Core.ConsoleEvents.StandardErrorConsoleEvent)|SpectreConsole.WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent).md|WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent)
 M:MasterCommander.Integrations.Display.SpectreConsole.WriteExitedConsoleEvent(MasterCommander.Core.ConsoleEvents.ExitedConsoleEvent)|SpectreConsole.WriteExitedConsoleEvent(ExitedConsoleEvent).md|WriteExitedConsoleEvent(ExitedConsoleEvent)
 M:MasterCommander.Integrations.Display.SpectreConsole.WriteElapsedConsoleEvent(MasterCommander.Core.ConsoleEvents.ExecutionTimeConsoleEvent)|SpectreConsole.WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent).md|WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent)
-N:MasterCommander.Integrations.Display|MasterCommander.Integrations.Display.md|MasterCommander.Integrations.Display
+N:MasterCommander.Integrations.Display|MasterCommander.md#MasterCommander.Integrations.Display|MasterCommander.Integrations.Display
 T:MasterCommander.Integrations.Display.SpectreConsole|SpectreConsole.md|SpectreConsole
 M:MasterCommander.Integrations.Display.StandardConsole.WriteLine(System.String)|StandardConsole.WriteLine(string).md|WriteLine(string)
 M:MasterCommander.Integrations.Display.StandardConsole.WriteCommand(System.String)|StandardConsole.WriteCommand(string).md|WriteCommand(string)
@@ -55,7 +55,7 @@ T:MasterCommander.Integrations.Display.StandardConsole|StandardConsole.md|Standa
 P:MasterCommander.Core.CmdOptionAttribute.ShortOption|CmdOptionAttribute.ShortOption.md|ShortOption
 P:MasterCommander.Core.CmdOptionAttribute.LongOption|CmdOptionAttribute.LongOption.md|LongOption
 M:MasterCommander.Core.CmdOptionAttribute.#ctor(System.String)|CmdOptionAttribute.CmdOptionAttribute(string).md|CmdOptionAttribute(string)
-N:MasterCommander.Core|MasterCommander.Core.md|MasterCommander.Core
+N:MasterCommander.Core|MasterCommander.md#MasterCommander.Core|MasterCommander.Core
 T:MasterCommander.Core.CmdOptionAttribute|CmdOptionAttribute.md|CmdOptionAttribute
 P:MasterCommander.Core.CmdOptionOrderAttribute.Order|CmdOptionOrderAttribute.Order.md|Order
 M:MasterCommander.Core.CmdOptionOrderAttribute.#ctor(System.Int32)|CmdOptionOrderAttribute.CmdOptionOrderAttribute(int).md|CmdOptionOrderAttribute(int)
@@ -80,13 +80,13 @@ M:MasterCommander.Core.Services.IDirectoryService.CreateTemporaryDirectory|IDire
 M:MasterCommander.Core.Services.IDirectoryService.WatchDirectory(System.String,System.Action{System.IO.FileSystemEventArgs})|IDirectoryService.WatchDirectory(string,Action_FileSystemEventArgs_).md|WatchDirectory(string, Action<FileSystemEventArgs>)
 M:MasterCommander.Core.Services.IDirectoryService.CompressDirectory(System.String,System.String)|IDirectoryService.CompressDirectory(string,string).md|CompressDirectory(string, string)
 M:MasterCommander.Core.Services.IDirectoryService.DecompressToDirectory(System.String,System.String)|IDirectoryService.DecompressToDirectory(string,string).md|DecompressToDirectory(string, string)
-N:MasterCommander.Core.Services|MasterCommander.Core.Services.md|MasterCommander.Core.Services
+N:MasterCommander.Core.Services|MasterCommander.md#MasterCommander.Core.Services|MasterCommander.Core.Services
 T:MasterCommander.Core.Services.IDirectoryService|IDirectoryService.md|IDirectoryService
 M:MasterCommander.Core.Services.IProjectInitializationService.InitializeConsoleProjectAsync|IProjectInitializationService.InitializeConsoleProjectAsync().md|InitializeConsoleProjectAsync()
 T:MasterCommander.Core.Services.IProjectInitializationService|IProjectInitializationService.md|IProjectInitializationService
 P:MasterCommander.Core.Exceptions.CliCommandException.ExitCode|CliCommandException.ExitCode.md|ExitCode
 M:MasterCommander.Core.Exceptions.CliCommandException.#ctor(System.String,System.Int32)|CliCommandException.CliCommandException(string,int).md|CliCommandException(string, int)
-N:MasterCommander.Core.Exceptions|MasterCommander.Core.Exceptions.md|MasterCommander.Core.Exceptions
+N:MasterCommander.Core.Exceptions|MasterCommander.md#MasterCommander.Core.Exceptions|MasterCommander.Core.Exceptions
 T:MasterCommander.Core.Exceptions.CliCommandException|CliCommandException.md|CliCommandException
 M:MasterCommander.Core.Exceptions.CliOperationCanceledException.#ctor(System.String)|CliOperationCanceledException.CliOperationCanceledException(string).md|CliOperationCanceledException(string)
 T:MasterCommander.Core.Exceptions.CliOperationCanceledException|CliOperationCanceledException.md|CliOperationCanceledException
@@ -105,7 +105,7 @@ M:MasterCommander.Core.Display.ConsoleBase.WriteStandardOutputConsoleEvent(Maste
 M:MasterCommander.Core.Display.ConsoleBase.WriteStandardErrorConsoleEvent(MasterCommander.Core.ConsoleEvents.StandardErrorConsoleEvent)|ConsoleBase.WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent).md|WriteStandardErrorConsoleEvent(StandardErrorConsoleEvent)
 M:MasterCommander.Core.Display.ConsoleBase.WriteExitedConsoleEvent(MasterCommander.Core.ConsoleEvents.ExitedConsoleEvent)|ConsoleBase.WriteExitedConsoleEvent(ExitedConsoleEvent).md|WriteExitedConsoleEvent(ExitedConsoleEvent)
 M:MasterCommander.Core.Display.ConsoleBase.WriteElapsedConsoleEvent(MasterCommander.Core.ConsoleEvents.ExecutionTimeConsoleEvent)|ConsoleBase.WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent).md|WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent)
-N:MasterCommander.Core.Display|MasterCommander.Core.Display.md|MasterCommander.Core.Display
+N:MasterCommander.Core.Display|MasterCommander.md#MasterCommander.Core.Display|MasterCommander.Core.Display
 T:MasterCommander.Core.Display.ConsoleBase|ConsoleBase.md|ConsoleBase
 M:MasterCommander.Core.Display.ConsoleEventFactory.CreateFrom(System.Diagnostics.Stopwatch)|ConsoleEventFactory.CreateFrom(Stopwatch).md|CreateFrom(Stopwatch)
 M:MasterCommander.Core.Display.ConsoleEventFactory.CreateFrom(CliWrap.EventStream.CommandEvent)|ConsoleEventFactory.CreateFrom(CommandEvent).md|CreateFrom(CommandEvent)
@@ -126,7 +126,7 @@ M:MasterCommander.Core.Display.IConsole.WriteStandardErrorConsoleEvent(MasterCom
 M:MasterCommander.Core.Display.IConsole.WriteExitedConsoleEvent(MasterCommander.Core.ConsoleEvents.ExitedConsoleEvent)|IConsole.WriteExitedConsoleEvent(ExitedConsoleEvent).md|WriteExitedConsoleEvent(ExitedConsoleEvent)
 M:MasterCommander.Core.Display.IConsole.WriteElapsedConsoleEvent(MasterCommander.Core.ConsoleEvents.ExecutionTimeConsoleEvent)|IConsole.WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent).md|WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent)
 T:MasterCommander.Core.Display.IConsole|IConsole.md|IConsole
-N:MasterCommander.Core.ConsoleEvents|MasterCommander.Core.ConsoleEvents.md|MasterCommander.Core.ConsoleEvents
+N:MasterCommander.Core.ConsoleEvents|MasterCommander.md#MasterCommander.Core.ConsoleEvents|MasterCommander.Core.ConsoleEvents
 T:MasterCommander.Core.ConsoleEvents.ConsoleEvent|ConsoleEvent.md|ConsoleEvent
 P:MasterCommander.Core.ConsoleEvents.ExecutionTimeConsoleEvent.ElapsedTime|ExecutionTimeConsoleEvent.ElapsedTime.md|ElapsedTime
 M:MasterCommander.Core.ConsoleEvents.ExecutionTimeConsoleEvent.#ctor(System.TimeSpan)|ExecutionTimeConsoleEvent.ExecutionTimeConsoleEvent(TimeSpan).md|ExecutionTimeConsoleEvent(TimeSpan)
@@ -153,7 +153,7 @@ M:MasterCommander.Commanders.Npm.INpmCommandFactory.CreateCommandInstall|INpmCom
 M:MasterCommander.Commanders.Npm.INpmCommandFactory.CreateCommandUpdate|INpmCommandFactory.CreateCommandUpdate().md|CreateCommandUpdate()
 M:MasterCommander.Commanders.Npm.INpmCommandFactory.CreateCommandStart|INpmCommandFactory.CreateCommandStart().md|CreateCommandStart()
 M:MasterCommander.Commanders.Npm.INpmCommandFactory.CreateCommandRunScript(System.String)|INpmCommandFactory.CreateCommandRunScript(string).md|CreateCommandRunScript(string)
-N:MasterCommander.Commanders.Npm|MasterCommander.Commanders.Npm.md|MasterCommander.Commanders.Npm
+N:MasterCommander.Commanders.Npm|MasterCommander.md#MasterCommander.Commanders.Npm|MasterCommander.Commanders.Npm
 T:MasterCommander.Commanders.Npm.INpmCommandFactory|INpmCommandFactory.md|INpmCommandFactory
 M:MasterCommander.Commanders.Npm.INpmService.InitAsync(System.Threading.CancellationToken)|INpmService.InitAsync(CancellationToken).md|InitAsync(CancellationToken)
 M:MasterCommander.Commanders.Npm.INpmService.InstallAsync(System.Threading.CancellationToken)|INpmService.InstallAsync(CancellationToken).md|InstallAsync(CancellationToken)
@@ -182,7 +182,7 @@ M:MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandInit|GitCommandF
 M:MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandStatus|GitCommandFactory.CreateCommandStatus().md|CreateCommandStatus()
 M:MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandCloneRepository(System.String,System.String)|GitCommandFactory.CreateCommandCloneRepository(string,string).md|CreateCommandCloneRepository(string, string)
 M:MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandCommit(System.String)|GitCommandFactory.CreateCommandCommit(string).md|CreateCommandCommit(string)
-N:MasterCommander.Commanders.Git|MasterCommander.Commanders.Git.md|MasterCommander.Commanders.Git
+N:MasterCommander.Commanders.Git|MasterCommander.md#MasterCommander.Commanders.Git|MasterCommander.Commanders.Git
 T:MasterCommander.Commanders.Git.GitCommandFactory|GitCommandFactory.md|GitCommandFactory
 M:MasterCommander.Commanders.Git.GitService.#ctor(MasterCommander.Commanders.Git.IGitCommandFactory,MasterCommander.Core.Display.IConsole)|GitService.GitService(IGitCommandFactory,IConsole).md|GitService(IGitCommandFactory, IConsole)
 M:MasterCommander.Commanders.Git.GitService.InitAsync(System.Threading.CancellationToken)|GitService.InitAsync(CancellationToken).md|InitAsync(CancellationToken)
@@ -207,7 +207,7 @@ M:MasterCommander.Commanders.Dotnet.DotnetCommandFactory.CreateCommandBuild(Mast
 M:MasterCommander.Commanders.Dotnet.DotnetCommandFactory.CreateCommandRun(MasterCommander.Commanders.Dotnet.CmdRun.DotnetRunOptions)|DotnetCommandFactory.CreateCommandRun(DotnetRunOptions).md|CreateCommandRun(DotnetRunOptions)
 M:MasterCommander.Commanders.Dotnet.DotnetCommandFactory.CreateCommandTest|DotnetCommandFactory.CreateCommandTest().md|CreateCommandTest()
 M:MasterCommander.Commanders.Dotnet.DotnetCommandFactory.CreateCommandSlnAdd(System.String)|DotnetCommandFactory.CreateCommandSlnAdd(string).md|CreateCommandSlnAdd(string)
-N:MasterCommander.Commanders.Dotnet|MasterCommander.Commanders.Dotnet.md|MasterCommander.Commanders.Dotnet
+N:MasterCommander.Commanders.Dotnet|MasterCommander.md#MasterCommander.Commanders.Dotnet|MasterCommander.Commanders.Dotnet
 T:MasterCommander.Commanders.Dotnet.DotnetCommandFactory|DotnetCommandFactory.md|DotnetCommandFactory
 P:MasterCommander.Commanders.Dotnet.DotnetCommandOptionsBase.Command|DotnetCommandOptionsBase.Command.md|Command
 P:MasterCommander.Commanders.Dotnet.DotnetCommandOptionsBase.Architecture|DotnetCommandOptionsBase.Architecture.md|Architecture
@@ -248,13 +248,13 @@ P:MasterCommander.Commanders.Dotnet.CmdRun.DotnetRunOptions.NoLaunchProfile|Dotn
 P:MasterCommander.Commanders.Dotnet.CmdRun.DotnetRunOptions.Project|DotnetRunOptions.Project.md|Project
 P:MasterCommander.Commanders.Dotnet.CmdRun.DotnetRunOptions.ApplicationArguments|DotnetRunOptions.ApplicationArguments.md|ApplicationArguments
 M:MasterCommander.Commanders.Dotnet.CmdRun.DotnetRunOptions.#ctor|DotnetRunOptions.DotnetRunOptions().md|DotnetRunOptions()
-N:MasterCommander.Commanders.Dotnet.CmdRun|MasterCommander.Commanders.Dotnet.CmdRun.md|MasterCommander.Commanders.Dotnet.CmdRun
+N:MasterCommander.Commanders.Dotnet.CmdRun|MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdRun|MasterCommander.Commanders.Dotnet.CmdRun
 T:MasterCommander.Commanders.Dotnet.CmdRun.DotnetRunOptions|DotnetRunOptions.md|DotnetRunOptions
 P:MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewClassLibraryOptions.Framework|DotnetNewClassLibraryOptions.Framework.md|Framework
 P:MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewClassLibraryOptions.LangVersion|DotnetNewClassLibraryOptions.LangVersion.md|LangVersion
 P:MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewClassLibraryOptions.NoRestore|DotnetNewClassLibraryOptions.NoRestore.md|NoRestore
 M:MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewClassLibraryOptions.#ctor(System.String)|DotnetNewClassLibraryOptions.DotnetNewClassLibraryOptions(string).md|DotnetNewClassLibraryOptions(string)
-N:MasterCommander.Commanders.Dotnet.CmdNew.Options|MasterCommander.Commanders.Dotnet.CmdNew.Options.md|MasterCommander.Commanders.Dotnet.CmdNew.Options
+N:MasterCommander.Commanders.Dotnet.CmdNew.Options|MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options|MasterCommander.Commanders.Dotnet.CmdNew.Options
 T:MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewClassLibraryOptions|DotnetNewClassLibraryOptions.md|DotnetNewClassLibraryOptions
 P:MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewConsoleOptions.UseProgramMain|DotnetNewConsoleOptions.UseProgramMain.md|UseProgramMain
 M:MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewConsoleOptions.#ctor|DotnetNewConsoleOptions.DotnetNewConsoleOptions().md|DotnetNewConsoleOptions()
@@ -295,7 +295,7 @@ T:MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewWpfOptions|DotnetNew
 M:MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewWpfUserControlLibOptions.#ctor|DotnetNewWpfUserControlLibOptions.DotnetNewWpfUserControlLibOptions().md|DotnetNewWpfUserControlLibOptions()
 T:MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewWpfUserControlLibOptions|DotnetNewWpfUserControlLibOptions.md|DotnetNewWpfUserControlLibOptions
 P:MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasFramework.Framework|IHasFramework.Framework.md|Framework
-N:MasterCommander.Commanders.Dotnet.CmdNew.Abstractions|MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.md|MasterCommander.Commanders.Dotnet.CmdNew.Abstractions
+N:MasterCommander.Commanders.Dotnet.CmdNew.Abstractions|MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Abstractions|MasterCommander.Commanders.Dotnet.CmdNew.Abstractions
 T:MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasFramework|IHasFramework.md|IHasFramework
 P:MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasLangVersion.LangVersion|IHasLangVersion.LangVersion.md|LangVersion
 T:MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasLangVersion|IHasLangVersion.md|IHasLangVersion
@@ -313,7 +313,7 @@ P:MasterCommander.Commanders.Dotnet.CmdBuild.DotnetBuildOptions.Source|DotnetBui
 P:MasterCommander.Commanders.Dotnet.CmdBuild.DotnetBuildOptions.UseCurrentRuntime|DotnetBuildOptions.UseCurrentRuntime.md|UseCurrentRuntime
 P:MasterCommander.Commanders.Dotnet.CmdBuild.DotnetBuildOptions.VersionSuffix|DotnetBuildOptions.VersionSuffix.md|VersionSuffix
 M:MasterCommander.Commanders.Dotnet.CmdBuild.DotnetBuildOptions.#ctor|DotnetBuildOptions.DotnetBuildOptions().md|DotnetBuildOptions()
-N:MasterCommander.Commanders.Dotnet.CmdBuild|MasterCommander.Commanders.Dotnet.CmdBuild.md|MasterCommander.Commanders.Dotnet.CmdBuild
+N:MasterCommander.Commanders.Dotnet.CmdBuild|MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdBuild|MasterCommander.Commanders.Dotnet.CmdBuild
 T:MasterCommander.Commanders.Dotnet.CmdBuild.DotnetBuildOptions|DotnetBuildOptions.md|DotnetBuildOptions
 P:MasterCommander.Commanders.Docker.DockerCommandFactory.ExecutablePath|DockerCommandFactory.ExecutablePath.md|ExecutablePath
 M:MasterCommander.Commanders.Docker.DockerCommandFactory.#ctor(MasterCommander.Core.Services.IDirectoryService)|DockerCommandFactory.DockerCommandFactory(IDirectoryService).md|DockerCommandFactory(IDirectoryService)
@@ -321,7 +321,7 @@ M:MasterCommander.Commanders.Docker.DockerCommandFactory.CreateCommandBuild(Syst
 M:MasterCommander.Commanders.Docker.DockerCommandFactory.CreateCommandRun(System.String,System.String)|DockerCommandFactory.CreateCommandRun(string,string).md|CreateCommandRun(string, string)
 M:MasterCommander.Commanders.Docker.DockerCommandFactory.CreateCommandStop(System.String)|DockerCommandFactory.CreateCommandStop(string).md|CreateCommandStop(string)
 M:MasterCommander.Commanders.Docker.DockerCommandFactory.CreateCommandRemoveContainer(System.String)|DockerCommandFactory.CreateCommandRemoveContainer(string).md|CreateCommandRemoveContainer(string)
-N:MasterCommander.Commanders.Docker|MasterCommander.Commanders.Docker.md|MasterCommander.Commanders.Docker
+N:MasterCommander.Commanders.Docker|MasterCommander.md#MasterCommander.Commanders.Docker|MasterCommander.Commanders.Docker
 T:MasterCommander.Commanders.Docker.DockerCommandFactory|DockerCommandFactory.md|DockerCommandFactory
 M:MasterCommander.Commanders.Docker.DockerService.#ctor(MasterCommander.Commanders.Docker.IDockerCommandFactory,MasterCommander.Core.Display.IConsole)|DockerService.DockerService(IDockerCommandFactory,IConsole).md|DockerService(IDockerCommandFactory, IConsole)
 M:MasterCommander.Commanders.Docker.DockerService.BuildAsync(System.String,System.String,System.Threading.CancellationToken)|DockerService.BuildAsync(string,string,CancellationToken).md|BuildAsync(string, string, CancellationToken)

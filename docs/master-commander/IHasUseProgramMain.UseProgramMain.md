@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdNew.Abstractions](MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.md 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions').[IHasUseProgramMain](IHasUseProgramMain.md 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasUseProgramMain')
+### [MasterCommander.Commanders.Dotnet.CmdNew.Abstractions](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Abstractions 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions').[IHasUseProgramMain](IHasUseProgramMain.md 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasUseProgramMain')
 
 ## IHasUseProgramMain.UseProgramMain Property
 

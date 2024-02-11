@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander](MasterCommander.md 'MasterCommander')
+### [MasterCommander](MasterCommander.md#MasterCommander 'MasterCommander')
 
 ## MainExtensions Class
 

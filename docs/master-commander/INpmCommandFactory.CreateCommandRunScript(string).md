@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Npm](MasterCommander.Commanders.Npm.md 'MasterCommander.Commanders.Npm').[INpmCommandFactory](INpmCommandFactory.md 'MasterCommander.Commanders.Npm.INpmCommandFactory')
+### [MasterCommander.Commanders.Npm](MasterCommander.md#MasterCommander.Commanders.Npm 'MasterCommander.Commanders.Npm').[INpmCommandFactory](INpmCommandFactory.md 'MasterCommander.Commanders.Npm.INpmCommandFactory')
 
 ## INpmCommandFactory.CreateCommandRunScript(string) Method
 

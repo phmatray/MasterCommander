@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core](MasterCommander.Core.md 'MasterCommander.Core').[CmdOptionsBase](CmdOptionsBase.md 'MasterCommander.Core.CmdOptionsBase')
+### [MasterCommander.Core](MasterCommander.md#MasterCommander.Core 'MasterCommander.Core').[CmdOptionsBase](CmdOptionsBase.md 'MasterCommander.Core.CmdOptionsBase')
 
 ## CmdOptionsBase.ExtractPropertiesWithAttributes() Method
 

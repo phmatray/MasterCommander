@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core](MasterCommander.Core.md 'MasterCommander.Core')
+### [MasterCommander.Core](MasterCommander.md#MasterCommander.Core 'MasterCommander.Core')
 
 ## CmdOptionOrderAttribute Class
 

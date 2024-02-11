@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Exceptions](MasterCommander.Core.Exceptions.md 'MasterCommander.Core.Exceptions').[CliCommandException](CliCommandException.md 'MasterCommander.Core.Exceptions.CliCommandException')
+### [MasterCommander.Core.Exceptions](MasterCommander.md#MasterCommander.Core.Exceptions 'MasterCommander.Core.Exceptions').[CliCommandException](CliCommandException.md 'MasterCommander.Core.Exceptions.CliCommandException')
 
 ## CliCommandException(string, int) Constructor
 

@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdNew.Options](MasterCommander.Commanders.Dotnet.CmdNew.Options.md 'MasterCommander.Commanders.Dotnet.CmdNew.Options').[DotnetNewWpfUserControlLibOptions](DotnetNewWpfUserControlLibOptions.md 'MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewWpfUserControlLibOptions')
+### [MasterCommander.Commanders.Dotnet.CmdNew.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander.Commanders.Dotnet.CmdNew.Options').[DotnetNewWpfUserControlLibOptions](DotnetNewWpfUserControlLibOptions.md 'MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewWpfUserControlLibOptions')
 
 ## DotnetNewWpfUserControlLibOptions() Constructor
 

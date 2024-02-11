@@ -1,5 +1,5 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Docker](MasterCommander.Commanders.Docker.md 'MasterCommander.Commanders.Docker').[IDockerService](IDockerService.md 'MasterCommander.Commanders.Docker.IDockerService')
+### [MasterCommander.Commanders.Docker](MasterCommander.md#MasterCommander.Commanders.Docker 'MasterCommander.Commanders.Docker').[IDockerService](IDockerService.md 'MasterCommander.Commanders.Docker.IDockerService')
 
 ## IDockerService.StopAsync(string, CancellationToken) Method
 
