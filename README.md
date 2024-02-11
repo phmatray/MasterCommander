@@ -2,11 +2,12 @@
 
 ---
 
+Write code, not commands. MasterCommander provides a simple, consistent interface for common development tasks.
+
 | ![Logo MasterCommander](https://raw.githubusercontent.com/phmatray/MasterCommander/main/logo.png)                  | MasterCommander is a versatile command-line utility designed to streamline the workflow for developers working with multiple technology stacks. By integrating common operations for Git, .NET, Docker, and npm into a single application, MasterCommander enhances productivity and simplifies project setup and management tasks. |
 |--------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [![Sparkline](https://stars.medv.io/phmatray/MasterCommander.svg)](https://stars.medv.io/phmatray/MasterCommander) |                                                                                                                                                                                                                                                                                                                                     |
 
-[![phmatray - TaLibStandard](https://img.shields.io/static/v1?label=phmatray&message=MasterCommander&color=blue&logo=github)](https://github.com/phmatray/MasterCommander "Go to GitHub repo")
+[![phmatray - MasterCommander](https://img.shields.io/static/v1?label=phmatray&message=MasterCommander&color=blue&logo=github)](https://github.com/phmatray/MasterCommander "Go to GitHub repo")
 [![License: GPL-3.0-or-later](https://img.shields.io/badge/License-GPLv3.0--or--later-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![stars - MasterCommander](https://img.shields.io/github/stars/phmatray/MasterCommander?style=social)](https://github.com/phmatray/MasterCommander)
 [![forks - MasterCommander](https://img.shields.io/github/forks/phmatray/MasterCommander?style=social)](https://github.com/phmatray/MasterCommander)
@@ -27,9 +28,10 @@
 * [MasterCommander](#mastercommander)
   * [📝 Table of Contents](#-table-of-contents)
   * [🏁 Getting started](#-getting-started)
-  * [📌 Features](#-features)
-    * [Roadmap (next features)](#roadmap-next-features)
   * [📄 Documentation](#-documentation)
+  * [📌 Features](#-features)
+    * [Current Features](#current-features)
+    * [Roadmap (next features)](#roadmap-next-features)
   * [📥 Installation](#-installation)
     * [📋 Prerequisites](#-prerequisites)
     * [From NuGet](#from-nuget)
@@ -47,9 +49,10 @@
 
 ## 🏁 Getting started
 
-Write code, not commands. MasterCommander provides a simple, consistent interface for common development tasks.
-
 Use your favorite CLI tools without leaving your code editor:
+
+This example demonstrates how to use MasterCommander to create a new .NET solution and project, initialize a Git repository, and build and run the project.
+In addition, this code adds a .gitignore file, an .editorconfig file, and a global.json file to the project.
 
 ```csharp
 private const string SdkVersion = "8.0.101";
@@ -72,27 +75,10 @@ await dotnet.BuildAsync(new DotnetBuildOptions { Configuration = "Release" });
 await dotnet.RunAsync(new DotnetRunOptions { Project = ConsoleCsproj, Configuration = "Release" });
 ``` 
 
+You can standardize your development workflow by using MasterCommander to perform common tasks across multiple projects and technology stacks.
+
 Output from MasterCommander commands is displayed in a clean, readable format:
-> ![MasterCommander Screenshot](./assets/img/output-spectre.png)
-
-## 📌 Features
-
-* [x] **Unified Interface**: MasterCommander provides a single interface for interacting with multiple development tools.
-* [x] **Simple Commands**: Execute common development tasks with simple, intuitive commands.
-* [x] **Cross-Platform**: MasterCommander is designed to work on Windows, macOS, and Linux.
-* [x] **Customizable**: Add new commands and features to MasterCommander to suit your workflow.
-
-### Roadmap (next features)
-
-* **WIP =>** **.NET Projects**: Easily create new .NET solutions and projects.
-* **WIP =>** **Git Integration**: Initialize new repositories, check status, and more with built-in Git commands.
-* **WIP =>** **Docker Support**: Manage Docker containers and images through simple commands.
-* **WIP =>** **npm Packages**: Handle npm packages and run npm scripts within your projects.
-* [ ] Comprehensive API documentation that is easy to understand
-* [ ] High-Level API for common use cases
-* [ ] More tests
-* [ ] More examples
-* [ ] More features
+> ![MasterCommander Screenshot](https://raw.githubusercontent.com/phmatray/MasterCommander/main/assets/img/output-spectre.png)
 
 ## 📄 Documentation
 
@@ -102,6 +88,27 @@ All summaries are written in English. If you want to help us translate the docum
 discuss it.
 
 > **Note:** The documentation is generated using [Doraku/DefaultDocumentation]() tool. It is generated automatically when the project is built.
+
+## 📌 Features
+
+### Current Features
+
+* [x] **Unified Interface**: MasterCommander provides a single interface for interacting with multiple development tools.
+* [x] **Simple Commands**: Execute common development tasks with simple, intuitive commands.
+* [x] **Cross-Platform**: MasterCommander is designed to work on Windows, macOS, and Linux.
+* [x] **Customizable**: Add new commands and features to MasterCommander to suit your workflow.
+
+### Roadmap (next features)
+
+* [ ] **WIP =>** **.NET Projects**: Easily create new .NET solutions and projects.
+* [ ] **WIP =>** **Git Integration**: Initialize new repositories, check status, and more with built-in Git commands.
+* [ ] **WIP =>** **Docker Support**: Manage Docker containers and images through simple commands.
+* [ ] **WIP =>** **npm Packages**: Handle npm packages and run npm scripts within your projects.
+* [ ] Comprehensive API documentation that is easy to understand
+* [ ] High-Level API for common use cases
+* [ ] More tests
+* [ ] More examples
+* [ ] More features
 
 ## 📥 Installation
 
@@ -150,11 +157,6 @@ learn more about these features.
 
 This table is automatically updated regularly the latest developments and releases.
 
-### 🧪 Tests Specifications
-
-* Target framework : .NET 8
-* Language version : C# 12
-* xUnit and FluentAssertions
 
 ## 📊 Code Quality
 
@@ -163,19 +165,27 @@ We strive for the highest code quality in MasterCommander. To ensure this, we us
 - StyleCop
 - .editorconfig
 
-## ❓ Issues and Feature Requests
+### 🧪 Tests Specifications
 
-For reporting bugs or suggesting new features, kindly submit these as an issue to the [MasterCommander Repository](https://github.com/phmatray/MasterCommander/issues). We value your contributions, but before submitting an issue, please ensure it is not a duplicate of an existing one.
+We use xUnit and FluentAssertions to write and run tests for MasterCommander. This ensures that the library is reliable and performs as expected.
 
 ## 🤝 Contributing
+
+### How to contribute?
 
 Contributions to MasterCommander are welcome! Whether it's reporting bugs, discussing improvements, or submitting pull requests, all contributions help make MasterCommander a better tool for developers.
 
 Before submitting pull requests, please ensure you have discussed the proposed changes with the project maintainers.
 
-## 🌟 Contributors
+A great way to contribute to MasterCommander is to add new commands. If you have a command you'd like to see added to MasterCommander, please open an issue to discuss it.
+
+### Contributors
 
 [![Contributors](https://contrib.rocks/image?repo=phmatray/MasterCommander)](http://contrib.rocks)
+
+## ❓ Issues and Feature Requests
+
+For reporting bugs or suggesting new features, kindly submit these as an issue to the [MasterCommander Repository](https://github.com/phmatray/MasterCommander/issues). We value your contributions, but before submitting an issue, please ensure it is not a duplicate of an existing one.
 
 ## ✉️ Contact
 
