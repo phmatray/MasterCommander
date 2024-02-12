@@ -31,8 +31,22 @@ public interface IDirectoryService
     /// Sets the working directory to the directory where the specified solution is located.
     /// </summary>
     /// <param name="relativePath">The relative path from the MasterCommander directory to the solution directory.</param>
+    void SetWorkingDirectory(string relativePath);
+
+    /// <summary>
+    /// Sets the working directory to the directory where the specified solution is located.
+    /// </summary>
+    /// <param name="relativePath">The relative path from the MasterCommander directory to the solution directory.</param>
     /// <param name="createIfNotExists">A value indicating whether the directory should be created if it does not exist.</param>
-    void SetWorkingDirectory(string relativePath, bool createIfNotExists = false);
+    void SetWorkingDirectory(string relativePath, bool createIfNotExists);
+
+    /// <summary>
+    /// Creates a new directory within a specified base directory.
+    /// </summary>
+    /// <param name="baseDirectory">The base directory where the new directory will be created.</param>
+    /// <param name="newDirectoryName">The name of the new directory to create.</param>
+    /// <returns>The path of the newly created directory.</returns>
+    string CreateNewDirectory(string baseDirectory, string newDirectoryName);
 
     /// <summary>
     /// Creates a new directory within a specified base directory.
@@ -41,7 +55,7 @@ public interface IDirectoryService
     /// <param name="newDirectoryName">The name of the new directory to create.</param>
     /// <param name="overwrite">A value indicating whether an existing directory should be overwritten.</param>
     /// <returns>The path of the newly created directory.</returns>
-    string CreateNewDirectory(string baseDirectory, string newDirectoryName, bool overwrite = false);
+    string CreateNewDirectory(string baseDirectory, string newDirectoryName, bool overwrite);
 
     /// <summary>
     /// Clears the contents of a specified directory.

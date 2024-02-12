@@ -7,7 +7,9 @@ P:MasterCommander.Integrations.DirectoryService.HomeDirectory|DirectoryService.H
 P:MasterCommander.Integrations.DirectoryService.MasterCommanderDirectory|DirectoryService.MasterCommanderDirectory.md|MasterCommanderDirectory
 P:MasterCommander.Integrations.DirectoryService.WorkingDirectory|DirectoryService.WorkingDirectory.md|WorkingDirectory
 M:MasterCommander.Integrations.DirectoryService.#ctor(MasterCommander.Core.Display.IConsole)|DirectoryService.DirectoryService(IConsole).md|DirectoryService(IConsole)
+M:MasterCommander.Integrations.DirectoryService.SetWorkingDirectory(System.String)|DirectoryService.SetWorkingDirectory(string).md|SetWorkingDirectory(string)
 M:MasterCommander.Integrations.DirectoryService.SetWorkingDirectory(System.String,System.Boolean)|DirectoryService.SetWorkingDirectory(string,bool).md|SetWorkingDirectory(string, bool)
+M:MasterCommander.Integrations.DirectoryService.CreateNewDirectory(System.String,System.String)|DirectoryService.CreateNewDirectory(string,string).md|CreateNewDirectory(string, string)
 M:MasterCommander.Integrations.DirectoryService.CreateNewDirectory(System.String,System.String,System.Boolean)|DirectoryService.CreateNewDirectory(string,string,bool).md|CreateNewDirectory(string, string, bool)
 M:MasterCommander.Integrations.DirectoryService.ClearDirectory(System.String)|DirectoryService.ClearDirectory(string).md|ClearDirectory(string)
 M:MasterCommander.Integrations.DirectoryService.CalculateDirectorySize(System.String)|DirectoryService.CalculateDirectorySize(string).md|CalculateDirectorySize(string)
@@ -73,7 +75,9 @@ T:MasterCommander.Core.CmdOptionValuesAttribute|CmdOptionValuesAttribute.md|CmdO
 P:MasterCommander.Core.Services.IDirectoryService.HomeDirectory|IDirectoryService.HomeDirectory.md|HomeDirectory
 P:MasterCommander.Core.Services.IDirectoryService.MasterCommanderDirectory|IDirectoryService.MasterCommanderDirectory.md|MasterCommanderDirectory
 P:MasterCommander.Core.Services.IDirectoryService.WorkingDirectory|IDirectoryService.WorkingDirectory.md|WorkingDirectory
+M:MasterCommander.Core.Services.IDirectoryService.SetWorkingDirectory(System.String)|IDirectoryService.SetWorkingDirectory(string).md|SetWorkingDirectory(string)
 M:MasterCommander.Core.Services.IDirectoryService.SetWorkingDirectory(System.String,System.Boolean)|IDirectoryService.SetWorkingDirectory(string,bool).md|SetWorkingDirectory(string, bool)
+M:MasterCommander.Core.Services.IDirectoryService.CreateNewDirectory(System.String,System.String)|IDirectoryService.CreateNewDirectory(string,string).md|CreateNewDirectory(string, string)
 M:MasterCommander.Core.Services.IDirectoryService.CreateNewDirectory(System.String,System.String,System.Boolean)|IDirectoryService.CreateNewDirectory(string,string,bool).md|CreateNewDirectory(string, string, bool)
 M:MasterCommander.Core.Services.IDirectoryService.ClearDirectory(System.String)|IDirectoryService.ClearDirectory(string).md|ClearDirectory(string)
 M:MasterCommander.Core.Services.IDirectoryService.CalculateDirectorySize(System.String)|IDirectoryService.CalculateDirectorySize(string).md|CalculateDirectorySize(string)

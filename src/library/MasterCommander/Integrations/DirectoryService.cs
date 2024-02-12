@@ -44,7 +44,13 @@ public class DirectoryService : IDirectoryService
     public string? WorkingDirectory { get; set; }
 
     /// <inheritdoc />
-    public void SetWorkingDirectory(string relativePath, bool createIfNotExists = false)
+    public void SetWorkingDirectory(string relativePath)
+    {
+        WorkingDirectory = Path.Combine(MasterCommanderDirectory, relativePath);
+    }
+
+    /// <inheritdoc />
+    public void SetWorkingDirectory(string relativePath, bool createIfNotExists)
     {
         WorkingDirectory = createIfNotExists
             ? CreateNewDirectory(MasterCommanderDirectory, relativePath, true)
@@ -52,7 +58,7 @@ public class DirectoryService : IDirectoryService
     }
 
     /// <inheritdoc />
-    public string CreateNewDirectory(string baseDirectory, string newDirectoryName, bool overwrite = false)
+    public string CreateNewDirectory(string baseDirectory, string newDirectoryName)
     {
         var newDirectory = Path.Combine(baseDirectory, newDirectoryName);
 
@@ -60,7 +66,16 @@ public class DirectoryService : IDirectoryService
         {
             Directory.CreateDirectory(newDirectory);
         }
-        else if (overwrite)
+
+        return newDirectory;
+    }
+
+    /// <inheritdoc />
+    public string CreateNewDirectory(string baseDirectory, string newDirectoryName, bool overwrite)
+    {
+        var newDirectory = CreateNewDirectory(baseDirectory, newDirectoryName);
+
+        if (overwrite)
         {
             ClearDirectory(newDirectory);
         }
@@ -112,10 +127,10 @@ public class DirectoryService : IDirectoryService
             EnableRaisingEvents = true
         };
 
-        watcher.Changed += (sender, e) => onChangeCallback(e);
-        watcher.Created += (sender, e) => onChangeCallback(e);
-        watcher.Deleted += (sender, e) => onChangeCallback(e);
-        watcher.Renamed += (sender, e) => onChangeCallback(e);
+        watcher.Changed += (_, e) => onChangeCallback(e);
+        watcher.Created += (_, e) => onChangeCallback(e);
+        watcher.Deleted += (_, e) => onChangeCallback(e);
+        watcher.Renamed += (_, e) => onChangeCallback(e);
     }
 
     /// <inheritdoc />

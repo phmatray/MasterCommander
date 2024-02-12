@@ -6,7 +6,7 @@
 Sets the working directory to the directory where the specified solution is located.
 
 ```csharp
-void SetWorkingDirectory(string relativePath, bool createIfNotExists=false);
+void SetWorkingDirectory(string relativePath, bool createIfNotExists);
 ```
 #### Parameters
 

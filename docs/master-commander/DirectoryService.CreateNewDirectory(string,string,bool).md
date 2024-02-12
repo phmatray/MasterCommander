@@ -6,7 +6,7 @@
 Creates a new directory within a specified base directory.
 
 ```csharp
-public string CreateNewDirectory(string baseDirectory, string newDirectoryName, bool overwrite=false);
+public string CreateNewDirectory(string baseDirectory, string newDirectoryName, bool overwrite);
 ```
 #### Parameters
 
