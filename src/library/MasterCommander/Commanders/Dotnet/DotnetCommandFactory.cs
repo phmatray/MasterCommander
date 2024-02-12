@@ -12,7 +12,7 @@ public class DotnetCommandFactory(IDirectoryService directoryService)
     : CommandBuilder(directoryService), IDotnetCommandFactory
 {
     /// <inheritdoc />
-    protected override string ExecutablePath => "dotnet";
+    public override string ExecutablePath => "dotnet";
 
     /// <inheritdoc />
     public Command CreateCommandNew(DotnetNewOptions options)

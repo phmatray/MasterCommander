@@ -13,14 +13,14 @@ public abstract class CommandBuilder(IDirectoryService directoryService)
     /// <summary>
     /// Gets the path to the executable that the command will run.
     /// </summary>
-    protected abstract string ExecutablePath { get; }
+    public abstract string ExecutablePath { get; }
 
     /// <summary>
     /// Creates a command with the specified arguments, configuring the executable path and working directory.
     /// </summary>
     /// <param name="arguments">The arguments to pass to the executable.</param>
     /// <returns>A configured command.</returns>
-    protected virtual Command CreateCommand(IEnumerable<string> arguments)
+    private protected virtual Command CreateCommand(IEnumerable<string> arguments)
     {
         var workingDirectory = GetWorkingDirectory();
         var command = Cli.Wrap(ExecutablePath)
@@ -36,7 +36,7 @@ public abstract class CommandBuilder(IDirectoryService directoryService)
     /// </summary>
     /// <param name="command">The command to configure.</param>
     /// <returns>The configured command.</returns>
-    protected virtual Command ConfigureCommand(Command command)
+    private protected virtual Command ConfigureCommand(Command command)
     {
         // Allow derived classes to further configure the command
         return command;

@@ -12,7 +12,7 @@ public class GitCommandFactory(IDirectoryService directoryService)
     : CommandBuilder(directoryService), IGitCommandFactory
 {
     /// <inheritdoc />
-    protected override string ExecutablePath => "git";
+    public override string ExecutablePath => "git";
 
     /// <inheritdoc />
     public Command CreateCommandInit()

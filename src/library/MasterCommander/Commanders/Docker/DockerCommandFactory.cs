@@ -12,7 +12,7 @@ public class DockerCommandFactory(IDirectoryService directoryService)
     : CommandBuilder(directoryService), IDockerCommandFactory
 {
     /// <inheritdoc />
-    protected override string ExecutablePath => "docker";
+    public override string ExecutablePath => "docker";
 
     /// <inheritdoc />
     public Command CreateCommandBuild(string dockerfilePath, string tag)

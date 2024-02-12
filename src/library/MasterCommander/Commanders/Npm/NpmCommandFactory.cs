@@ -12,7 +12,7 @@ public class NpmCommandFactory(IDirectoryService directoryService)
     : CommandBuilder(directoryService), INpmCommandFactory
 {
     /// <inheritdoc />
-    protected override string ExecutablePath => "npm";
+    public override string ExecutablePath => "npm";
 
     /// <inheritdoc />
     public Command CreateCommandInit()

@@ -18,7 +18,7 @@ public abstract class CommandOutputHandler(IConsole console)
     /// <param name="command">The command whose output is to be handled.</param>
     /// <param name="ct">A cancellation token that can be used to cancel the listening operation.</param>
     /// <returns>A task representing the asynchronous operation of listening to and handling command output and events.</returns>
-    protected async Task ListenCommandAsync(Command command, CancellationToken ct)
+    private protected async Task ListenCommandAsync(Command command, CancellationToken ct)
     {
         console.WriteCommand(command.ToString());
         var stopWatch = Stopwatch.StartNew();

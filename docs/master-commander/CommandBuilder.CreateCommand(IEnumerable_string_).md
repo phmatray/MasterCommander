@@ -6,7 +6,7 @@
 Creates a command with the specified arguments, configuring the executable path and working directory.
 
 ```csharp
-protected virtual CliWrap.Command CreateCommand(System.Collections.Generic.IEnumerable<string> arguments);
+private protected virtual CliWrap.Command CreateCommand(System.Collections.Generic.IEnumerable<string> arguments);
 ```
 #### Parameters
 

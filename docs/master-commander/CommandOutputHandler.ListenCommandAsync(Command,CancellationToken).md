@@ -6,7 +6,7 @@
 Listens for and processes command execution events asynchronously, writing output and events to the console.
 
 ```csharp
-protected System.Threading.Tasks.Task ListenCommandAsync(CliWrap.Command command, System.Threading.CancellationToken ct);
+private protected System.Threading.Tasks.Task ListenCommandAsync(CliWrap.Command command, System.Threading.CancellationToken ct);
 ```
 #### Parameters
 

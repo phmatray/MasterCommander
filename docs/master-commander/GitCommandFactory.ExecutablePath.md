@@ -6,7 +6,7 @@
 Gets the path to the executable that the command will run.
 
 ```csharp
-protected override string ExecutablePath { get; }
+public override string ExecutablePath { get; }
 ```
 
 #### Property Value

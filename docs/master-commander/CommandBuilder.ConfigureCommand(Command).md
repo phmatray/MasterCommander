@@ -7,7 +7,7 @@ Allows derived classes to further configure the command before execution.
 This method can be overridden to apply additional configurations like environment variables, timeout settings, etc.
 
 ```csharp
-protected virtual CliWrap.Command ConfigureCommand(CliWrap.Command command);
+private protected virtual CliWrap.Command ConfigureCommand(CliWrap.Command command);
 ```
 #### Parameters
 
