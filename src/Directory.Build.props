@@ -6,6 +6,8 @@
     <IsTestProject>$(MSBuildProjectName.Contains('Tests'))</IsTestProject>
     <ImplicitUsings>true</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
   
   <!-- Documentation -->
@@ -40,23 +42,39 @@
     <AnalysisModeStyle>All</AnalysisModeStyle>
     <AnalysisModeUsage>All</AnalysisModeUsage>
   </PropertyGroup>
+
+  <!-- Continuous Integration -->
+  <PropertyGroup Label="Deterministic Build" Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
   
   <!-- Packaging -->
-  <PropertyGroup>
+  <PropertyGroup Label="Package Information">
     <EnablePackageValidation>true</EnablePackageValidation>
     <!--<PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>-->
 
-    <Authors>Philippe Matray</Authors>
     <Description>
       MasterCommander is a versatile command-line utility designed to streamline the workflow for developers working 
       with multiple technology stacks. By integrating common operations for Git, .NET, Docker, and npm into a single 
       application, MasterCommander enhances productivity and simplifies project setup and management tasks.
     </Description>
+    <Authors>Philippe Matray</Authors>
+    <Copyright>Philippe Matray</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/phmatray/MasterCommander</RepositoryUrl>
     <PackageProjectUrl>https://github.com/phmatray/MasterCommander</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/phmatray/MasterCommander/releases</PackageReleaseNotes>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>logo.png</PackageIcon>
     <PackageTags>git, docker, cli, npm, devops utility, library, tool, dotnet, project-management, developers, workflow-automation</PackageTags>
+  </PropertyGroup>
+
+  <!-- Source Link -->
+  <PropertyGroup Label="Source Link">
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
 
   <!-- File inclusion -->
@@ -64,19 +82,25 @@
     <None Include="../../../logo.png" Pack="true" PackagePath="\" Link="Properties/logo.png" />
     <None Include="../../../LICENSE" Pack="true" PackagePath="\" Link="Properties/LICENSE" />
     <None Include="../../../README.md" Pack="true" PackagePath="\" Link="Properties/README.md" />
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Link="Properties/stylecop.json" />
   </ItemGroup>
 
   <!-- MinVer Configuration -->
   <PropertyGroup>
     <!-- Set the minimum version to be used if no Git tags are found -->
     <MinVerMinimumMajorMinor>1.0</MinVerMinimumMajorMinor>
+    <MinVerSkip Condition="'$(Configuration)' == 'Debug'">true</MinVerSkip>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    <MinVerAutoIncrement>patch</MinVerAutoIncrement>
+    <MinVerDefaultPreReleaseIdentifiers>alpha</MinVerDefaultPreReleaseIdentifiers>
+    <MinVerIgnoreHeight>true</MinVerIgnoreHeight>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(IsTestProject)' != 'true'">
+  <ItemGroup Label="Dependencies" Condition="'$(IsTestProject)' != 'true'">
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="Development Dependencies">
     <!-- Code Analyzers -->
     <PackageReference Include="StyleCop.Analyzers" PrivateAssets="all" />
     <PackageReference Include="Roslynator.Analyzers" PrivateAssets="all"/>
@@ -86,7 +110,7 @@
     <PackageReference Include="MinVer" PrivateAssets="all"/>
   </ItemGroup>
 
-  <ItemGroup Condition="$(IsTestProject)">
+  <ItemGroup Label="Test Dependencies" Condition="$(IsTestProject)">
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="xunit" />
     <PackageReference Include="FluentAssertions" />
@@ -99,8 +123,5 @@
     <PackageReference Include="coverlet.collector" PrivateAssets="all" />
   </ItemGroup>
 
-  <ItemGroup>
-    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Link="stylecop.json" />
-  </ItemGroup>
 </Project>
 

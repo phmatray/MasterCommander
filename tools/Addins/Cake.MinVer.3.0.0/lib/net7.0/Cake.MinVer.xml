@@ -1,0 +1,653 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.MinVer</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.MinVer.MinVerAliases">
+            <summary>
+            MinVer aliases
+            </summary>
+        </member>
+        <member name="M:Cake.MinVer.MinVerAliases.MinVer(Cake.Core.ICakeContext)">
+            <summary>
+            Run the MinVer dotnet tool with default settings.
+            </summary>
+            <param name="context">The context.</param>
+            <example>
+            <code>
+            <![CDATA[
+            var buildVersion = MinVer();
+            
+            Information($"Version: {buildVersion.Version}");
+            Information($"Major: {buildVersion.Major}");
+            Information($"Minor: {buildVersion.Minor}");
+            Information($"Patch: {buildVersion.Patch}");
+            Information($"PreRelease: {buildVersion.PreRelease}");
+            Information($"BuildMetadata: {buildVersion.BuildMetadata}");
+            // ...
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.MinVer.MinVerAliases.MinVer(Cake.Core.ICakeContext,System.Action{Cake.MinVer.MinVerSettings})">
+            <summary>
+            Run the MinVer dotnet tool using the settings returned by a configurator.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="configurator">The settings configurator.</param>
+            <example>
+            <para>Increment the major version (e.g. 'dotnet minver --auto-increment major')</para>
+            <code>
+            <![CDATA[
+            var buildVersion = MinVer(settings => settings.WithAutoIncrement(MinVerAutoIncrement.Major));
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the build metadata (e.g. 'dotnet minver --build-metadata abcdefg')</para>
+            <code>
+            <![CDATA[
+            var buildVersion = MinVer(settings => settings.WithBuildMetadata("abcdefg"));
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the default pre-release phase (e.g. 'dotnet minver --default-pre-release-phase preview')</para>
+            <code>
+            <![CDATA[
+            var buildVersion = MinVer(settings => settings.WithDefaultPreReleasePhase("preview"));
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the minimum major and minor version (e.g. 'dotnet minver --minimum-major-minor 2.5')</para>
+            <code>
+            <![CDATA[
+            var buildVersion = MinVer(settings => settings.WithMinimumMajorMinor("2.5"));
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the working directory for MinVer to use (e.g. 'dotnet minver --repo C:\MyProject')</para>
+            <code>
+            <![CDATA[
+            var buildVersion = MinVer(settings => settings.WithRepo(@"C:\MyProject"));
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the tag prefix (e.g. 'dotnet minver --tag-prefix v')</para>
+            <code>
+            <![CDATA[
+            var buildVersion = MinVer(settings => settings.WithTagPrefix("v"));
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Run MinVer as a global tool (e.g. 'minver'), instead of local tool (e.g. 'dotnet minver')</para>
+            <code>
+            <![CDATA[
+            var buildVersion = MinVer(settings => settings.WithPreferGlobalTool());
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Disable the automatic fallback to global tool (or local tool) in case of errors</para>
+            <code>
+            <![CDATA[
+            var buildVersion = MinVer(settings => settings.WithNoFallback());
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the verbosity (e.g. 'dotnet minver --verbosity trace')</para>
+            <code>
+            <![CDATA[
+            var buildVersion = MinVer(settings => settings.WithVerbosity(MinVerVerbosity.Trace));
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.MinVer.MinVerAliases.MinVer(Cake.Core.ICakeContext,Cake.MinVer.MinVerSettings)">
+            <summary>
+            Run the MinVer dotnet tool using the specified settings.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="settings">The settings.</param>
+            <example>
+            <para>Increment the major version (e.g. 'dotnet minver --auto-increment major')</para>
+            <code>
+            <![CDATA[
+            var settings = new MinVerSettings
+            {
+                AutoIncrement = MinVerAutoIncrement.Major,
+            };
+            
+            var buildVersion = MinVer(settings);
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the build metadata (e.g. 'dotnet minver --build-metadata abcdefg')</para>
+            <code>
+            <![CDATA[
+            var settings = new MinVerSettings
+            {
+                BuildMetadata = "abcdefg",
+            };
+            
+            var buildVersion = MinVer(settings);
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the default pre-release phase (e.g. 'dotnet minver --default-pre-release-phase preview')</para>
+            <code>
+            <![CDATA[
+            var settings = new MinVerSettings
+            {
+                DefaultPreReleasePhase = "preview",
+            };
+            
+            var buildVersion = MinVer(settings);
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the minimum major and minor version (e.g. 'dotnet minver --minimum-major-minor 2.5')</para>
+            <code>
+            <![CDATA[
+            var settings = new MinVerSettings
+            {
+                MinimumMajorMinor = "2.5",
+            };
+            
+            var buildVersion = MinVer(settings);
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the working directory for MinVer to use (e.g. 'dotnet minver --repo C:\MyProject')</para>
+            <code>
+            <![CDATA[
+            var settings = new MinVerSettings
+            {
+                Repo = @"C:\MyProject",
+            };
+            
+            var buildVersion = MinVer(settings);
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the tag prefix (e.g. 'dotnet minver --tag-prefix v')</para>
+            <code>
+            <![CDATA[
+            var settings = new MinVerSettings
+            {
+                TagPrefix = "v",
+            };
+            
+            var buildVersion = MinVer(settings);
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Run MinVer as a global tool (e.g. 'minver'), instead of local tool (e.g. 'dotnet minver')</para>
+            <code>
+            <![CDATA[
+            var settings = new MinVerSettings
+            {
+                PreferGlobalTool = true,
+            };
+            
+            var buildVersion = MinVer(settings);
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Disable the automatic fallback to global tool (or local tool) in case of errors</para>
+            <code>
+            <![CDATA[
+            var settings = new MinVerSettings
+            {
+                NoFallback = true,
+            };
+            
+            var buildVersion = MinVer(settings);
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            <para>Set the verbosity (e.g. 'dotnet minver --verbosity trace')</para>
+            <code>
+            <![CDATA[
+            var settings = new MinVerSettings
+            {
+                Verbosity = MinVerVerbosity.Trace,
+            };
+            
+            var buildVersion = MinVer(settings);
+            Information($"Version: {buildVersion.Version}");
+            // ...
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="T:Cake.MinVer.MinVerAutoIncrement">
+            <summary>
+            --auto-increment &lt;VERSION_PART&gt;
+            major, minor, or patch (default)
+            </summary>
+        </member>
+        <member name="F:Cake.MinVer.MinVerAutoIncrement.Major">
+            <summary>
+            --auto-increment major
+            </summary>
+        </member>
+        <member name="F:Cake.MinVer.MinVerAutoIncrement.Minor">
+            <summary>
+            --auto-increment minor
+            </summary>
+        </member>
+        <member name="F:Cake.MinVer.MinVerAutoIncrement.Patch">
+            <summary>
+            --auto-increment patch
+            </summary>
+        </member>
+        <member name="M:Cake.MinVer.MinVerGlobalTool.GetArguments(Cake.MinVer.MinVerSettings)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.MinVer.MinVerGlobalTool.GetToolName">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.MinVer.MinVerGlobalTool.GetToolExecutableNames">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.MinVer.MinVerLocalTool.GetArguments(Cake.MinVer.MinVerSettings)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.MinVer.MinVerLocalTool.GetToolName">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.MinVer.MinVerSettings">
+            <summary>
+            Contains settings used by <see cref="T:Cake.MinVer.MinVerTool" />.
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerSettings.AutoIncrement">
+            <summary>
+            Set the version part to be automatically incremented.
+            --auto-increment &lt;VERSION_PART&gt;
+            major, minor, or patch (default)
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerSettings.BuildMetadata">
+            <summary>
+            Set the build metadata.
+            --build-metadata &lt;BUILD_METADATA&gt;
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerSettings.DefaultPreReleasePhase">
+            <summary>
+            Set the default pre-release phase.
+            --default-pre-release-phase &lt;PHASE&gt;
+            alpha (default), preview, etc.
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerSettings.MinimumMajorMinor">
+            <summary>
+            Set the minimum major and minor version.
+            --minimum-major-minor &lt;MINIMUM_MAJOR_MINOR&gt;
+            1.0, 1.1, 2.0, etc.
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerSettings.Repo">
+            <summary>
+            Set the working directory for MinVer to use.
+            --repo &lt;REPO&gt;
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerSettings.TagPrefix">
+            <summary>
+            Set the tag prefix.
+            --tag-prefix &lt;TAG_PREFIX&gt;
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerSettings.PreferGlobalTool">
+            <summary>
+            By default, MinVer is executed as a local tool first and, in case of error, fallback(*) to global tool
+            Set <see cref="P:Cake.MinVer.MinVerSettings.PreferGlobalTool" /> to <see langword="true" /> to execute MinVer as global tool first and,
+            in case of an error, fallback(*) to local tool
+            
+            (*) Unless the fallback is disabled via <see cref="P:Cake.MinVer.MinVerSettings.NoFallback" />
+            
+            Local tool = `dotnet minver`
+            Global tool = `minver`
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerSettings.NoFallback">
+            <summary>
+            By default, MinVer is executed as a local tool first(*) and, in case of error, fallback to global tool(*)
+            Set <see cref="P:Cake.MinVer.MinVerSettings.NoFallback" /> to <see langword="true" /> to disable the fallback in case of an error
+            
+            (*) Unless <see cref="P:Cake.MinVer.MinVerSettings.PreferGlobalTool" /> is set to <see langword="true" />, in which case MinVer is
+            executed as a global tool first and, in case of an error, fallback to local tool
+            
+            Local tool = `dotnet minver`
+            Global tool = `minver`
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerSettings.Verbosity">
+            <summary>
+            Set the verbosity.
+            --verbosity &lt;VERBOSITY&gt;
+            error, warn, info (default), debug, or trace
+            </summary>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettings.Clone">
+            <summary>
+            Creates a shallow clone of this <see cref="T:Cake.MinVer.MinVerSettings" /> instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Cake.MinVer.MinVerSettingsExtensions">
+            <summary>
+            Extensions for <see cref="T:Cake.MinVer.MinVerSettings" />.
+            </summary>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettingsExtensions.WithAutoIncrement(Cake.MinVer.MinVerSettings,Cake.MinVer.MinVerAutoIncrement)">
+            <summary>
+            Set the version part to be automatically incremented.
+            --auto-increment &lt;VERSION_PART&gt;
+            major, minor, or patch (default)
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="autoIncrement">The version part to be automatically incremented.</param>
+            <returns>The <paramref name="settings" /> instance with <see cref="P:Cake.MinVer.MinVerSettings.AutoIncrement" /> set to <paramref name="autoIncrement" />.</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettingsExtensions.WithBuildMetadata(Cake.MinVer.MinVerSettings,System.String)">
+            <summary>
+            Set the build metadata.
+            --build-metadata &lt;BUILD_METADATA&gt;
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="buildMetadata">The build metadata.</param>
+            <returns>The <paramref name="settings" /> instance with <see cref="P:Cake.MinVer.MinVerSettings.BuildMetadata" /> set to <paramref name="buildMetadata" />.</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettingsExtensions.WithDefaultPreReleasePhase(Cake.MinVer.MinVerSettings,System.String)">
+            <summary>
+            Set the default pre-release phase.
+            --default-pre-release-phase &lt;PHASE&gt;
+            alpha (default), preview, etc.
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="defaultPreReleasePhase">The build metadata.</param>
+            <returns>The <paramref name="settings" /> instance with <see cref="P:Cake.MinVer.MinVerSettings.DefaultPreReleasePhase" /> set to <paramref name="defaultPreReleasePhase" />.</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettingsExtensions.WithMinimumMajorMinor(Cake.MinVer.MinVerSettings,System.String)">
+            <summary>
+            Set the minimum major and minor version.
+            --minimum-major-minor &lt;MINIMUM_MAJOR_MINOR&gt;
+            1.0, 1.1, 2.0, etc.
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="minimumMajorMinor">The build metadata.</param>
+            <returns>The <paramref name="settings" /> instance with <see cref="P:Cake.MinVer.MinVerSettings.MinimumMajorMinor" /> set to <paramref name="minimumMajorMinor" />.</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettingsExtensions.WithRepo(Cake.MinVer.MinVerSettings,Cake.Core.IO.DirectoryPath)">
+            <summary>
+            Set the working directory for MinVer to use.
+            --repo &lt;REPO&gt;
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="repo">The working directory.</param>
+            <returns>The <paramref name="settings" /> instance with <see cref="P:Cake.MinVer.MinVerSettings.Repo" /> set to <paramref name="repo" />.</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettingsExtensions.WithTagPrefix(Cake.MinVer.MinVerSettings,System.String)">
+            <summary>
+            Set the tag prefix.
+            --tag-prefix &lt;TAG_PREFIX&gt;
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="tagPrefix">The tag prefix.</param>
+            <returns>The <paramref name="settings" /> instance with <see cref="P:Cake.MinVer.MinVerSettings.Repo" /> set to <paramref name="tagPrefix" />.</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettingsExtensions.WithPreferGlobalTool(Cake.MinVer.MinVerSettings)">
+             <summary>
+             By default, MinVer is executed as a local tool first and, in case of error, fallback(*) to global tool
+             Set <see cref="P:Cake.MinVer.MinVerSettings.PreferGlobalTool" /> to <see langword="true" /> to execute MinVer as global tool first and,
+             in case of an error, fallback(*) to local tool
+            
+             (*) Unless the fallback is disabled via <see cref="P:Cake.MinVer.MinVerSettings.NoFallback" />
+            
+             Local tool = `dotnet minver`
+             Global tool = `minver`
+             </summary>
+             <param name="settings">The settings.</param>
+             <returns>The <paramref name="settings" /> instance with <see cref="P:Cake.MinVer.MinVerSettings.Repo" />.</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettingsExtensions.WithNoFallback(Cake.MinVer.MinVerSettings)">
+             <summary>
+             By default, MinVer is executed as a local tool first(*) and, in case of error, fallback to global tool(*)
+             Set <see cref="P:Cake.MinVer.MinVerSettings.NoFallback" /> to <see langword="true" /> to disable the fallback in case of an error
+            
+             (*) Unless <see cref="P:Cake.MinVer.MinVerSettings.PreferGlobalTool" /> is set to <see langword="true" />, in which case MinVer is
+             executed as a global tool first and, in case of an error, fallback to local tool
+            
+             Local tool = `dotnet minver`
+             Global tool = `minver`
+             </summary>
+             <param name="settings">The settings.</param>
+             <returns>The <paramref name="settings" /> instance with <see cref="P:Cake.MinVer.MinVerSettings.Repo" />.</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettingsExtensions.WithToolPath(Cake.MinVer.MinVerSettings,Cake.Core.IO.FilePath)">
+            <summary>
+            Set a custom path to the minver.exe file.
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="toolPath">The custom path to the minver.exe file.</param>
+            <returns>The <paramref name="settings" /> instance with <see cref="P:Cake.Core.Tooling.ToolSettings.ToolPath" /> set to <paramref name="toolPath" />.</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettingsExtensions.WithVerbosity(Cake.MinVer.MinVerSettings,Cake.MinVer.MinVerVerbosity)">
+            <summary>
+            Set the verbosity.
+            --verbosity &lt;VERBOSITY&gt;
+            error, warn, info (default), debug, or trace
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="verbosity">The verbosity.</param>
+            <returns>The <paramref name="settings" /> instance with <see cref="P:Cake.MinVer.MinVerSettings.Verbosity" /> set to <paramref name="verbosity" />.</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerSettingsExtensions.FromPath(Cake.MinVer.MinVerSettings,Cake.Core.IO.DirectoryPath)">
+            <summary>
+            Sets the working directory which should be used to run the MinVer tool.
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="path">Working directory which should be used to run the dotnet minver tool.</param>
+            <returns>The <paramref name="settings" /> instance with <see cref="P:Cake.Core.Tooling.ToolSettings.WorkingDirectory" /> set to <paramref name="path" />.</returns>
+        </member>
+        <member name="T:Cake.MinVer.MinVerTool">
+            <summary>
+            MinVer dotnet tool.
+            </summary>
+        </member>
+        <member name="M:Cake.MinVer.MinVerTool.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator,Cake.Core.Diagnostics.ICakeLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.MinVer.MinVerTool" /> class.
+            </summary>
+            <param name="fileSystem">The file system.</param>
+            <param name="environment">The environment.</param>
+            <param name="processRunner">The process runner.</param>
+            <param name="tools">The tool locator.</param>
+            <param name="log">Cake log instance.</param>
+        </member>
+        <member name="P:Cake.MinVer.MinVerTool.CakeLog">
+            <summary>
+            Cake log instance.
+            </summary>
+        </member>
+        <member name="M:Cake.MinVer.MinVerTool.Run(Cake.MinVer.MinVerSettings)">
+            <summary>
+            Run the MinVer dotnet tool using the specified settings.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns>The MinVer calculated version information</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerTool.GetToolName">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.MinVer.MinVerToolBase.CreateArgumentBuilder(Cake.MinVer.MinVerSettings)">
+            <summary>
+            Creates a <see cref="T:Cake.Core.IO.ProcessArgumentBuilder" /> and adds common commandline arguments.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns>Instance of <see cref="T:Cake.Core.IO.ProcessArgumentBuilder" />.</returns>
+        </member>
+        <member name="T:Cake.MinVer.MinVerVerbosity">
+            <summary>
+            --verbosity &lt;VERBOSITY&gt;
+            error, warn, info (default), debug, or trace
+            </summary>
+        </member>
+        <member name="F:Cake.MinVer.MinVerVerbosity.Error">
+            <summary>
+            --verbosity error
+            </summary>
+        </member>
+        <member name="F:Cake.MinVer.MinVerVerbosity.Warn">
+            <summary>
+            --verbosity warn
+            </summary>
+        </member>
+        <member name="F:Cake.MinVer.MinVerVerbosity.Info">
+            <summary>
+            --verbosity info
+            </summary>
+        </member>
+        <member name="F:Cake.MinVer.MinVerVerbosity.Debug">
+            <summary>
+            --verbosity debug
+            </summary>
+        </member>
+        <member name="F:Cake.MinVer.MinVerVerbosity.Trace">
+            <summary>
+            --verbosity trace
+            </summary>
+        </member>
+        <member name="T:Cake.MinVer.MinVerVersion">
+            <summary>
+            The version returned by MinVer
+            </summary>
+        </member>
+        <member name="M:Cake.MinVer.MinVerVersion.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.MinVer.MinVerVersion" /> class.
+            </summary>
+            <param name="versionString">The version string returned by MinVer</param>
+        </member>
+        <member name="M:Cake.MinVer.MinVerVersion.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.MinVer.MinVerVersion" /> class.
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerVersion.Version">
+            <summary>
+            The original, non-normalized version string
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerVersion.Major">
+            <summary>
+            The Major version number
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerVersion.Minor">
+            <summary>
+            The Minor version number
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerVersion.Patch">
+            <summary>
+            The Patch version number
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerVersion.PreRelease">
+            <summary>
+            The Pre-release extension
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerVersion.IsPreRelease">
+            <summary>
+            Returns <see langword="true"/> when <see cref="P:Cake.MinVer.MinVerVersion.PreRelease" /> is not null or empty
+            otherwise <see langword="false"/>
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerVersion.BuildMetadata">
+            <summary>
+            The Build metadata extension
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerVersion.AssemblyVersion">
+            <summary>
+            <see cref="P:Cake.MinVer.MinVerVersion.Major" />.0.0.0
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerVersion.FileVersion">
+            <summary>
+            <see cref="P:Cake.MinVer.MinVerVersion.Major" />.<see cref="P:Cake.MinVer.MinVerVersion.Minor" />.<see cref="P:Cake.MinVer.MinVerVersion.Patch" />.0
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerVersion.InformationalVersion">
+            <summary>
+            The original, non-normalized version string. Same as <see cref="P:Cake.MinVer.MinVerVersion.Version" />
+            </summary>
+        </member>
+        <member name="P:Cake.MinVer.MinVerVersion.PackageVersion">
+            <summary>
+            The original, non-normalized version string. Same as <see cref="P:Cake.MinVer.MinVerVersion.Version" />
+            </summary>
+        </member>
+        <member name="M:Cake.MinVer.MinVerVersion.Parse(System.String)">
+            <summary>
+            Converts the specified string representation of MinVer-compatible version to its <see cref="T:Cake.MinVer.MinVerVersion" /> equivalent.
+            </summary>
+            <param name="versionString">A string containing a string version to convert.</param>
+            <returns>An object that is equivalent to the version contained in <paramref name="versionString">versionString</paramref>.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="versionString">versionString</paramref> is null or empty.</exception>
+            <exception cref="T:System.FormatException"><paramref name="versionString">versionString</paramref> does not contain a valid string representation of MinVer-compatible version.</exception>
+        </member>
+        <member name="M:Cake.MinVer.MinVerVersion.TryParse(System.String,Cake.MinVer.MinVerVersion@)">
+            <summary>
+            Converts the specified string representation of MinVer-compatible version to its <see cref="T:Cake.MinVer.MinVerVersion" /> equivalent and returns a value that indicates whether the conversion succeeded.
+            </summary>
+            <param name="versionString">A string containing a string version to convert.</param>
+            <param name="version">When this method returns <see langword="true" />, contains the <see cref="T:Cake.MinVer.MinVerVersion" /> value equivalent to the version contained in <paramref name="versionString">versionString</paramref>, if the conversion succeeded, or <see langword="null" /> if the conversion failed. The conversion fails if the <paramref name="versionString">versionString</paramref> parameter is null, is an empty string (""), or does not contain a valid string representation of a MinVer-compatible version.</param>
+            <returns><see langword="true" /> if the <paramref name="versionString">versionString</paramref> parameter was converted successfully; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:Cake.MinVer.MinVerVersion.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.MinVer.MinVerVersion.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.MinVer.MinVerVersion.CompareTo(Cake.MinVer.MinVerVersion)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.MinVer.MinVerVersion.op_Implicit(Cake.MinVer.MinVerVersion)~System.String">
+            <summary>
+            Implicit conversion from <see cref="T:Cake.MinVer.MinVerVersion"/> to <see cref="T:System.String"/> to simplify use in build scripts.
+            </summary>
+            <param name="version">The MinVer version.</param>
+            <returns>The original, non-normalized version string.</returns>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="version"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="T:Cake.MinVer.NamespaceDoc">
+            <summary>
+            This namespace contain types used for operations using the MinVer tool wrapper.
+            </summary>
+        </member>
+    </members>
+</doc>

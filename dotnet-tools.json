@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "cake.tool": {
+      "version": "4.0.0",
+      "commands": [
+        "dotnet-cake"
+      ]
+    },
+    "meziantou.framework.nugetpackagevalidation.tool": {
+      "version": "1.0.14",
+      "commands": [
+        "meziantou.validate-nuget-package"
+      ]
+    }
+  }
+}
