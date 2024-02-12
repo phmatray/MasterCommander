@@ -2,8 +2,8 @@
 
 Write code, not commands. MasterCommander provides a simple, consistent interface for common development tasks.
 
-| ![Logo MasterCommander](https://raw.githubusercontent.com/phmatray/MasterCommander/main/logo.png)                  | MasterCommander is a versatile command-line utility designed to streamline the workflow for developers working with multiple technology stacks. By integrating common operations for Git, .NET, Docker, and npm into a single application, MasterCommander enhances productivity and simplifies project setup and management tasks. |
-|--------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![Logo MasterCommander](https://raw.githubusercontent.com/phmatray/MasterCommander/main/logo.png) | MasterCommander is a versatile command-line utility designed to streamline the workflow for developers working with multiple technology stacks. By integrating common operations for Git, .NET, Docker, and npm into a single application, MasterCommander enhances productivity and simplifies project setup and management tasks. |
+|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 [![phmatray - MasterCommander](https://img.shields.io/static/v1?label=phmatray&message=MasterCommander&color=blue&logo=github)](https://github.com/phmatray/MasterCommander "Go to GitHub repo")
 [![License: GPL-3.0-or-later](https://img.shields.io/badge/License-GPLv3.0--or--later-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
@@ -52,7 +52,8 @@ Write code, not commands. MasterCommander provides a simple, consistent interfac
 
 Use your favorite CLI tools without leaving your code editor:
 
-This example demonstrates how to use MasterCommander to create a new .NET solution and project, initialize a Git repository, and build and run the project.
+This example demonstrates how to use MasterCommander to create a new .NET solution and project, initialize a Git
+repository, and build and run the project.
 In addition, this code adds a .gitignore file, an .editorconfig file, and a global.json file to the project.
 
 ```csharp
@@ -76,25 +77,29 @@ await dotnet.BuildAsync(new DotnetBuildOptions { Configuration = "Release" });
 await dotnet.RunAsync(new DotnetRunOptions { Project = ConsoleCsproj, Configuration = "Release" });
 ``` 
 
-You can standardize your development workflow by using MasterCommander to perform common tasks across multiple projects and technology stacks.
+You can standardize your development workflow by using MasterCommander to perform common tasks across multiple projects
+and technology stacks.
 
 Output from MasterCommander commands is displayed in a clean, readable format:
 > ![MasterCommander Screenshot](https://raw.githubusercontent.com/phmatray/MasterCommander/main/assets/img/output-spectre.png)
 
 ## 📄 Documentation
 
-**MasterCommander** provides a [COMPLETE DOCUMENTATION](https://github.com/phmatray/MasterCommander/blob/main/docs/README.md) of the library.
+**MasterCommander** provides
+a [COMPLETE DOCUMENTATION](https://github.com/phmatray/MasterCommander/blob/main/docs/README.md) of the library.
 
 All summaries are written in English. If you want to help us translate the documentation, please open an issue to
 discuss it.
 
-> **Note:** The documentation is generated using [Doraku/DefaultDocumentation]() tool. It is generated automatically when the project is built.
+> **Note:** The documentation is generated using [Doraku/DefaultDocumentation]() tool. It is generated automatically
+> when the project is built.
 
 ## 📌 Features
 
 ### Current Features
 
-* [x] **Unified Interface**: MasterCommander provides a single interface for interacting with multiple development tools.
+* [x] **Unified Interface**: MasterCommander provides a single interface for interacting with multiple development
+  tools.
 * [x] **Simple Commands**: Execute common development tasks with simple, intuitive commands.
 * [x] **Cross-Platform**: MasterCommander is designed to work on Windows, macOS, and Linux.
 * [x] **Customizable**: Add new commands and features to MasterCommander to suit your workflow.
@@ -149,12 +154,11 @@ To install MasterCommander, you can use the NuGet package manager. Run the follo
 dotnet add package MasterCommander --version 1.0.0-alpha.0.40
 ```
 
-| Package Name                         | NuGet Version Badge                                                                                            | NuGet Downloads Badge                                                                                           | Package Explorer                                       |
-|--------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| MasterCommander                      | [![NuGet](https://img.shields.io/nuget/v/MasterCommander.svg)](https://www.nuget.org/packages/MasterCommander) | [![NuGet](https://img.shields.io/nuget/dt/MasterCommander.svg)](https://www.nuget.org/packages/MasterCommander) | [Explore](https://nuget.info/packages/MasterCommander) |
+| Package Name    | NuGet Version Badge                                                                                            | NuGet Downloads Badge                                                                                           | Package Explorer                                       |
+|-----------------|----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| MasterCommander | [![NuGet](https://img.shields.io/nuget/v/MasterCommander.svg)](https://www.nuget.org/packages/MasterCommander) | [![NuGet](https://img.shields.io/nuget/dt/MasterCommander.svg)](https://www.nuget.org/packages/MasterCommander) | [Explore](https://nuget.info/packages/MasterCommander) |
 
 This table is automatically updated regularly the latest developments and releases.
-
 
 ## 📊 Code Quality
 
@@ -165,17 +169,20 @@ We strive for the highest code quality in MasterCommander. To ensure this, we us
 
 ### 🧪 Tests Specifications
 
-We use xUnit and FluentAssertions to write and run tests for MasterCommander. This ensures that the library is reliable and performs as expected.
+We use xUnit and FluentAssertions to write and run tests for MasterCommander. This ensures that the library is reliable
+and performs as expected.
 
 ## 🤝 Contributing
 
 ### How to contribute?
 
-Contributions to MasterCommander are welcome! Whether it's reporting bugs, discussing improvements, or submitting pull requests, all contributions help make MasterCommander a better tool for developers.
+Contributions to MasterCommander are welcome! Whether it's reporting bugs, discussing improvements, or submitting pull
+requests, all contributions help make MasterCommander a better tool for developers.
 
 Before submitting pull requests, please ensure you have discussed the proposed changes with the project maintainers.
 
-A great way to contribute to MasterCommander is to add new commands. If you have a command you'd like to see added to MasterCommander, please open an issue to discuss it.
+A great way to contribute to MasterCommander is to add new commands. If you have a command you'd like to see added to
+MasterCommander, please open an issue to discuss it.
 
 ### Contributors
 
@@ -183,7 +190,9 @@ A great way to contribute to MasterCommander is to add new commands. If you have
 
 ## ❓ Issues and Feature Requests
 
-For reporting bugs or suggesting new features, kindly submit these as an issue to the [MasterCommander Repository](https://github.com/phmatray/MasterCommander/issues). We value your contributions, but before submitting an issue, please ensure it is not a duplicate of an existing one.
+For reporting bugs or suggesting new features, kindly submit these as an issue to
+the [MasterCommander Repository](https://github.com/phmatray/MasterCommander/issues). We value your contributions, but
+before submitting an issue, please ensure it is not a duplicate of an existing one.
 
 ## ✉️ Contact
 
