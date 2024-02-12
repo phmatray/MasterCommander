@@ -44,7 +44,7 @@
   </PropertyGroup>
 
   <!-- Continuous Integration -->
-  <PropertyGroup Label="Deterministic Build" Condition="'$(GITHUB_ACTIONS)' == 'true'">
+  <PropertyGroup Label="Deterministic Build">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
   
