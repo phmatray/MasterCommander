@@ -12,7 +12,9 @@ public sealed class StandardConsole : ConsoleBase
     /// <inheritdoc />
     public override void WriteLine(string? message = null)
     {
+#pragma warning disable Spectre1000
         Console.WriteLine(message ?? string.Empty);
+#pragma warning restore Spectre1000
     }
 
     /// <inheritdoc />

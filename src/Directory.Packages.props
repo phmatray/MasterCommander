@@ -2,43 +2,53 @@
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
-  <ItemGroup>
-    <!-- DependencyInjection -->
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
-    <!-- Validation -->
-    <PackageVersion Include="FluentValidation" Version="11.9.0" />
-    <!-- DDD -->
-    <PackageVersion Include="ValueOf" Version="2.0.31" />
-    <!-- Reactive Extensions -->
-    <PackageVersion Include="System.Reactive" Version="6.0.0" />
-    <PackageVersion Include="System.Reactive.Linq" Version="6.0.0" />
-    <!-- Spectre.Console -->
-    <PackageVersion Include="Spectre.Console" Version="0.48.0" />
-    <PackageVersion Include="Spectre.Console.Cli" Version="0.48.0" />
-    <PackageVersion Include="Spectre.Console.Analyzer" Version="0.48.0" />
-    <!-- Infrastructure -->
-    <PackageVersion Include="CliWrap" Version="3.6.6" />
-    <!-- Test Frameworks -->
+
+  <!-- Development Tools -->
+  <ItemGroup Label="Development Tools">
+    <!-- Testing Libraries -->
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
-    <PackageVersion Include="Microsoft.CodeCoverage" Version="17.9.0" />
     <PackageVersion Include="coverlet.collector" Version="6.0.0" />
     <PackageVersion Include="xunit" Version="2.6.6" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.5.6" />
-    <PackageVersion Include="Verify.XUnit" Version="23.1.0" />
     <PackageVersion Include="Snapshooter.Xunit" Version="0.14.1" />
-    <PackageVersion Include="FluentAssertions" Version="6.12.0" />
+    <PackageVersion Include="Verify.XUnit" Version="23.1.0" />
     <!-- Analyzers -->
-    <PackageVersion Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" />
-    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
-    <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.556" />
-    <PackageVersion Include="Roslynator.Analyzers" Version="4.10.0" />
-    <!-- Source Linking -->
-    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
-    <!-- Other Tools -->
-    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.1.1" />
-    <PackageVersion Include="MinVer" Version="4.3.0" />
-    <!-- Documentation -->
+    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" PrivateAssets="all" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
+    <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.556" PrivateAssets="all" />
+    <PackageVersion Include="Roslynator.Analyzers" Version="4.10.0" PrivateAssets="all" />
+    <PackageVersion Include="Spectre.Console.Analyzer" Version="0.48.0" PrivateAssets="all" />
+    <!-- Source Generators -->
+    <PackageVersion Include="Vogen" Version="3.0.24" PrivateAssets="all" />
+    <!-- Code Coverage -->
+    <PackageVersion Include="Microsoft.CodeCoverage" Version="17.8.0" />
+  </ItemGroup>
+
+  <!-- Production Dependencies -->
+  <ItemGroup Label="Production Dependencies">
+    <!-- .NET Core & Extensions -->
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+    <!-- Libraries -->
+    <PackageVersion Include="CliWrap" Version="3.6.6" />
+    <PackageVersion Include="FluentAssertions" Version="6.12.0" />
+    <PackageVersion Include="FluentValidation" Version="11.9.0" />
+    <PackageVersion Include="Spectre.Console" Version="0.48.0" />
+    <PackageVersion Include="Spectre.Console.Cli" Version="0.48.0" />
+    <PackageVersion Include="System.Reactive" Version="6.0.0" />
+    <PackageVersion Include="System.Reactive.Linq" Version="6.0.0" />
+    <PackageVersion Include="ValueOf" Version="2.0.31" />
+  </ItemGroup>
+
+  <!-- Build and Versioning Tools -->
+  <ItemGroup Label="Build and Versioning Tools">
+    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.1.1" PrivateAssets="all" />
+    <PackageVersion Include="MinVer" Version="4.3.0" PrivateAssets="all" />
+    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- Documentation -->
+  <ItemGroup Label="Documentation">
     <PackageVersion Include="DefaultDocumentation" Version="0.8.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
