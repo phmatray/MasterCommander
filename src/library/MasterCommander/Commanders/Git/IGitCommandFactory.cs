@@ -16,6 +16,14 @@ public interface IGitCommandFactory
     Command CreateCommandInit();
 
     /// <summary>
+    /// Creates a command to add a file or directory to the git repository.
+    /// </summary>
+    /// <param name="pathSpec">The path to the file or directory to add.</param>
+    /// <param name="options">The options for adding the file or directory.</param>
+    /// <returns>A command to add a file or directory to the repository.</returns>
+    Command CreateCommandAdd(string pathSpec, GitAddOptions options);
+
+    /// <summary>
     /// Creates a command to check the status of the git repository.
     /// </summary>
     /// <returns>A command to display the status of the repository.</returns>

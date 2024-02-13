@@ -17,6 +17,18 @@ public interface IGitService
     Task InitAsync(CancellationToken ct = default);
 
     /// <summary>
+    /// Adds a file to the Git repository asynchronously.
+    /// </summary>
+    /// <param name="pathSpec">The path to the file to add.</param>
+    /// <param name="options">Optional options for the add operation.</param>
+    /// <param name="ct">Optional cancellation token to cancel the operation.</param>
+    /// <returns>A task that represents the asynchronous add operation.</returns>
+    Task AddAsync(
+        string pathSpec,
+        GitAddOptions? options = null,
+        CancellationToken ct = default);
+
+    /// <summary>
     /// Checks the status of the Git repository asynchronously.
     /// </summary>
     /// <param name="ct">Optional cancellation token to cancel the operation.</param>

@@ -64,6 +64,7 @@ P:MasterCommander.Core.CmdOptionOrderAttribute.Order|CmdOptionOrderAttribute.Ord
 M:MasterCommander.Core.CmdOptionOrderAttribute.#ctor(System.Int32)|CmdOptionOrderAttribute.CmdOptionOrderAttribute(int).md|CmdOptionOrderAttribute(int)
 T:MasterCommander.Core.CmdOptionOrderAttribute|CmdOptionOrderAttribute.md|CmdOptionOrderAttribute
 M:MasterCommander.Core.CmdOptionsBase.#ctor(System.String[])|CmdOptionsBase.CmdOptionsBase(string[]).md|CmdOptionsBase(string[])
+M:MasterCommander.Core.CmdOptionsBase.ToArguments(System.String[])|CmdOptionsBase.ToArguments(string[]).md|ToArguments(string[])
 M:MasterCommander.Core.CmdOptionsBase.ToArguments|CmdOptionsBase.ToArguments().md|ToArguments()
 M:MasterCommander.Core.CmdOptionsBase.ExtractPropertiesWithAttributes|CmdOptionsBase.ExtractPropertiesWithAttributes().md|ExtractPropertiesWithAttributes()
 M:MasterCommander.Core.CmdOptionsBase.ValidatePropertyValue(System.Reflection.PropertyInfo,System.Object,MasterCommander.Core.CmdOptionValuesAttribute)|CmdOptionsBase.ValidatePropertyValue(PropertyInfo,object,CmdOptionValuesAttribute).md|ValidatePropertyValue(PropertyInfo, object, CmdOptionValuesAttribute)
@@ -184,6 +185,7 @@ T:MasterCommander.Commanders.Npm.NpmService|NpmService.md|NpmService
 P:MasterCommander.Commanders.Git.GitCommandFactory.ExecutablePath|GitCommandFactory.ExecutablePath.md|ExecutablePath
 M:MasterCommander.Commanders.Git.GitCommandFactory.#ctor(MasterCommander.Core.Services.IDirectoryService)|GitCommandFactory.GitCommandFactory(IDirectoryService).md|GitCommandFactory(IDirectoryService)
 M:MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandInit|GitCommandFactory.CreateCommandInit().md|CreateCommandInit()
+M:MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandAdd(System.String,MasterCommander.Commanders.Git.CmdAdd.GitAddOptions)|GitCommandFactory.CreateCommandAdd(string,GitAddOptions).md|CreateCommandAdd(string, GitAddOptions)
 M:MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandStatus|GitCommandFactory.CreateCommandStatus().md|CreateCommandStatus()
 M:MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandCloneRepository(System.String,System.String)|GitCommandFactory.CreateCommandCloneRepository(string,string).md|CreateCommandCloneRepository(string, string)
 M:MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandCommit(System.String)|GitCommandFactory.CreateCommandCommit(string).md|CreateCommandCommit(string)
@@ -191,20 +193,30 @@ N:MasterCommander.Commanders.Git|MasterCommander.md#MasterCommander.Commanders.G
 T:MasterCommander.Commanders.Git.GitCommandFactory|GitCommandFactory.md|GitCommandFactory
 M:MasterCommander.Commanders.Git.GitService.#ctor(MasterCommander.Commanders.Git.IGitCommandFactory,MasterCommander.Core.Display.IConsole)|GitService.GitService(IGitCommandFactory,IConsole).md|GitService(IGitCommandFactory, IConsole)
 M:MasterCommander.Commanders.Git.GitService.InitAsync(System.Threading.CancellationToken)|GitService.InitAsync(CancellationToken).md|InitAsync(CancellationToken)
+M:MasterCommander.Commanders.Git.GitService.AddAsync(System.String,MasterCommander.Commanders.Git.CmdAdd.GitAddOptions,System.Threading.CancellationToken)|GitService.AddAsync(string,GitAddOptions,CancellationToken).md|AddAsync(string, GitAddOptions, CancellationToken)
 M:MasterCommander.Commanders.Git.GitService.StatusAsync(System.Threading.CancellationToken)|GitService.StatusAsync(CancellationToken).md|StatusAsync(CancellationToken)
 M:MasterCommander.Commanders.Git.GitService.CloneRepositoryAsync(System.String,System.String,System.Threading.CancellationToken)|GitService.CloneRepositoryAsync(string,string,CancellationToken).md|CloneRepositoryAsync(string, string, CancellationToken)
 M:MasterCommander.Commanders.Git.GitService.CommitAsync(System.String,System.Threading.CancellationToken)|GitService.CommitAsync(string,CancellationToken).md|CommitAsync(string, CancellationToken)
 T:MasterCommander.Commanders.Git.GitService|GitService.md|GitService
 M:MasterCommander.Commanders.Git.IGitCommandFactory.CreateCommandInit|IGitCommandFactory.CreateCommandInit().md|CreateCommandInit()
+M:MasterCommander.Commanders.Git.IGitCommandFactory.CreateCommandAdd(System.String,MasterCommander.Commanders.Git.CmdAdd.GitAddOptions)|IGitCommandFactory.CreateCommandAdd(string,GitAddOptions).md|CreateCommandAdd(string, GitAddOptions)
 M:MasterCommander.Commanders.Git.IGitCommandFactory.CreateCommandStatus|IGitCommandFactory.CreateCommandStatus().md|CreateCommandStatus()
 M:MasterCommander.Commanders.Git.IGitCommandFactory.CreateCommandCloneRepository(System.String,System.String)|IGitCommandFactory.CreateCommandCloneRepository(string,string).md|CreateCommandCloneRepository(string, string)
 M:MasterCommander.Commanders.Git.IGitCommandFactory.CreateCommandCommit(System.String)|IGitCommandFactory.CreateCommandCommit(string).md|CreateCommandCommit(string)
 T:MasterCommander.Commanders.Git.IGitCommandFactory|IGitCommandFactory.md|IGitCommandFactory
 M:MasterCommander.Commanders.Git.IGitService.InitAsync(System.Threading.CancellationToken)|IGitService.InitAsync(CancellationToken).md|InitAsync(CancellationToken)
+M:MasterCommander.Commanders.Git.IGitService.AddAsync(System.String,MasterCommander.Commanders.Git.CmdAdd.GitAddOptions,System.Threading.CancellationToken)|IGitService.AddAsync(string,GitAddOptions,CancellationToken).md|AddAsync(string, GitAddOptions, CancellationToken)
 M:MasterCommander.Commanders.Git.IGitService.StatusAsync(System.Threading.CancellationToken)|IGitService.StatusAsync(CancellationToken).md|StatusAsync(CancellationToken)
 M:MasterCommander.Commanders.Git.IGitService.CloneRepositoryAsync(System.String,System.String,System.Threading.CancellationToken)|IGitService.CloneRepositoryAsync(string,string,CancellationToken).md|CloneRepositoryAsync(string, string, CancellationToken)
 M:MasterCommander.Commanders.Git.IGitService.CommitAsync(System.String,System.Threading.CancellationToken)|IGitService.CommitAsync(string,CancellationToken).md|CommitAsync(string, CancellationToken)
 T:MasterCommander.Commanders.Git.IGitService|IGitService.md|IGitService
+P:MasterCommander.Commanders.Git.CmdAdd.GitAddOptions.Verbose|GitAddOptions.Verbose.md|Verbose
+P:MasterCommander.Commanders.Git.CmdAdd.GitAddOptions.DryRun|GitAddOptions.DryRun.md|DryRun
+P:MasterCommander.Commanders.Git.CmdAdd.GitAddOptions.Force|GitAddOptions.Force.md|Force
+P:MasterCommander.Commanders.Git.CmdAdd.GitAddOptions.Update|GitAddOptions.Update.md|Update
+M:MasterCommander.Commanders.Git.CmdAdd.GitAddOptions.#ctor|GitAddOptions.GitAddOptions().md|GitAddOptions()
+N:MasterCommander.Commanders.Git.CmdAdd|MasterCommander.md#MasterCommander.Commanders.Git.CmdAdd|MasterCommander.Commanders.Git.CmdAdd
+T:MasterCommander.Commanders.Git.CmdAdd.GitAddOptions|GitAddOptions.md|GitAddOptions
 P:MasterCommander.Commanders.Dotnet.DotnetCommandFactory.ExecutablePath|DotnetCommandFactory.ExecutablePath.md|ExecutablePath
 M:MasterCommander.Commanders.Dotnet.DotnetCommandFactory.#ctor(MasterCommander.Core.Services.IDirectoryService)|DotnetCommandFactory.DotnetCommandFactory(IDirectoryService).md|DotnetCommandFactory(IDirectoryService)
 M:MasterCommander.Commanders.Dotnet.DotnetCommandFactory.CreateCommandNew(MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewOptions)|DotnetCommandFactory.CreateCommandNew(DotnetNewOptions).md|CreateCommandNew(DotnetNewOptions)

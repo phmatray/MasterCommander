@@ -7,6 +7,8 @@ namespace MasterCommander.Commanders.Dotnet;
 /// <summary>
 /// Provides .NET related operations.
 /// </summary>
+/// <param name="dotnetCommandFactory">The factory for creating dotnet command instances.</param>
+/// <param name="console">The console to use for output.</param>
 public class DotnetService(
     IDotnetCommandFactory dotnetCommandFactory,
     IConsole console)

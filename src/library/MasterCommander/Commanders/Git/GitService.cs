@@ -22,6 +22,17 @@ public class GitService(
     }
 
     /// <inheritdoc />
+    public async Task AddAsync(
+        string pathSpec,
+        GitAddOptions? options,
+        CancellationToken ct = default)
+    {
+        options ??= new GitAddOptions();
+        var command = gitCommandFactory.CreateCommandAdd(pathSpec, options);
+        await ListenCommandAsync(command, ct);
+    }
+
+    /// <inheritdoc />
     public async Task StatusAsync(CancellationToken ct = default)
     {
         var command = gitCommandFactory.CreateCommandStatus();

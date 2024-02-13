@@ -11,6 +11,7 @@ global using MasterCommander.Commanders.Dotnet.CmdBuild;
 global using MasterCommander.Commanders.Dotnet.CmdNew.Options;
 global using MasterCommander.Commanders.Dotnet.CmdRun;
 global using MasterCommander.Commanders.Git;
+global using MasterCommander.Commanders.Git.CmdAdd;
 global using MasterCommander.Commanders.Npm;
 global using MasterCommander.Core;
 global using MasterCommander.Core.ConsoleEvents;

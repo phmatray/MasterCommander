@@ -22,6 +22,12 @@ public class GitCommandFactory(IDirectoryService directoryService)
     }
 
     /// <inheritdoc />
+    public Command CreateCommandAdd(string pathSpec, GitAddOptions options)
+    {
+        return CreateCommand(options.ToArguments(pathSpec));
+    }
+
+    /// <inheritdoc />
     public Command CreateCommandStatus()
     {
         string[] arguments = ["status"];

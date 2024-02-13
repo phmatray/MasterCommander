@@ -16,8 +16,8 @@ Write code, not commands. MasterCommander provides a simple, consistent interfac
 [![GitHub contributors](https://img.shields.io/github/contributors/phmatray/MasterCommander)](https://github.com/phmatray/MasterCommander/graphs/contributors)
 [![GitHub last commit](https://img.shields.io/github/last-commit/phmatray/MasterCommander)](https://github.com/phmatray/MasterCommander/commits/master)
 
-[![codecov](https://codecov.io/gh/phmatray/MasterCommander/branch/main/graph/badge.svg?token=041C4QKW6O)](https://app.codecov.io/gh/phmatray/MasterCommander/tree/main)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/bdd7b46c04534d8e958fda9dce1b0366)](https://app.codacy.com/gh/phmatray/MasterCommander/dashboard)
+[![codecov](https://codecov.io/gh/phmatray/MasterCommander/branch/main/graph/badge.svg?token=041C4QKW6O)](https://app.codecov.io/gh/phmatray/MasterCommander/tree/main)
 
 ---
 
@@ -75,7 +75,7 @@ await dotnet.SlnAddAsync(ConsoleCsproj);
 await dotnet.BuildAsync();
 await dotnet.BuildAsync(new DotnetBuildOptions { Configuration = "Release" });
 await dotnet.RunAsync(new DotnetRunOptions { Project = ConsoleCsproj, Configuration = "Release" });
-``` 
+```
 
 You can standardize your development workflow by using MasterCommander to perform common tasks across multiple projects
 and technology stacks.
@@ -90,7 +90,6 @@ a [COMPLETE DOCUMENTATION](https://github.com/phmatray/MasterCommander/blob/main
 
 All summaries are written in English. If you want to help us translate the documentation, please open an issue to
 discuss it.
-
 > **Note:** The documentation is generated using [Doraku/DefaultDocumentation]() tool. It is generated automatically
 > when the project is built.
 
@@ -122,12 +121,12 @@ discuss it.
 
 To use MasterCommander, ensure you have the following installed on your system:
 
-- Git
-- .NET 8.0 (supported versions: 8.0.101 or later)
-- A C# IDE (Visual Studio, JetBrains Rider, etc.)
-- A C# compiler (dotnet CLI, etc.)
-- Docker (optional)
-- Node.js and npm (optional)
+* Git
+* .NET 8.0 (supported versions: 8.0.101 or later)
+* A C# IDE (Visual Studio, JetBrains Rider, etc.)
+* A C# compiler (dotnet CLI, etc.)
+* Docker (optional)
+* Node.js and npm (optional)
 
 #### We use the latest C# features
 
@@ -151,7 +150,7 @@ You can also build MasterCommander from source. Follow these steps to get starte
 To install MasterCommander, you can use the NuGet package manager. Run the following command in your terminal:
 
 ```shell
-dotnet add package MasterCommander --version 1.0.0-alpha.0.40
+dotnet add package MasterCommander
 ```
 
 | Package Name    | NuGet Version Badge                                                                                            | NuGet Downloads Badge                                                                                           | Package Explorer                                       |
@@ -164,8 +163,8 @@ This table is automatically updated regularly the latest developments and releas
 
 We strive for the highest code quality in MasterCommander. To ensure this, we use the following tools:
 
-- StyleCop
-- .editorconfig
+* StyleCop
+* .editorconfig
 
 ### 🧪 Tests Specifications
 

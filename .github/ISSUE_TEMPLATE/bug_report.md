@@ -8,6 +8,7 @@ assignees: ''
 ---
 
 **Information**
+
 - OS: [eg Windows/Linux/MacOS]
 - Version: [e.g. 1.0.0]
 

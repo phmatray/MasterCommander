@@ -14,6 +14,17 @@ public abstract record CmdOptionsBase(params string[] InitialArguments)
     /// <summary>
     /// Converts the properties of the command options into an enumerable of argument strings.
     /// </summary>
+    /// <param name="additionalArguments">Additional arguments to include in the result.</param>
+    /// <returns>An enumerable of strings representing the command line arguments.</returns>
+    public IEnumerable<string> ToArguments(params string[] additionalArguments)
+    {
+        var arguments = ToArguments();
+        return arguments.Concat(additionalArguments);
+    }
+
+    /// <summary>
+    /// Converts the properties of the command options into an enumerable of argument strings.
+    /// </summary>
     /// <returns>An enumerable of strings representing the command line arguments.</returns>
     public IEnumerable<string> ToArguments()
     {

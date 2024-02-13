@@ -24,6 +24,7 @@ Implements [IGitCommandFactory](IGitCommandFactory.md 'MasterCommander.Commander
 
 | Methods | |
 | :--- | :--- |
+| [CreateCommandAdd(string, GitAddOptions)](GitCommandFactory.CreateCommandAdd(string,GitAddOptions).md 'MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandAdd(string, MasterCommander.Commanders.Git.CmdAdd.GitAddOptions)') | Creates a command to add a file or directory to the git repository. |
 | [CreateCommandCloneRepository(string, string)](GitCommandFactory.CreateCommandCloneRepository(string,string).md 'MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandCloneRepository(string, string)') | Creates a command for cloning a remote repository into a local directory. |
 | [CreateCommandCommit(string)](GitCommandFactory.CreateCommandCommit(string).md 'MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandCommit(string)') | Creates a command for committing changes to the repository with a specific message. |
 | [CreateCommandInit()](GitCommandFactory.CreateCommandInit().md 'MasterCommander.Commanders.Git.GitCommandFactory.CreateCommandInit()') | Creates a command for initializing a new git repository. |

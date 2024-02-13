@@ -42,6 +42,7 @@ public class ProjectInitializationService(
         await dotnet.NewAsync(new DotnetNewSolutionOptions { OutputName = SolutionName });
         await dotnet.NewAsync(new DotnetNewConsoleOptions { OutputName = ConsoleProjectName, OutputDirectory = ConsoleProjectDirectory });
         await dotnet.SlnAddAsync(ConsoleCsproj);
+        await git.AddAsync("*");
         await dotnet.BuildAsync();
         await dotnet.BuildAsync(new DotnetBuildOptions { Configuration = "Release" });
         await dotnet.RunAsync(new DotnetRunOptions { Project = ConsoleCsproj, Configuration = "Release" });

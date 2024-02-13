@@ -101,6 +101,14 @@
 | [IGitCommandFactory](IGitCommandFactory.md 'MasterCommander.Commanders.Git.IGitCommandFactory') | Defines the interface for creating git command instances. |
 | [IGitService](IGitService.md 'MasterCommander.Commanders.Git.IGitService') | Provides an interface for interacting with Git repositories asynchronously. |
 
+<a name='MasterCommander.Commanders.Git.CmdAdd'></a>
+
+## MasterCommander.Commanders.Git.CmdAdd Namespace
+
+| Classes | |
+| :--- | :--- |
+| [GitAddOptions](GitAddOptions.md 'MasterCommander.Commanders.Git.CmdAdd.GitAddOptions') | Represents the options available for the git add command. |
+
 <a name='MasterCommander.Commanders.Npm'></a>
 
 ## MasterCommander.Commanders.Npm Namespace
