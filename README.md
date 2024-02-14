@@ -16,6 +16,7 @@ Write code, not commands. MasterCommander provides a simple, consistent interfac
 [![GitHub contributors](https://img.shields.io/github/contributors/phmatray/MasterCommander)](https://github.com/phmatray/MasterCommander/graphs/contributors)
 [![GitHub last commit](https://img.shields.io/github/last-commit/phmatray/MasterCommander)](https://github.com/phmatray/MasterCommander/commits/master)
 
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/phmatray/MasterCommander)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/bdd7b46c04534d8e958fda9dce1b0366)](https://app.codacy.com/gh/phmatray/MasterCommander/dashboard)
 [![codecov](https://codecov.io/gh/phmatray/MasterCommander/branch/main/graph/badge.svg?token=041C4QKW6O)](https://app.codecov.io/gh/phmatray/MasterCommander/tree/main)
 
