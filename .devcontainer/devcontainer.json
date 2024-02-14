@@ -1,0 +1,19 @@
+{
+    "name": "MasterCommander Dev Container",
+    "build": {
+        "context": "..",
+        "dockerfile": ".devcontainer/Dockerfile"
+    },
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "extensions": [
+        "ms-dotnettools.csharp"
+        // Add other extensions relevant to your project here
+    ],
+    "forwardPorts": [
+        // Add any ports your application uses
+    ],
+    "postCreateCommand": "dotnet restore",
+    "remoteUser": "root"
+}
