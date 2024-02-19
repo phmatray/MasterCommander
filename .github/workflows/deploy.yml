@@ -21,8 +21,6 @@ env:
     ARTIFACT: webHelpHI2-all.zip
     # Writerside docker image version
     DOCKER_VERSION: 232.10275
-    # Replace HI with the ID of the instance in capital letters
-    ALGOLIA_ARTIFACT: algolia-indexes-HI.zip
 
 jobs:
     build:
@@ -46,14 +44,6 @@ jobs:
                   path: |
                       artifacts/${{ env.ARTIFACT }}
                       artifacts/report.json
-                  retention-days: 7
-            
-            # Add the step below to upload Algolia indexes
-            - name: Upload algolia-indexes
-              uses: actions/upload-artifact@v4
-              with:
-                  name: algolia-indexes
-                  path: artifacts/${{ env.ALGOLIA_ARTIFACT }}
                   retention-days: 7
     
     # Add the job below and artifacts/report.json on Upload documentation step above if you want to fail the build when documentation contains errors
