@@ -14,7 +14,14 @@ public sealed class SpectreConsole : ConsoleBase
     /// <inheritdoc />
     public override void WriteLine(string? message = null)
     {
-        AnsiConsole.MarkupLine(message ?? string.Empty);
+        try
+        {
+            AnsiConsole.MarkupLine(message ?? string.Empty);
+        }
+        catch (Exception)
+        {
+            Console.WriteLine(message);
+        }
     }
 
     /// <inheritdoc />
