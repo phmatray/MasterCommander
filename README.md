@@ -29,6 +29,9 @@ Write code, not commands. MasterCommander provides a simple, consistent interfac
   * [📝 Table of Contents](#-table-of-contents)
   * [🏁 Getting started](#-getting-started)
   * [📄 Documentation](#-documentation)
+    * [🌐 User Documentation](#-user-documentation)
+    * [📚 Technical Documentation](#-technical-documentation)
+      * [🌍 Contributing to Documentation](#-contributing-to-documentation)
   * [📌 Features](#-features)
     * [Current Features](#current-features)
     * [Roadmap (next features)](#roadmap-next-features)
@@ -87,13 +90,21 @@ Output from MasterCommander commands is displayed in a clean, readable format:
 
 ## 📄 Documentation
 
-**MasterCommander** provides
-a [COMPLETE DOCUMENTATION](https://github.com/phmatray/MasterCommander/blob/main/docs/README.md) of the library.
+Explore the extensive documentation to get started with **MasterCommander**, understand its capabilities, and integrate it into your projects effectively. Our documentation is split into two main sections to cater to different needs:
 
-All summaries are written in English. If you want to help us translate the documentation, please open an issue to
-discuss it.
-> **Note:** The documentation is generated using [Doraku/DefaultDocumentation]() tool. It is generated automatically
-> when the project is built.
+### 🌐 User Documentation
+
+For an overview of **MasterCommander**, including features, installation guides, and how to get started with using the library in your projects, visit our **[User Documentation](https://phmatray.github.io/MasterCommander/mastercommander.html)**. This section is designed to help both beginners and experienced users to quickly leverage the library's full potential.
+
+### 📚 Technical Documentation
+
+For developers looking for in-depth technical details, our **[Technical Documentation](https://github.com/phmatray/MasterCommander/blob/main/docs/README.md)** provides comprehensive insights into the library's internal workings, API references, and code examples. This section is ideal for those who want to extend the library, contribute to its development, or simply understand its mechanisms at a deeper level.
+
+#### 🌍 Contributing to Documentation
+
+Our documentation is written in English to reach a broad audience. We welcome contributions from the community to expand our documentation, including translations into other languages. If you're interested in helping us make **MasterCommander** more accessible by translating the documentation or improving the existing content, please [open an issue](https://github.com/phmatray/MasterCommander/issues) on our GitHub repository to discuss your ideas.
+
+> **Note:** The documentation for **MasterCommander** is generated automatically using the [Doraku/DefaultDocumentation](https://github.com/Doraku/DefaultDocumentation) tool whenever the project is built. This ensures that the documentation is always up-to-date with the latest codebase.
 
 ## 📌 Features
 
