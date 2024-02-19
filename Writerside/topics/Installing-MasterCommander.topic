@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="Installing-MasterCommander" title="Installing MasterCommander">
+
+    <title>
+        Installation
+    </title>
+    <p>Installing MasterCommander is designed to be straightforward and efficient, enabling you to quickly integrate it
+        into your development workflow. This section guides you through the installation process and helps you get
+        started with MasterCommander on your system.</p>
+    <chapter title="Prerequisites" id="prerequisites">
+        <p>Before installing MasterCommander, ensure that your system meets the following requirements:</p>
+        <list>
+            <li>
+                <control>Git</control>
+                : Required for version control operations.
+            </li>
+            <li>
+                <control>.NET SDK (8.0.101 or later)</control>
+                : Necessary for developing and running .NET applications.
+            </li>
+            <li>
+                <control>Docker (optional)</control>
+                : For managing Docker containers and images if you plan to use MasterCommander for Docker operations.
+            </li>
+            <li>
+                <control>Node.js and npm (optional)</control>
+                : Required for managing npm packages and running npm scripts.
+            </li>
+        </list>
+    </chapter>
+    <chapter title="Installation Methods" id="installation-methods">
+        <chapter title="From Source" id="from-source">
+            <p>To install MasterCommander from source, follow these steps:</p>
+            <list type="decimal">
+                <li>
+                    <control>Clone the Repository</control>
+                    : Clone the MasterCommander repository to your local machine using Git:
+                </li>
+            </list>
+
+            <code-block lang="shell">
+                git clone https://github.com/phmatray/MasterCommander.git
+            </code-block>
+            <list start="2" type="decimal">
+                <li>
+                    <control>Build the Project</control>
+                    : Navigate to the cloned directory and use the .NET CLI to build the project:
+                </li>
+            </list>
+
+            <code-block lang="shell">
+                cd MasterCommander
+                dotnet build
+            </code-block>
+            <list start="3" type="decimal">
+                <li>
+                    <control>Run MasterCommander</control>
+                    : Once the build is successful, you can run MasterCommander directly from the source directory:
+                </li>
+            </list>
+
+            <code-block lang="shell">
+                dotnet run
+            </code-block>
+            <p>Alternatively, if you prefer to use an Integrated Development Environment (IDE) like Visual Studio or
+                JetBrains Rider, you can open the <code>MasterCommander.sln</code> solution file in your IDE and run the
+                application from there.</p>
+        </chapter>
+        <chapter title="NuGet Packages" id="nuget-packages">
+            <p>MasterCommander can also be installed as a NuGet package in your .NET projects. To install the
+                MasterCommander NuGet package, run the following command in your terminal:</p>
+
+            <code-block lang="shell">
+                dotnet add package MasterCommander
+            </code-block>
+            <p>For the latest version and more detailed information about the package, visit the <a
+                href="https://www.nuget.org/packages/MasterCommander">MasterCommander NuGet page</a>.</p>
+        </chapter>
+    </chapter>
+    <chapter title="Verifying the Installation (soon)" id="verifying-the-installation">
+        <p>After installing MasterCommander, you can verify the installation by running a simple command to check the
+            version or to display help information. From the command line, execute:</p>
+
+        <code-block lang="shell">
+            dotnet mastercommander --version
+        </code-block>
+        <p>or</p>
+
+        <code-block lang="shell">
+            dotnet mastercommander --help
+        </code-block>
+        <p>This should display the version of MasterCommander installed or a help message with available commands,
+            indicating that MasterCommander has been successfully installed and is ready for use.</p>
+    </chapter>
+    <chapter title="Next Steps" id="next-steps">
+        <p>With MasterCommander installed, you're now ready to streamline your development workflow by utilizing its
+            powerful features and integrations. Explore the <a
+                href="https://github.com/phmatray/MasterCommander/blob/main/docs/README.md">technical documentation</a> to learn
+            more about how MasterCommander can enhance your productivity and simplify project management across multiple
+            technology stacks.</p>
+    </chapter>
+    
+</topic>

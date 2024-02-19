@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="Overview" title="Overview">
+
+    <title>
+        Overview
+    </title>
+    <p>MasterCommander revolutionizes the development workflow by offering a unified command-line utility that
+        integrates seamlessly with multiple technology stacks. It caters to developers juggling tasks across Git, .NET,
+        Docker, and npm, providing a single interface to streamline project setup, management, and execution processes.
+        By encapsulating the complexity of using different tools for various tasks, MasterCommander not only boosts
+        productivity but also elevates the development experience, enabling developers to focus more on writing code
+        rather than managing commands.</p>
+    <chapter title="Key Features and Benefits" id="key-features-and-benefits">
+        <list>
+            <li>
+                <control>Unified Command Interface</control>
+                : Simplify your workflow with a consistent command interface for interacting with .NET projects, Git
+                repositories, Docker containers, and npm packages.
+            </li>
+            <li>
+                <control>Cross-Platform Support</control>
+                : Designed with versatility in mind, MasterCommander operates flawlessly on Windows, macOS, and Linux,
+                ensuring a seamless experience across different operating environments.
+            </li>
+            <li>
+                <control>Enhanced Productivity</control>
+                : Automate and expedite common development tasks, from project initialization and dependency management
+                to build and deployment processes.
+            </li>
+            <li>
+                <control>Customization and Extensibility</control>
+                : Tailor MasterCommander to fit your workflow by adding new commands or integrating additional tools,
+                making it a versatile companion for any development project.
+            </li>
+        </list>
+    </chapter>
+    <chapter title="Ideal For" id="ideal-for">
+        <p>MasterCommander serves a diverse audience, ranging from individual developers working on personal projects to
+            teams managing complex, multi-faceted applications. It's particularly beneficial for:</p>
+        <list>
+            <li>
+                <control>Software Developers</control>
+                : Who require a streamlined process for managing projects across different languages and frameworks.
+            </li>
+            <li>
+                <control>DevOps Engineers</control>
+                : Looking for an efficient way to automate builds, tests, and deployments within their CI/CD pipelines.
+            </li>
+            <li>
+                <control>System Administrators</control>
+                : Who manage server environments and need a tool to handle configuration and container management tasks
+                effortlessly.
+            </li>
+        </list>
+    </chapter>
+    <chapter title="Getting Started" id="getting-started">
+        <p>MasterCommander is straightforward to set up and use. It's designed to get you up and running quickly with
+            minimal configuration, allowing you to integrate it into your existing development environment with ease.
+            From source code management with Git to managing Docker images and handling npm packages, MasterCommander
+            provides clear, concise commands to perform a wide range of tasks efficiently.</p>
+        <p>Here's a practical example demonstrating how MasterCommander streamlines the development process:</p>
+
+        <code-block lang="c#">
+            private const string SdkVersion = &quot;8.0.101&quot;;
+            private const string SolutionName = &quot;AppDemo&quot;;
+            private const string ConsoleProjectName = $&quot;{SolutionName}.Console&quot;;
+            private const string ConsoleProjectDirectory = $&quot;src/{ConsoleProjectName}&quot;;
+            private const string ConsoleCsproj = $&quot;{ConsoleProjectDirectory}/{ConsoleProjectName}.csproj&quot;;
+
+            await git.InitAsync();
+            await git.StatusAsync();
+            await dotnet.NewAsync(new DotnetNewGitignoreOptions());
+            await dotnet.NewAsync(new DotnetNewEditorConfigOptions());
+            await dotnet.NewAsync(new DotnetNewNuGetConfigOptions());
+            await dotnet.NewAsync(new DotnetNewGlobalJsonOptions { SdkVersion = SdkVersion });
+            await dotnet.NewAsync(new DotnetNewSolutionOptions { OutputName = SolutionName });
+            await dotnet.NewAsync(new DotnetNewConsoleOptions { OutputName = ConsoleProjectName, OutputDirectory =
+            ConsoleProjectDirectory });
+            await dotnet.SlnAddAsync(ConsoleCsproj);
+            await dotnet.BuildAsync();
+            await dotnet.BuildAsync(new DotnetBuildOptions { Configuration = &quot;Release&quot; });
+            await dotnet.RunAsync(new DotnetRunOptions { Project = ConsoleCsproj, Configuration = &quot;Release&quot;
+            });
+        </code-block>
+        <p>This code snippet showcases the ease of creating a new .NET solution, initializing a Git repository, and
+            performing build and run operations—all through MasterCommander's intuitive interface.</p>
+    </chapter>
+    <chapter title="Documentation and Support" id="documentation-and-support">
+        <p>Comprehensive documentation is available, detailing every feature and command, ensuring you can make the most
+            out of MasterCommander. Whether you're a new user getting acquainted with its capabilities or an experienced
+            developer looking to extend its functionality, the documentation is an invaluable resource for all
+            users.</p>
+    </chapter>
+    <chapter title="Contributing to MasterCommander" id="contributing-to-mastercommander">
+        <p>MasterCommander is an open-source project, and contributions are warmly welcomed. Whether it's improving the
+            documentation, suggesting new features, or helping with code development, your contributions help make
+            MasterCommander an even more powerful tool for the development community.</p>
+    </chapter>
+
+</topic>
