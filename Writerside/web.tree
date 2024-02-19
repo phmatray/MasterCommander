@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="web"
+                 name="MasterCommander"
+                 start-page="starter-topic.md">
+
+    <toc-element topic="MasterCommander.topic">
+        <toc-element topic="Overview.topic"/>
+        <toc-element topic="Installing-MasterCommander.topic"/>
+    </toc-element>
+    <toc-element topic="Tutorials.topic">
+    </toc-element>
+    <toc-element topic="How-Tos.topic">
+        <toc-element topic="Create-a-NET-Console-Project.topic"/>
+    </toc-element>
+    <toc-element topic="Reference.topic"/>
+    <toc-element topic="FAQ.topic"/>
+</instance-profile>

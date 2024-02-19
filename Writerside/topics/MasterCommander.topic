@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="MasterCommander" title="MasterCommander">
+
+    <section-starting-page>
+        <title>MasterCommander</title>
+        <description>
+            A versatile command-line utility designed to streamline the workflow for developers working with multiple technology stacks.
+        </description>
+        
+        <spotlight>
+            <a href="Overview.topic"
+               description="Get an overview of MasterCommander and its features."
+               type="development"
+               summary="Discover the features of MasterCommander."/>
+            <a href="Installing-MasterCommander.topic"
+               description="Learn how to install and configure MasterCommander."
+               type="start"
+               summary="Get started with MasterCommander."/>
+        </spotlight>
+        
+        <primary>
+            <title>Discover</title>
+            <a href="Tutorials.topic"
+               type="idea"
+               summary="Step by step guides on working with MasterCommander"/>
+        </primary>
+        
+        <secondary>
+            <title>Learn</title>
+            <a href="How-Tos.topic"
+               type="learn"
+               summary="Get details on common usage scenarios"/>
+        </secondary>
+        
+    </section-starting-page>
+
+</topic>
