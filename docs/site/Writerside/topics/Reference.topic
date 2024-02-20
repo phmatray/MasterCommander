@@ -4,9 +4,7 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        id="Reference" title="Reference">
 
-    <title>
-        Reference
-    </title>
+    <title>API Reference</title>
     <p>Start typing here...</p>
 
 </topic>

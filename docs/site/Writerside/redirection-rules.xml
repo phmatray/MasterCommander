@@ -6,12 +6,4 @@
         <accepts>page.html</accepts>
     </rule>
     -->
-    <rule id="2151c9a8">
-        <description>Created after removal of "Starter" from web</description>
-        <accepts>Starter.html</accepts>
-    </rule>
-    <rule id="2b7e601f">
-        <description>Created after removal of "Installation" from MasterCommander</description>
-        <accepts>Empty-MD-Topic.html</accepts>
-    </rule>
 </rules>
