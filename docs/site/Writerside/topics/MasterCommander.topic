@@ -2,7 +2,7 @@
 <!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       id="MasterCommander" title="MasterCommander - The Developer's Swiss Army Knife" revMajor="1" revMinor="1">
+       id="MasterCommander" title="MasterCommander - Automated Development Workflow">
 
     <section-starting-page>
         <title>MasterCommander</title>
@@ -22,7 +22,7 @@
         </spotlight>
 
         <primary>
-            <title>Learn</title>
+            <title>How-to Guides</title>
             <a href="Create-a-NET-Console-Project.topic"
                type="how-to"
                summary="Learn how to use MasterCommander with a .NET Console Application."/>
@@ -30,6 +30,16 @@
                type="how-to"
                summary="Learn how to use MasterCommander with a Blazor Application."/>
         </primary>
+        
+        <secondary>
+            <title>Resources</title>
+            <a href="Reference.topic"
+                type="reference"
+                summary="Explore the MasterCommander reference documentation."/>
+            <a href="https://github.com/phmatray/MasterCommander"
+               type="external"
+               summary="View the MasterCommander source code on GitHub."/>
+        </secondary>
 
     </section-starting-page>
 
