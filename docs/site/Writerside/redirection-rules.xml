@@ -6,4 +6,8 @@
         <accepts>page.html</accepts>
     </rule>
     -->
+    <rule id="3afb57b1">
+        <description>Created after removal of "Tutorials" from MasterCommander</description>
+        <accepts>Tutorials.html</accepts>
+    </rule>
 </rules>

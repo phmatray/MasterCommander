@@ -7,16 +7,15 @@
                  start-page="MasterCommander.topic">
 
     <toc-element topic="MasterCommander.topic">
-        <toc-element topic="Installing-MasterCommander.topic"/>
         <toc-element topic="Overview.topic"/>
-    </toc-element>
-    <toc-element topic="Tutorials.topic">
+        <toc-element topic="Installing-MasterCommander.topic"/>
+        <toc-element topic="FAQ.topic"/>
     </toc-element>
     <toc-element topic="How-Tos.topic">
         <toc-element topic="Create-a-NET-Console-Project.topic"/>
+        <toc-element topic="Create-a-Blazor-App.topic"/>
     </toc-element>
     <toc-element topic="Reference.topic">
         <toc-element topic="CliCommandException.ExitCode.topic"/>
     </toc-element>
-    <toc-element topic="FAQ.topic"/>
 </instance-profile>
