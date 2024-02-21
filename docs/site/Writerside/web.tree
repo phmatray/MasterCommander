@@ -10,6 +10,8 @@
         <toc-element topic="Installing-MasterCommander.topic"/>
     </toc-element>
     <toc-element topic="Overview.topic"/>
+        <toc-element topic="Overview.topic"/>
+    </toc-element>
     <toc-element topic="Tutorials.topic">
     </toc-element>
     <toc-element topic="How-Tos.topic">
