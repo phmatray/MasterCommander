@@ -2,39 +2,35 @@
 <!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       id="MasterCommander" title="MasterCommander">
+       id="MasterCommander" title="MasterCommander - The Developer's Swiss Army Knife" revMajor="1" revMinor="1">
 
     <section-starting-page>
         <title>MasterCommander</title>
         <description>
-            A versatile command-line utility designed to streamline the workflow for developers working with multiple technology stacks.
+            MasterCommander is a versatile command-line utility designed to streamline the workflow for developers working with multiple technology stacks.
         </description>
-        
+
         <spotlight>
             <a href="Overview.topic"
-               description="Get an overview of MasterCommander and its features."
+               description="Get an overview of MasterCommander and its powerful features."
                type="development"
                summary="Discover the features of MasterCommander."/>
             <a href="Installing-MasterCommander.topic"
-               description="Learn how to install and configure MasterCommander."
+               description="Learn how to install and configure MasterCommander on your system."
                type="start"
                summary="Get started with MasterCommander."/>
         </spotlight>
-        
+
         <primary>
-            <title>Discover</title>
-            <a href="Tutorials.topic"
-               type="idea"
-               summary="Step by step guides on working with MasterCommander"/>
-        </primary>
-        
-        <secondary>
             <title>Learn</title>
-            <a href="How-Tos.topic"
-               type="learn"
-               summary="Get details on common usage scenarios"/>
-        </secondary>
-        
+            <a href="Create-a-NET-Console-Project.topic"
+               type="how-to"
+               summary="Learn how to use MasterCommander with a .NET Console Application."/>
+            <a href="Create-a-Blazor-App.topic"
+               type="how-to"
+               summary="Learn how to use MasterCommander with a Blazor Application."/>
+        </primary>
+
     </section-starting-page>
 
 </topic>
