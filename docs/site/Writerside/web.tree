@@ -4,12 +4,10 @@
 
 <instance-profile id="web"
                  name="MasterCommander"
-                 start-page="starter-topic.md">
+                 start-page="MasterCommander.topic">
 
     <toc-element topic="MasterCommander.topic">
         <toc-element topic="Installing-MasterCommander.topic"/>
-    </toc-element>
-    <toc-element topic="Overview.topic"/>
         <toc-element topic="Overview.topic"/>
     </toc-element>
     <toc-element topic="Tutorials.topic">
