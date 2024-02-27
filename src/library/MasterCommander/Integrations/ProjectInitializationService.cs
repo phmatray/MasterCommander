@@ -34,7 +34,6 @@ public class ProjectInitializationService(
         console.WriteStartupMessage();
 
         await git.InitAsync();
-        await git.StatusAsync();
         await dotnet.NewAsync(new DotnetNewGitignoreOptions());
         await dotnet.NewAsync(new DotnetNewEditorConfigOptions());
         await dotnet.NewAsync(new DotnetNewNuGetConfigOptions());

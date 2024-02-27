@@ -1,0 +1,9 @@
+<Project>
+  <!-- File inclusion -->
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)/../../logo.png" Pack="true" PackagePath="\" Link="Properties/logo.png" />
+    <None Include="$(MSBuildThisFileDirectory)/../../LICENSE" Pack="true" PackagePath="\" Link="Properties/LICENSE" />
+    <None Include="$(MSBuildThisFileDirectory)/../../README.md" Pack="true" PackagePath="\" Link="Properties/README.md" />
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)/../../stylecop.json" Link="Properties/stylecop.json" />
+  </ItemGroup>
+</Project>

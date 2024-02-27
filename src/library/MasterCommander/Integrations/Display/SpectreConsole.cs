@@ -20,7 +20,9 @@ public sealed class SpectreConsole : ConsoleBase
         }
         catch (Exception)
         {
+#pragma warning disable Spectre1000
             Console.WriteLine(message);
+#pragma warning restore Spectre1000
         }
     }
 
