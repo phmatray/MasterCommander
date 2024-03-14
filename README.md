@@ -61,7 +61,7 @@ repository, and build and run the project.
 In addition, this code adds a .gitignore file, an .editorconfig file, and a global.json file to the project.
 
 ```csharp
-private const string SdkVersion = "8.0.101";
+private const string SdkVersion = "8.0.*";
 private const string SolutionName = "AppDemo";
 private const string ConsoleProjectName = $"{SolutionName}.Console";
 private const string ConsoleProjectDirectory = $"src/{ConsoleProjectName}";

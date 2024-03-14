@@ -20,7 +20,7 @@ public class ProjectInitializationService(
     IConsole console,
     IDirectoryService directory) : IProjectInitializationService
 {
-    private const string SdkVersion = "8.0.101";
+    private const string SdkVersion = "8.0.*";
     private const string SolutionName = "AppDemo";
     private const string ConsoleProjectName = $"{SolutionName}.Console";
     private const string ConsoleProjectDirectory = $"src/{ConsoleProjectName}";
