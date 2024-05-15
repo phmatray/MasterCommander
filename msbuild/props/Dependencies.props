@@ -47,7 +47,7 @@
     <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.556" />
     <PackageReference Include="StyleCop.Analyzers" PrivateAssets="all" />
 
-    <PackageVersion Include="Roslynator.Analyzers" Version="4.12.2" />
+    <PackageVersion Include="Roslynator.Analyzers" Version="4.12.3" />
     <PackageReference Include="Roslynator.Analyzers" PrivateAssets="all" />
   </ItemGroup>
   
@@ -95,16 +95,16 @@
     <PackageVersion Include="coverlet.collector" Version="6.0.2" />
     <PackageReference Include="coverlet.collector" PrivateAssets="all" />
 
-    <PackageVersion Include="xunit" Version="2.7.1" />
+    <PackageVersion Include="xunit" Version="2.8.0" />
     <PackageReference Include="xunit" />
 
-    <PackageVersion Include="xunit.runner.visualstudio" Version="2.5.8" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.0" />
     <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
 
     <PackageVersion Include="Snapshooter.Xunit" Version="0.14.1" />
     <PackageReference Include="Snapshooter.Xunit" />
 
-    <PackageVersion Include="Verify.XUnit" Version="24.1.0" />
+    <PackageVersion Include="Verify.XUnit" Version="24.2.0" />
     <PackageReference Include="Verify.XUnit" />
 
     <PackageVersion Include="FluentAssertions" Version="6.12.0" />
