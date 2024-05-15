@@ -15,7 +15,7 @@ public abstract record CmdOptionsBase(params string[] InitialArguments)
     /// Converts the properties of the command options into an enumerable of argument strings.
     /// </summary>
     /// <param name="additionalArguments">Additional arguments to include in the result.</param>
-    /// <returns>An enumerable of strings representing the command line arguments.</returns>
+    /// <returns>A strings enumerable representing the command line arguments.</returns>
     public IEnumerable<string> ToArguments(params string[] additionalArguments)
     {
         var arguments = ToArguments();
@@ -25,7 +25,7 @@ public abstract record CmdOptionsBase(params string[] InitialArguments)
     /// <summary>
     /// Converts the properties of the command options into an enumerable of argument strings.
     /// </summary>
-    /// <returns>An enumerable of strings representing the command line arguments.</returns>
+    /// <returns>A strings enumerable representing the command line arguments.</returns>
     public IEnumerable<string> ToArguments()
     {
         var arguments = new List<string>(InitialArguments);
@@ -85,7 +85,7 @@ public abstract record CmdOptionsBase(params string[] InitialArguments)
     /// <param name="cmdOptionValues">The attribute specifying valid values, if present.</param>
     private static void ValidatePropertyValue(PropertyInfo property, object value, CmdOptionValuesAttribute? cmdOptionValues)
     {
-        if (cmdOptionValues != null && !cmdOptionValues.ValidOptions.Contains(value.ToString()))
+        if (cmdOptionValues?.ValidOptions.Contains(value.ToString()) == false)
         {
             throw new ArgumentException($"Invalid value for {property.Name}. Valid options are: {string.Join(", ", cmdOptionValues.ValidOptions)}");
         }

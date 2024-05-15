@@ -34,7 +34,7 @@ public class DotnetNewOptionsTests
         var options = new DotnetNewOptions("console");
 
         // Act
-        var args = options.ToArguments();
+        var args = options.ToArguments().ToList();
 
         // Assert
         args.Should().ContainInOrder("new", "console");

@@ -20,7 +20,7 @@ public class CmdOptionsBaseTests
         };
 
         // Act
-        var args = options.ToArguments();
+        var args = options.ToArguments().ToList();
 
         // Assert
         string[] unexpected = ["--dry-run", "--no-update-check", "--diagnostics"];
