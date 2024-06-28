@@ -72,7 +72,7 @@
     <PackageVersion Include="FluentValidation" Version="11.9.1" />
     <PackageReference Include="FluentValidation" />
 
-    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.1.1" />
+    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.2.4" />
     <PackageReference Include="DotNet.ReproducibleBuilds" PrivateAssets="all"/>
 
     <PackageVersion Include="MinVer" Version="5.0.0" />
