@@ -95,7 +95,7 @@
     <PackageVersion Include="coverlet.collector" Version="6.0.2" />
     <PackageReference Include="coverlet.collector" PrivateAssets="all" />
 
-    <PackageVersion Include="xunit" Version="2.9.0" />
+    <PackageVersion Include="xunit" Version="2.9.2" />
     <PackageReference Include="xunit" />
 
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.2" />
