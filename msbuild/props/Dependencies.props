@@ -17,8 +17,8 @@
 
   <!-- Package Version Management -->
   <ItemGroup>
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
     <PackageVersion Include="CliWrap" Version="3.6.6" />
     <PackageVersion Include="Vogen" Version="3.0.24" />
     <PackageVersion Include="Microsoft.CodeCoverage" Version="17.8.0" />
