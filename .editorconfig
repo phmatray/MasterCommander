@@ -433,6 +433,12 @@ dotnet_diagnostic.SX1623.severity = none
 
 dotnet_diagnostic.AD0001.severity = none
 
+# IDE0058: Expression value is never used
+# This is a common pattern in .NET DI setup code (services.AddScoped<>() etc.)
+# where chaining is intentionally avoided for readability. Suppress as suggestion
+# to keep it visible in IDE without breaking the build.
+dotnet_diagnostic.IDE0058.severity = suggestion
+
 # C++ Files
 [*.{cpp,h,in}]
 curly_bracket_next_line = true
