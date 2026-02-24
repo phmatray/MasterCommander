@@ -21,10 +21,11 @@ public class DotnetNewOptionsTests
         };
 
         // Act
-        var args = options.ToArguments();
+        var args = options.ToArguments().ToList();
 
         // Assert
-        args.Should().ContainInConsecutiveOrder("new", "console", "--force", "--language", "C#", "--name", "MyApp", "--framework", "net8.0");
+        var expected = new[] { "new", "console", "--force", "--language", "C#", "--name", "MyApp", "--framework", "net8.0" };
+        args.ShouldBe(expected);
     }
 
     [Fact]
@@ -37,8 +38,13 @@ public class DotnetNewOptionsTests
         var args = options.ToArguments().ToList();
 
         // Assert
-        args.Should().ContainInOrder("new", "console");
-        args.Should().NotContain("--name", "--force", "--language", "--framework");
+        args.ShouldContain("new");
+        args.ShouldContain("console");
+        args.IndexOf("new").ShouldBeLessThan(args.IndexOf("console"));
+        args.ShouldNotContain("--name");
+        args.ShouldNotContain("--force");
+        args.ShouldNotContain("--language");
+        args.ShouldNotContain("--framework");
     }
 
     [Fact]
@@ -50,12 +56,9 @@ public class DotnetNewOptionsTests
             Language = "C++"
         };
 
-        // Act
-        var act = () => options.ToArguments();
-
-        // Assert
-        act.Should().Throw<ArgumentException>()
-            .WithMessage("Invalid value for Language. Valid options are: C#, F#, VB");
+        // Act & Assert
+        var ex = Should.Throw<ArgumentException>(() => options.ToArguments());
+        ex.Message.ShouldBe("Invalid value for Language. Valid options are: C#, F#, VB");
     }
 
     [Fact]
@@ -71,9 +74,10 @@ public class DotnetNewOptionsTests
         };
 
         // Act
-        var args = options.ToArguments();
+        var args = options.ToArguments().ToList();
 
         // Assert
-        args.Should().ContainInConsecutiveOrder("new", "webapi", "--force", "--language", "F#", "--name", "AdvancedAPI", "--framework", "net8.0");
+        var expected = new[] { "new", "webapi", "--force", "--language", "F#", "--name", "AdvancedAPI", "--framework", "net8.0" };
+        args.ShouldBe(expected);
     }
 }

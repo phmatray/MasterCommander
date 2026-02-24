@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Docker](MasterCommander.md#MasterCommander.Commanders.Docker 'MasterCommander.Commanders.Docker').[DockerCommandFactory](DockerCommandFactory.md 'MasterCommander.Commanders.Docker.DockerCommandFactory')
+### [MasterCommander\.Commanders\.Docker](MasterCommander.md#MasterCommander.Commanders.Docker 'MasterCommander\.Commanders\.Docker').[DockerCommandFactory](DockerCommandFactory.md 'MasterCommander\.Commanders\.Docker\.DockerCommandFactory')
 
-## DockerCommandFactory.CreateCommandRemoveContainer(string) Method
+## DockerCommandFactory\.CreateCommandRemoveContainer\(string\) Method
 
-Creates a command to remove a Docker container.
+Creates a command to remove a Docker container\.
 
 ```csharp
 public CliWrap.Command CreateCommandRemoveContainer(string containerName);
@@ -12,12 +12,12 @@ public CliWrap.Command CreateCommandRemoveContainer(string containerName);
 
 <a name='MasterCommander.Commanders.Docker.DockerCommandFactory.CreateCommandRemoveContainer(string).containerName'></a>
 
-`containerName` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`containerName` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The name of the container to remove.
+The name of the container to remove\.
 
-Implements [CreateCommandRemoveContainer(string)](IDockerCommandFactory.CreateCommandRemoveContainer(string).md 'MasterCommander.Commanders.Docker.IDockerCommandFactory.CreateCommandRemoveContainer(string)')
+Implements [CreateCommandRemoveContainer\(string\)](IDockerCommandFactory.CreateCommandRemoveContainer(string).md 'MasterCommander\.Commanders\.Docker\.IDockerCommandFactory\.CreateCommandRemoveContainer\(string\)')
 
 #### Returns
-[CliWrap.Command](https://docs.microsoft.com/en-us/dotnet/api/CliWrap.Command 'CliWrap.Command')  
-A command to remove a Docker container.
+[CliWrap\.Command](https://learn.microsoft.com/en-us/dotnet/api/cliwrap.command 'CliWrap\.Command')  
+A command to remove a Docker container\.

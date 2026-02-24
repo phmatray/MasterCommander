@@ -1,16 +1,16 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Exceptions](MasterCommander.md#MasterCommander.Core.Exceptions 'MasterCommander.Core.Exceptions')
+### [MasterCommander\.Core\.Exceptions](MasterCommander.md#MasterCommander.Core.Exceptions 'MasterCommander\.Core\.Exceptions')
 
 ## CliOperationException Class
 
-Represents an exception for general CLI operation failures, including an inner exception that represents the cause of the current exception.
+Represents an exception for general CLI operation failures, including an inner exception that represents the cause of the current exception\.
 
 ```csharp
 public class CliOperationException : System.Exception
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [System.Exception](https://docs.microsoft.com/en-us/dotnet/api/System.Exception 'System.Exception') &#129106; CliOperationException
+Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object') &#129106; [System\.Exception](https://learn.microsoft.com/en-us/dotnet/api/system.exception 'System\.Exception') &#129106; CliOperationException
 
 | Constructors | |
 | :--- | :--- |
-| [CliOperationException(string, Exception)](CliOperationException.CliOperationException(string,Exception).md 'MasterCommander.Core.Exceptions.CliOperationException.CliOperationException(string, System.Exception)') | Initializes a new instance of the [CliOperationException](CliOperationException.md 'MasterCommander.Core.Exceptions.CliOperationException') class. |
+| [CliOperationException\(string, Exception\)](CliOperationException.CliOperationException(string,Exception).md 'MasterCommander\.Core\.Exceptions\.CliOperationException\.CliOperationException\(string, System\.Exception\)') | Initializes a new instance of the [CliOperationException](CliOperationException.md 'MasterCommander\.Core\.Exceptions\.CliOperationException') class\. |

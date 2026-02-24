@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.ConsoleEvents](MasterCommander.md#MasterCommander.Core.ConsoleEvents 'MasterCommander.Core.ConsoleEvents').[ExitedConsoleEvent](ExitedConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.ExitedConsoleEvent')
+### [MasterCommander\.Core\.ConsoleEvents](MasterCommander.md#MasterCommander.Core.ConsoleEvents 'MasterCommander\.Core\.ConsoleEvents').[ExitedConsoleEvent](ExitedConsoleEvent.md 'MasterCommander\.Core\.ConsoleEvents\.ExitedConsoleEvent')
 
-## ExitedConsoleEvent(int) Constructor
+## ExitedConsoleEvent\(int\) Constructor
 
-Represents a console event that indicates the exit code of a process.
+Represents a console event that indicates the exit code of a process\.
 
 ```csharp
 public ExitedConsoleEvent(int exitCode);
@@ -12,6 +12,6 @@ public ExitedConsoleEvent(int exitCode);
 
 <a name='MasterCommander.Core.ConsoleEvents.ExitedConsoleEvent.ExitedConsoleEvent(int).exitCode'></a>
 
-`exitCode` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`exitCode` [System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')
 
-The exit code of the process.
+The exit code of the process\.

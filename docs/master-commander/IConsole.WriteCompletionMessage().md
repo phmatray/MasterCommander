@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander.Core.Display').[IConsole](IConsole.md 'MasterCommander.Core.Display.IConsole')
+### [MasterCommander\.Core\.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander\.Core\.Display').[IConsole](IConsole.md 'MasterCommander\.Core\.Display\.IConsole')
 
-## IConsole.WriteCompletionMessage() Method
+## IConsole\.WriteCompletionMessage\(\) Method
 
-Writes a completion message to the console. This is intended for final console output upon application completion.
+Writes a completion message to the console\. This is intended for final console output upon application completion\.
 
 ```csharp
 void WriteCompletionMessage();

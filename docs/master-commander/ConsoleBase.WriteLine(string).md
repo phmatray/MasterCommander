@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander.Core.Display').[ConsoleBase](ConsoleBase.md 'MasterCommander.Core.Display.ConsoleBase')
+### [MasterCommander\.Core\.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander\.Core\.Display').[ConsoleBase](ConsoleBase.md 'MasterCommander\.Core\.Display\.ConsoleBase')
 
-## ConsoleBase.WriteLine(string) Method
+## ConsoleBase\.WriteLine\(string\) Method
 
-Writes a line to the console. If the message is null, writes an empty line.
+Writes a line to the console\. If the message is null, writes an empty line\.
 
 ```csharp
 public abstract void WriteLine(string? message=null);
@@ -12,8 +12,8 @@ public abstract void WriteLine(string? message=null);
 
 <a name='MasterCommander.Core.Display.ConsoleBase.WriteLine(string).message'></a>
 
-`message` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`message` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The message to write, or null to write an empty line.
+The message to write, or null to write an empty line\.
 
-Implements [WriteLine(string)](IConsole.WriteLine(string).md 'MasterCommander.Core.Display.IConsole.WriteLine(string)')
+Implements [WriteLine\(string\)](IConsole.WriteLine(string).md 'MasterCommander\.Core\.Display\.IConsole\.WriteLine\(string\)')

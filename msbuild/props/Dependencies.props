@@ -95,7 +95,7 @@
     <PackageVersion Include="coverlet.collector" Version="8.0.0" />
     <PackageReference Include="coverlet.collector" PrivateAssets="all" />
 
-    <PackageVersion Include="xunit" Version="2.9.2" />
+    <PackageVersion Include="xunit" Version="2.9.3" />
     <PackageReference Include="xunit" />
 
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
@@ -107,7 +107,7 @@
     <PackageVersion Include="Verify.XUnit" Version="31.12.5" />
     <PackageReference Include="Verify.XUnit" />
 
-    <PackageVersion Include="FluentAssertions" Version="8.8.0" />
-    <PackageReference Include="FluentAssertions" />
+    <PackageVersion Include="Shouldly" Version="4.3.0" />
+    <PackageReference Include="Shouldly" />
   </ItemGroup>
 </Project>

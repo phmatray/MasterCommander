@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdNew.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander.Commanders.Dotnet.CmdNew.Options').[DotnetNewSolutionOptions](DotnetNewSolutionOptions.md 'MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewSolutionOptions')
+### [MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options').[DotnetNewSolutionOptions](DotnetNewSolutionOptions.md 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options\.DotnetNewSolutionOptions')
 
-## DotnetNewSolutionOptions() Constructor
+## DotnetNewSolutionOptions\(\) Constructor
 
-Options for creating a new solution file.
+Options for creating a new solution file\.
 
 ```csharp
 public DotnetNewSolutionOptions();

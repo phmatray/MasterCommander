@@ -1,13 +1,13 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdNew.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander.Commanders.Dotnet.CmdNew.Options').[DotnetNewOptions](DotnetNewOptions.md 'MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewOptions')
+### [MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options').[DotnetNewOptions](DotnetNewOptions.md 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options\.DotnetNewOptions')
 
-## DotnetNewOptions.ProjectPath Property
+## DotnetNewOptions\.ProjectPath Property
 
-Gets the path to the project file to consider for additional configuration options.
+Gets the path to the project file to consider for additional configuration options\.
 
 ```csharp
-public string? ProjectPath { get; set; }
+public string? ProjectPath { get; init; }
 ```
 
 #### Property Value
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')

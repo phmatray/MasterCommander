@@ -1,13 +1,13 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdBuild](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdBuild 'MasterCommander.Commanders.Dotnet.CmdBuild').[DotnetBuildOptions](DotnetBuildOptions.md 'MasterCommander.Commanders.Dotnet.CmdBuild.DotnetBuildOptions')
+### [MasterCommander\.Commanders\.Dotnet\.CmdBuild](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdBuild 'MasterCommander\.Commanders\.Dotnet\.CmdBuild').[DotnetBuildOptions](DotnetBuildOptions.md 'MasterCommander\.Commanders\.Dotnet\.CmdBuild\.DotnetBuildOptions')
 
-## DotnetBuildOptions.Property Property
+## DotnetBuildOptions\.Property Property
 
-Gets or initializes the additional properties for the build command.
+Gets or initializes the additional properties for the build command\.
 
 ```csharp
-public string? Property { get; set; }
+public string? Property { get; init; }
 ```
 
 #### Property Value
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')

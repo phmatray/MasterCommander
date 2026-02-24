@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.ConsoleEvents](MasterCommander.md#MasterCommander.Core.ConsoleEvents 'MasterCommander.Core.ConsoleEvents').[StandardOutputConsoleEvent](StandardOutputConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.StandardOutputConsoleEvent')
+### [MasterCommander\.Core\.ConsoleEvents](MasterCommander.md#MasterCommander.Core.ConsoleEvents 'MasterCommander\.Core\.ConsoleEvents').[StandardOutputConsoleEvent](StandardOutputConsoleEvent.md 'MasterCommander\.Core\.ConsoleEvents\.StandardOutputConsoleEvent')
 
-## StandardOutputConsoleEvent(string) Constructor
+## StandardOutputConsoleEvent\(string\) Constructor
 
-Represents a console event that contains the standard output of a process.
+Represents a console event that contains the standard output of a process\.
 
 ```csharp
 public StandardOutputConsoleEvent(string text);
@@ -12,6 +12,6 @@ public StandardOutputConsoleEvent(string text);
 
 <a name='MasterCommander.Core.ConsoleEvents.StandardOutputConsoleEvent.StandardOutputConsoleEvent(string).text'></a>
 
-`text` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`text` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The text output to standard output.
+The text output to standard output\.

@@ -1,14 +1,14 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Services](MasterCommander.md#MasterCommander.Core.Services 'MasterCommander.Core.Services').[IDirectoryService](IDirectoryService.md 'MasterCommander.Core.Services.IDirectoryService')
+### [MasterCommander\.Core\.Services](MasterCommander.md#MasterCommander.Core.Services 'MasterCommander\.Core\.Services').[IDirectoryService](IDirectoryService.md 'MasterCommander\.Core\.Services\.IDirectoryService')
 
-## IDirectoryService.WorkingDirectory Property
+## IDirectoryService\.WorkingDirectory Property
 
-Gets the working directory. This is the directory where commands will be executed.
+Gets the working directory\. This is the directory where commands will be executed\.
 
 ```csharp
 string? WorkingDirectory { get; }
 ```
 
 #### Property Value
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')  
-The working directory.
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')  
+The working directory\.

@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander.Core.Display').[ConsoleEventFactory](ConsoleEventFactory.md 'MasterCommander.Core.Display.ConsoleEventFactory')
+### [MasterCommander\.Core\.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander\.Core\.Display').[ConsoleEventFactory](ConsoleEventFactory.md 'MasterCommander\.Core\.Display\.ConsoleEventFactory')
 
-## ConsoleEventFactory.CreateStandardErrorEvent(string) Method
+## ConsoleEventFactory\.CreateStandardErrorEvent\(string\) Method
 
-Creates a console event for standard error messages.
+Creates a console event for standard error messages\.
 
 ```csharp
 private static MasterCommander.Core.ConsoleEvents.StandardErrorConsoleEvent CreateStandardErrorEvent(string message);
@@ -12,10 +12,10 @@ private static MasterCommander.Core.ConsoleEvents.StandardErrorConsoleEvent Crea
 
 <a name='MasterCommander.Core.Display.ConsoleEventFactory.CreateStandardErrorEvent(string).message'></a>
 
-`message` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`message` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The message from standard error.
+The message from standard error\.
 
 #### Returns
-[StandardErrorConsoleEvent](StandardErrorConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.StandardErrorConsoleEvent')  
-A console event containing the standard error message.
+[StandardErrorConsoleEvent](StandardErrorConsoleEvent.md 'MasterCommander\.Core\.ConsoleEvents\.StandardErrorConsoleEvent')  
+A console event containing the standard error message\.

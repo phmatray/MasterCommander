@@ -1,15 +1,15 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdNew.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander.Commanders.Dotnet.CmdNew.Options').[DotnetNewWebApiOptions](DotnetNewWebApiOptions.md 'MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewWebApiOptions')
+### [MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options').[DotnetNewWebApiOptions](DotnetNewWebApiOptions.md 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options\.DotnetNewWebApiOptions')
 
-## DotnetNewWebApiOptions.UseProgramMain Property
+## DotnetNewWebApiOptions\.UseProgramMain Property
 
-Gets a value indicating whether to use a Program.Main entry point.
+Gets a value indicating whether to use a Program\.Main entry point\.
 
 ```csharp
-public bool UseProgramMain { get; set; }
+public bool UseProgramMain { get; init; }
 ```
 
-Implements [UseProgramMain](IHasUseProgramMain.UseProgramMain.md 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasUseProgramMain.UseProgramMain')
+Implements [UseProgramMain](IHasUseProgramMain.UseProgramMain.md 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Abstractions\.IHasUseProgramMain\.UseProgramMain')
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System\.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System\.Boolean')

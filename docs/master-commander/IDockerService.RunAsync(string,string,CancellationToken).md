@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Docker](MasterCommander.md#MasterCommander.Commanders.Docker 'MasterCommander.Commanders.Docker').[IDockerService](IDockerService.md 'MasterCommander.Commanders.Docker.IDockerService')
+### [MasterCommander\.Commanders\.Docker](MasterCommander.md#MasterCommander.Commanders.Docker 'MasterCommander\.Commanders\.Docker').[IDockerService](IDockerService.md 'MasterCommander\.Commanders\.Docker\.IDockerService')
 
-## IDockerService.RunAsync(string, string, CancellationToken) Method
+## IDockerService\.RunAsync\(string, string, CancellationToken\) Method
 
-Runs a Docker container from an image asynchronously.
+Runs a Docker container from an image asynchronously\.
 
 ```csharp
 System.Threading.Tasks.Task RunAsync(string image, string? containerName=null, System.Threading.CancellationToken ct=default(System.Threading.CancellationToken));
@@ -12,22 +12,22 @@ System.Threading.Tasks.Task RunAsync(string image, string? containerName=null, S
 
 <a name='MasterCommander.Commanders.Docker.IDockerService.RunAsync(string,string,System.Threading.CancellationToken).image'></a>
 
-`image` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`image` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The Docker image to run.
+The Docker image to run\.
 
 <a name='MasterCommander.Commanders.Docker.IDockerService.RunAsync(string,string,System.Threading.CancellationToken).containerName'></a>
 
-`containerName` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`containerName` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-Optional name for the container.
+Optional name for the container\.
 
 <a name='MasterCommander.Commanders.Docker.IDockerService.RunAsync(string,string,System.Threading.CancellationToken).ct'></a>
 
-`ct` [System.Threading.CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationToken 'System.Threading.CancellationToken')
+`ct` [System\.Threading\.CancellationToken](https://learn.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken 'System\.Threading\.CancellationToken')
 
-Optional cancellation token to cancel the operation.
+Optional cancellation token to cancel the operation\.
 
 #### Returns
-[System.Threading.Tasks.Task](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task 'System.Threading.Tasks.Task')  
-A task representing the asynchronous operation of running a Docker container.
+[System\.Threading\.Tasks\.Task](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task 'System\.Threading\.Tasks\.Task')  
+A task representing the asynchronous operation of running a Docker container\.

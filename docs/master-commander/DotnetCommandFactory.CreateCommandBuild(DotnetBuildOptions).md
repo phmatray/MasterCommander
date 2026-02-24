@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet](MasterCommander.md#MasterCommander.Commanders.Dotnet 'MasterCommander.Commanders.Dotnet').[DotnetCommandFactory](DotnetCommandFactory.md 'MasterCommander.Commanders.Dotnet.DotnetCommandFactory')
+### [MasterCommander\.Commanders\.Dotnet](MasterCommander.md#MasterCommander.Commanders.Dotnet 'MasterCommander\.Commanders\.Dotnet').[DotnetCommandFactory](DotnetCommandFactory.md 'MasterCommander\.Commanders\.Dotnet\.DotnetCommandFactory')
 
-## DotnetCommandFactory.CreateCommandBuild(DotnetBuildOptions) Method
+## DotnetCommandFactory\.CreateCommandBuild\(DotnetBuildOptions\) Method
 
-Creates a new command to build a .NET project.
+Creates a new command to build a \.NET project\.
 
 ```csharp
 public CliWrap.Command CreateCommandBuild(MasterCommander.Commanders.Dotnet.CmdBuild.DotnetBuildOptions options);
@@ -12,12 +12,12 @@ public CliWrap.Command CreateCommandBuild(MasterCommander.Commanders.Dotnet.CmdB
 
 <a name='MasterCommander.Commanders.Dotnet.DotnetCommandFactory.CreateCommandBuild(MasterCommander.Commanders.Dotnet.CmdBuild.DotnetBuildOptions).options'></a>
 
-`options` [DotnetBuildOptions](DotnetBuildOptions.md 'MasterCommander.Commanders.Dotnet.CmdBuild.DotnetBuildOptions')
+`options` [DotnetBuildOptions](DotnetBuildOptions.md 'MasterCommander\.Commanders\.Dotnet\.CmdBuild\.DotnetBuildOptions')
 
-The options for building the .NET project.
+The options for building the \.NET project\.
 
-Implements [CreateCommandBuild(DotnetBuildOptions)](IDotnetCommandFactory.CreateCommandBuild(DotnetBuildOptions).md 'MasterCommander.Commanders.Dotnet.IDotnetCommandFactory.CreateCommandBuild(MasterCommander.Commanders.Dotnet.CmdBuild.DotnetBuildOptions)')
+Implements [CreateCommandBuild\(DotnetBuildOptions\)](IDotnetCommandFactory.CreateCommandBuild(DotnetBuildOptions).md 'MasterCommander\.Commanders\.Dotnet\.IDotnetCommandFactory\.CreateCommandBuild\(MasterCommander\.Commanders\.Dotnet\.CmdBuild\.DotnetBuildOptions\)')
 
 #### Returns
-[CliWrap.Command](https://docs.microsoft.com/en-us/dotnet/api/CliWrap.Command 'CliWrap.Command')  
-A command to build a .NET project.
+[CliWrap\.Command](https://learn.microsoft.com/en-us/dotnet/api/cliwrap.command 'CliWrap\.Command')  
+A command to build a \.NET project\.

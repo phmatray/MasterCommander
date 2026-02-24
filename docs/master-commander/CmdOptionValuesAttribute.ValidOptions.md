@@ -1,13 +1,13 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core](MasterCommander.md#MasterCommander.Core 'MasterCommander.Core').[CmdOptionValuesAttribute](CmdOptionValuesAttribute.md 'MasterCommander.Core.CmdOptionValuesAttribute')
+### [MasterCommander\.Core](MasterCommander.md#MasterCommander.Core 'MasterCommander\.Core').[CmdOptionValuesAttribute](CmdOptionValuesAttribute.md 'MasterCommander\.Core\.CmdOptionValuesAttribute')
 
-## CmdOptionValuesAttribute.ValidOptions Property
+## CmdOptionValuesAttribute\.ValidOptions Property
 
-Gets the array of valid options for the command option.
+Gets the array of valid options for the command option\.
 
 ```csharp
 public string[] ValidOptions { get; }
 ```
 
 #### Property Value
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')[\[\]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System\.Array')

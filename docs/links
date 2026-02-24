@@ -7,10 +7,10 @@ P:MasterCommander.Integrations.DirectoryService.HomeDirectory|DirectoryService.H
 P:MasterCommander.Integrations.DirectoryService.MasterCommanderDirectory|DirectoryService.MasterCommanderDirectory.md|MasterCommanderDirectory
 P:MasterCommander.Integrations.DirectoryService.WorkingDirectory|DirectoryService.WorkingDirectory.md|WorkingDirectory
 M:MasterCommander.Integrations.DirectoryService.#ctor(MasterCommander.Core.Display.IConsole)|DirectoryService.DirectoryService(IConsole).md|DirectoryService(IConsole)
-M:MasterCommander.Integrations.DirectoryService.SetWorkingDirectory(System.String)|DirectoryService.SetWorkingDirectory(string).md|SetWorkingDirectory(string)
-M:MasterCommander.Integrations.DirectoryService.SetWorkingDirectory(System.String,System.Boolean)|DirectoryService.SetWorkingDirectory(string,bool).md|SetWorkingDirectory(string, bool)
-M:MasterCommander.Integrations.DirectoryService.CreateNewDirectory(System.String,System.String)|DirectoryService.CreateNewDirectory(string,string).md|CreateNewDirectory(string, string)
-M:MasterCommander.Integrations.DirectoryService.CreateNewDirectory(System.String,System.String,System.Boolean)|DirectoryService.CreateNewDirectory(string,string,bool).md|CreateNewDirectory(string, string, bool)
+M:MasterCommander.Integrations.DirectoryService.SetWorkingDirectory(System.String)|DirectoryService.SetWorkingDirectory.md#MasterCommander.Integrations.DirectoryService.SetWorkingDirectory(string)|SetWorkingDirectory(string)
+M:MasterCommander.Integrations.DirectoryService.SetWorkingDirectory(System.String,System.Boolean)|DirectoryService.SetWorkingDirectory.md#MasterCommander.Integrations.DirectoryService.SetWorkingDirectory(string,bool)|SetWorkingDirectory(string, bool)
+M:MasterCommander.Integrations.DirectoryService.CreateNewDirectory(System.String,System.String)|DirectoryService.CreateNewDirectory.md#MasterCommander.Integrations.DirectoryService.CreateNewDirectory(string,string)|CreateNewDirectory(string, string)
+M:MasterCommander.Integrations.DirectoryService.CreateNewDirectory(System.String,System.String,System.Boolean)|DirectoryService.CreateNewDirectory.md#MasterCommander.Integrations.DirectoryService.CreateNewDirectory(string,string,bool)|CreateNewDirectory(string, string, bool)
 M:MasterCommander.Integrations.DirectoryService.ClearDirectory(System.String)|DirectoryService.ClearDirectory(string).md|ClearDirectory(string)
 M:MasterCommander.Integrations.DirectoryService.CalculateDirectorySize(System.String)|DirectoryService.CalculateDirectorySize(string).md|CalculateDirectorySize(string)
 M:MasterCommander.Integrations.DirectoryService.CreateTemporaryDirectory|DirectoryService.CreateTemporaryDirectory().md|CreateTemporaryDirectory()
@@ -64,8 +64,8 @@ P:MasterCommander.Core.CmdOptionOrderAttribute.Order|CmdOptionOrderAttribute.Ord
 M:MasterCommander.Core.CmdOptionOrderAttribute.#ctor(System.Int32)|CmdOptionOrderAttribute.CmdOptionOrderAttribute(int).md|CmdOptionOrderAttribute(int)
 T:MasterCommander.Core.CmdOptionOrderAttribute|CmdOptionOrderAttribute.md|CmdOptionOrderAttribute
 M:MasterCommander.Core.CmdOptionsBase.#ctor(System.String[])|CmdOptionsBase.CmdOptionsBase(string[]).md|CmdOptionsBase(string[])
-M:MasterCommander.Core.CmdOptionsBase.ToArguments(System.String[])|CmdOptionsBase.ToArguments(string[]).md|ToArguments(string[])
-M:MasterCommander.Core.CmdOptionsBase.ToArguments|CmdOptionsBase.ToArguments().md|ToArguments()
+M:MasterCommander.Core.CmdOptionsBase.ToArguments(System.String[])|CmdOptionsBase.ToArguments.md#MasterCommander.Core.CmdOptionsBase.ToArguments(string[])|ToArguments(string[])
+M:MasterCommander.Core.CmdOptionsBase.ToArguments|CmdOptionsBase.ToArguments.md#MasterCommander.Core.CmdOptionsBase.ToArguments()|ToArguments()
 M:MasterCommander.Core.CmdOptionsBase.ExtractPropertiesWithAttributes|CmdOptionsBase.ExtractPropertiesWithAttributes().md|ExtractPropertiesWithAttributes()
 M:MasterCommander.Core.CmdOptionsBase.ValidatePropertyValue(System.Reflection.PropertyInfo,System.Object,MasterCommander.Core.CmdOptionValuesAttribute)|CmdOptionsBase.ValidatePropertyValue(PropertyInfo,object,CmdOptionValuesAttribute).md|ValidatePropertyValue(PropertyInfo, object, CmdOptionValuesAttribute)
 M:MasterCommander.Core.CmdOptionsBase.AddArgumentBasedOnValue(System.Collections.Generic.List{System.String},System.String,System.Object)|CmdOptionsBase.AddArgumentBasedOnValue(List_string_,string,object).md|AddArgumentBasedOnValue(List<string>, string, object)
@@ -76,10 +76,10 @@ T:MasterCommander.Core.CmdOptionValuesAttribute|CmdOptionValuesAttribute.md|CmdO
 P:MasterCommander.Core.Services.IDirectoryService.HomeDirectory|IDirectoryService.HomeDirectory.md|HomeDirectory
 P:MasterCommander.Core.Services.IDirectoryService.MasterCommanderDirectory|IDirectoryService.MasterCommanderDirectory.md|MasterCommanderDirectory
 P:MasterCommander.Core.Services.IDirectoryService.WorkingDirectory|IDirectoryService.WorkingDirectory.md|WorkingDirectory
-M:MasterCommander.Core.Services.IDirectoryService.SetWorkingDirectory(System.String)|IDirectoryService.SetWorkingDirectory(string).md|SetWorkingDirectory(string)
-M:MasterCommander.Core.Services.IDirectoryService.SetWorkingDirectory(System.String,System.Boolean)|IDirectoryService.SetWorkingDirectory(string,bool).md|SetWorkingDirectory(string, bool)
-M:MasterCommander.Core.Services.IDirectoryService.CreateNewDirectory(System.String,System.String)|IDirectoryService.CreateNewDirectory(string,string).md|CreateNewDirectory(string, string)
-M:MasterCommander.Core.Services.IDirectoryService.CreateNewDirectory(System.String,System.String,System.Boolean)|IDirectoryService.CreateNewDirectory(string,string,bool).md|CreateNewDirectory(string, string, bool)
+M:MasterCommander.Core.Services.IDirectoryService.SetWorkingDirectory(System.String)|IDirectoryService.SetWorkingDirectory.md#MasterCommander.Core.Services.IDirectoryService.SetWorkingDirectory(string)|SetWorkingDirectory(string)
+M:MasterCommander.Core.Services.IDirectoryService.SetWorkingDirectory(System.String,System.Boolean)|IDirectoryService.SetWorkingDirectory.md#MasterCommander.Core.Services.IDirectoryService.SetWorkingDirectory(string,bool)|SetWorkingDirectory(string, bool)
+M:MasterCommander.Core.Services.IDirectoryService.CreateNewDirectory(System.String,System.String)|IDirectoryService.CreateNewDirectory.md#MasterCommander.Core.Services.IDirectoryService.CreateNewDirectory(string,string)|CreateNewDirectory(string, string)
+M:MasterCommander.Core.Services.IDirectoryService.CreateNewDirectory(System.String,System.String,System.Boolean)|IDirectoryService.CreateNewDirectory.md#MasterCommander.Core.Services.IDirectoryService.CreateNewDirectory(string,string,bool)|CreateNewDirectory(string, string, bool)
 M:MasterCommander.Core.Services.IDirectoryService.ClearDirectory(System.String)|IDirectoryService.ClearDirectory(string).md|ClearDirectory(string)
 M:MasterCommander.Core.Services.IDirectoryService.CalculateDirectorySize(System.String)|IDirectoryService.CalculateDirectorySize(string).md|CalculateDirectorySize(string)
 M:MasterCommander.Core.Services.IDirectoryService.CreateTemporaryDirectory|IDirectoryService.CreateTemporaryDirectory().md|CreateTemporaryDirectory()
@@ -113,8 +113,8 @@ M:MasterCommander.Core.Display.ConsoleBase.WriteExitedConsoleEvent(MasterCommand
 M:MasterCommander.Core.Display.ConsoleBase.WriteElapsedConsoleEvent(MasterCommander.Core.ConsoleEvents.ExecutionTimeConsoleEvent)|ConsoleBase.WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent).md|WriteElapsedConsoleEvent(ExecutionTimeConsoleEvent)
 N:MasterCommander.Core.Display|MasterCommander.md#MasterCommander.Core.Display|MasterCommander.Core.Display
 T:MasterCommander.Core.Display.ConsoleBase|ConsoleBase.md|ConsoleBase
-M:MasterCommander.Core.Display.ConsoleEventFactory.CreateFrom(System.Diagnostics.Stopwatch)|ConsoleEventFactory.CreateFrom(Stopwatch).md|CreateFrom(Stopwatch)
-M:MasterCommander.Core.Display.ConsoleEventFactory.CreateFrom(CliWrap.EventStream.CommandEvent)|ConsoleEventFactory.CreateFrom(CommandEvent).md|CreateFrom(CommandEvent)
+M:MasterCommander.Core.Display.ConsoleEventFactory.CreateFrom(System.Diagnostics.Stopwatch)|ConsoleEventFactory.CreateFrom.md#MasterCommander.Core.Display.ConsoleEventFactory.CreateFrom(System.Diagnostics.Stopwatch)|CreateFrom(Stopwatch)
+M:MasterCommander.Core.Display.ConsoleEventFactory.CreateFrom(CliWrap.EventStream.CommandEvent)|ConsoleEventFactory.CreateFrom.md#MasterCommander.Core.Display.ConsoleEventFactory.CreateFrom(CliWrap.EventStream.CommandEvent)|CreateFrom(CommandEvent)
 M:MasterCommander.Core.Display.ConsoleEventFactory.CreateStartedEvent(System.Int32)|ConsoleEventFactory.CreateStartedEvent(int).md|CreateStartedEvent(int)
 M:MasterCommander.Core.Display.ConsoleEventFactory.CreateStandardOutputEvent(System.String)|ConsoleEventFactory.CreateStandardOutputEvent(string).md|CreateStandardOutputEvent(string)
 M:MasterCommander.Core.Display.ConsoleEventFactory.CreateStandardErrorEvent(System.String)|ConsoleEventFactory.CreateStandardErrorEvent(string).md|CreateStandardErrorEvent(string)
@@ -356,3 +356,9 @@ M:MasterCommander.Commanders.Docker.IDockerService.RunAsync(System.String,System
 M:MasterCommander.Commanders.Docker.IDockerService.StopAsync(System.String,System.Threading.CancellationToken)|IDockerService.StopAsync(string,CancellationToken).md|StopAsync(string, CancellationToken)
 M:MasterCommander.Commanders.Docker.IDockerService.RemoveContainerAsync(System.String,System.Threading.CancellationToken)|IDockerService.RemoveContainerAsync(string,CancellationToken).md|RemoveContainerAsync(string, CancellationToken)
 T:MasterCommander.Commanders.Docker.IDockerService|IDockerService.md|IDockerService
+?:MasterCommander.Integrations.DirectoryService.SetWorkingDirectory|DirectoryService.SetWorkingDirectory.md|SetWorkingDirectory
+?:MasterCommander.Integrations.DirectoryService.CreateNewDirectory|DirectoryService.CreateNewDirectory.md|CreateNewDirectory
+?:MasterCommander.Core.CmdOptionsBase.ToArguments|CmdOptionsBase.ToArguments.md|ToArguments
+?:MasterCommander.Core.Services.IDirectoryService.SetWorkingDirectory|IDirectoryService.SetWorkingDirectory.md|SetWorkingDirectory
+?:MasterCommander.Core.Services.IDirectoryService.CreateNewDirectory|IDirectoryService.CreateNewDirectory.md|CreateNewDirectory
+?:MasterCommander.Core.Display.ConsoleEventFactory.CreateFrom|ConsoleEventFactory.CreateFrom.md|CreateFrom

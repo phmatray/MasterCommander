@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdNew.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander.Commanders.Dotnet.CmdNew.Options').[DotnetNewGlobalJsonOptions](DotnetNewGlobalJsonOptions.md 'MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewGlobalJsonOptions')
+### [MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options').[DotnetNewGlobalJsonOptions](DotnetNewGlobalJsonOptions.md 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options\.DotnetNewGlobalJsonOptions')
 
-## DotnetNewGlobalJsonOptions() Constructor
+## DotnetNewGlobalJsonOptions\(\) Constructor
 
-Options for creating a new global.json file.
+Options for creating a new global\.json file\.
 
 ```csharp
 public DotnetNewGlobalJsonOptions();
