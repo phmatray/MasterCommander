@@ -53,7 +53,7 @@
   
   <!-- Conditional Package Versions for Documentation -->
   <ItemGroup Condition="'$(IncludeDocumentation)' == 'true'">
-    <PackageVersion Include="DefaultDocumentation" Version="0.8.2" />
+    <PackageVersion Include="DefaultDocumentation" Version="1.2.3" />
     <PackageReference Include="DefaultDocumentation" PrivateAssets="all" />
   </ItemGroup>
   
