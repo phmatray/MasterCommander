@@ -61,7 +61,7 @@ repository, and build and run the project.
 In addition, this code adds a .gitignore file, an .editorconfig file, and a global.json file to the project.
 
 ```csharp
-private const string SdkVersion = "8.0.*";
+private const string SdkVersion = "10.0.*";
 private const string SolutionName = "AppDemo";
 private const string ConsoleProjectName = $"{SolutionName}.Console";
 private const string ConsoleProjectDirectory = $"src/{ConsoleProjectName}";
@@ -135,7 +135,7 @@ Our documentation is written in English to reach a broad audience. We welcome co
 To use MasterCommander, ensure you have the following installed on your system:
 
 * Git
-* .NET 8.0 (supported versions: 8.0.101 or later)
+* .NET 10.0 (supported versions: 10.0.100 or later)
 * A C# IDE (Visual Studio, JetBrains Rider, etc.)
 * A C# compiler (dotnet CLI, etc.)
 * Docker (optional)
@@ -143,11 +143,11 @@ To use MasterCommander, ensure you have the following installed on your system:
 
 #### We use the latest C# features
 
-This library targets .NET 8.0 and uses the latest C# features. It is written in C# 12.0 and uses the new `init`
+This library targets .NET 10.0 and uses the latest C# features. It is written in C# 13.0 and uses the new `init`
 properties, `record` types, `switch` expressions, `using` declarations and more.
 
-I invite you to read the [C# 12.0 documentation](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12) to
-learn more about these features.
+I invite you to read the [C# 13.0 documentation](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-13) to
+learn more about the latest features.
 
 ### 🚀 From Source
 
@@ -181,7 +181,7 @@ We strive for the highest code quality in MasterCommander. To ensure this, we us
 
 ### 🧪 Tests Specifications
 
-We use xUnit and FluentAssertions to write and run tests for MasterCommander. This ensures that the library is reliable
+We use xUnit and Shouldly to write and run tests for MasterCommander. This ensures that the library is reliable
 and performs as expected.
 
 ## 🤝 Contributing

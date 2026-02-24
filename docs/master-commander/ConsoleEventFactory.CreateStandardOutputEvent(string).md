@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander.Core.Display').[ConsoleEventFactory](ConsoleEventFactory.md 'MasterCommander.Core.Display.ConsoleEventFactory')
+### [MasterCommander\.Core\.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander\.Core\.Display').[ConsoleEventFactory](ConsoleEventFactory.md 'MasterCommander\.Core\.Display\.ConsoleEventFactory')
 
-## ConsoleEventFactory.CreateStandardOutputEvent(string) Method
+## ConsoleEventFactory\.CreateStandardOutputEvent\(string\) Method
 
-Creates a console event for standard output messages.
+Creates a console event for standard output messages\.
 
 ```csharp
 private static MasterCommander.Core.ConsoleEvents.StandardOutputConsoleEvent CreateStandardOutputEvent(string message);
@@ -12,10 +12,10 @@ private static MasterCommander.Core.ConsoleEvents.StandardOutputConsoleEvent Cre
 
 <a name='MasterCommander.Core.Display.ConsoleEventFactory.CreateStandardOutputEvent(string).message'></a>
 
-`message` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`message` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The message from standard output.
+The message from standard output\.
 
 #### Returns
-[StandardOutputConsoleEvent](StandardOutputConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.StandardOutputConsoleEvent')  
-A console event containing the standard output message.
+[StandardOutputConsoleEvent](StandardOutputConsoleEvent.md 'MasterCommander\.Core\.ConsoleEvents\.StandardOutputConsoleEvent')  
+A console event containing the standard output message\.

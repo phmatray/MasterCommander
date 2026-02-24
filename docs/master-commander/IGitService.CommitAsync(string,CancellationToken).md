@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Git](MasterCommander.md#MasterCommander.Commanders.Git 'MasterCommander.Commanders.Git').[IGitService](IGitService.md 'MasterCommander.Commanders.Git.IGitService')
+### [MasterCommander\.Commanders\.Git](MasterCommander.md#MasterCommander.Commanders.Git 'MasterCommander\.Commanders\.Git').[IGitService](IGitService.md 'MasterCommander\.Commanders\.Git\.IGitService')
 
-## IGitService.CommitAsync(string, CancellationToken) Method
+## IGitService\.CommitAsync\(string, CancellationToken\) Method
 
-Commits changes to the Git repository asynchronously with a specific message.
+Commits changes to the Git repository asynchronously with a specific message\.
 
 ```csharp
 System.Threading.Tasks.Task CommitAsync(string message, System.Threading.CancellationToken ct=default(System.Threading.CancellationToken));
@@ -12,16 +12,16 @@ System.Threading.Tasks.Task CommitAsync(string message, System.Threading.Cancell
 
 <a name='MasterCommander.Commanders.Git.IGitService.CommitAsync(string,System.Threading.CancellationToken).message'></a>
 
-`message` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`message` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The commit message.
+The commit message\.
 
 <a name='MasterCommander.Commanders.Git.IGitService.CommitAsync(string,System.Threading.CancellationToken).ct'></a>
 
-`ct` [System.Threading.CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationToken 'System.Threading.CancellationToken')
+`ct` [System\.Threading\.CancellationToken](https://learn.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken 'System\.Threading\.CancellationToken')
 
-Optional cancellation token to cancel the operation.
+Optional cancellation token to cancel the operation\.
 
 #### Returns
-[System.Threading.Tasks.Task](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task 'System.Threading.Tasks.Task')  
-A task that represents the asynchronous commit operation.
+[System\.Threading\.Tasks\.Task](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task 'System\.Threading\.Tasks\.Task')  
+A task that represents the asynchronous commit operation\.

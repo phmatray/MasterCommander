@@ -1,13 +1,13 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdNew.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander.Commanders.Dotnet.CmdNew.Options').[DotnetNewOptions](DotnetNewOptions.md 'MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewOptions')
+### [MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options').[DotnetNewOptions](DotnetNewOptions.md 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options\.DotnetNewOptions')
 
-## DotnetNewOptions.OutputDirectory Property
+## DotnetNewOptions\.OutputDirectory Property
 
-Gets the output directory where the generated artifacts should be placed.
+Gets the output directory where the generated artifacts should be placed\.
 
 ```csharp
-public string? OutputDirectory { get; set; }
+public string? OutputDirectory { get; init; }
 ```
 
 #### Property Value
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')

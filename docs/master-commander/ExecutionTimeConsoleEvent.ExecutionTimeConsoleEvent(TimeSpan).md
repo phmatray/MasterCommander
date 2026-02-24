@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.ConsoleEvents](MasterCommander.md#MasterCommander.Core.ConsoleEvents 'MasterCommander.Core.ConsoleEvents').[ExecutionTimeConsoleEvent](ExecutionTimeConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.ExecutionTimeConsoleEvent')
+### [MasterCommander\.Core\.ConsoleEvents](MasterCommander.md#MasterCommander.Core.ConsoleEvents 'MasterCommander\.Core\.ConsoleEvents').[ExecutionTimeConsoleEvent](ExecutionTimeConsoleEvent.md 'MasterCommander\.Core\.ConsoleEvents\.ExecutionTimeConsoleEvent')
 
-## ExecutionTimeConsoleEvent(TimeSpan) Constructor
+## ExecutionTimeConsoleEvent\(TimeSpan\) Constructor
 
-Represents a console event that indicates the execution time of a process.
+Represents a console event that indicates the execution time of a process\.
 
 ```csharp
 public ExecutionTimeConsoleEvent(System.TimeSpan elapsedTime);
@@ -12,6 +12,6 @@ public ExecutionTimeConsoleEvent(System.TimeSpan elapsedTime);
 
 <a name='MasterCommander.Core.ConsoleEvents.ExecutionTimeConsoleEvent.ExecutionTimeConsoleEvent(System.TimeSpan).elapsedTime'></a>
 
-`elapsedTime` [System.TimeSpan](https://docs.microsoft.com/en-us/dotnet/api/System.TimeSpan 'System.TimeSpan')
+`elapsedTime` [System\.TimeSpan](https://learn.microsoft.com/en-us/dotnet/api/system.timespan 'System\.TimeSpan')
 
-The total elapsed time of the process execution.
+The total elapsed time of the process execution\.

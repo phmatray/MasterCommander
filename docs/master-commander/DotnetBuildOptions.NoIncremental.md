@@ -1,13 +1,13 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdBuild](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdBuild 'MasterCommander.Commanders.Dotnet.CmdBuild').[DotnetBuildOptions](DotnetBuildOptions.md 'MasterCommander.Commanders.Dotnet.CmdBuild.DotnetBuildOptions')
+### [MasterCommander\.Commanders\.Dotnet\.CmdBuild](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdBuild 'MasterCommander\.Commanders\.Dotnet\.CmdBuild').[DotnetBuildOptions](DotnetBuildOptions.md 'MasterCommander\.Commanders\.Dotnet\.CmdBuild\.DotnetBuildOptions')
 
-## DotnetBuildOptions.NoIncremental Property
+## DotnetBuildOptions\.NoIncremental Property
 
-Gets a value indicating whether to disable incremental build.
+Gets a value indicating whether to disable incremental build\.
 
 ```csharp
-public bool NoIncremental { get; set; }
+public bool NoIncremental { get; init; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System\.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System\.Boolean')

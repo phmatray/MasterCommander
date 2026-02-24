@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet](MasterCommander.md#MasterCommander.Commanders.Dotnet 'MasterCommander.Commanders.Dotnet').[DotnetCommandOptionsBase](DotnetCommandOptionsBase.md 'MasterCommander.Commanders.Dotnet.DotnetCommandOptionsBase')
+### [MasterCommander\.Commanders\.Dotnet](MasterCommander.md#MasterCommander.Commanders.Dotnet 'MasterCommander\.Commanders\.Dotnet').[DotnetCommandOptionsBase](DotnetCommandOptionsBase.md 'MasterCommander\.Commanders\.Dotnet\.DotnetCommandOptionsBase')
 
-## DotnetCommandOptionsBase(string) Constructor
+## DotnetCommandOptionsBase\(string\) Constructor
 
-Base record for .NET command options, providing common options applicable to various .NET CLI commands.
+Base record for \.NET command options, providing common options applicable to various \.NET CLI commands\.
 
 ```csharp
 protected DotnetCommandOptionsBase(string Command);
@@ -12,6 +12,6 @@ protected DotnetCommandOptionsBase(string Command);
 
 <a name='MasterCommander.Commanders.Dotnet.DotnetCommandOptionsBase.DotnetCommandOptionsBase(string).Command'></a>
 
-`Command` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`Command` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The command to execute.
+The command to execute\.

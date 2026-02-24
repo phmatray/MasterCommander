@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander.Core.Display').[IConsole](IConsole.md 'MasterCommander.Core.Display.IConsole')
+### [MasterCommander\.Core\.Display](MasterCommander.md#MasterCommander.Core.Display 'MasterCommander\.Core\.Display').[IConsole](IConsole.md 'MasterCommander\.Core\.Display\.IConsole')
 
-## IConsole.WriteStartedConsoleEvent(StartedConsoleEvent) Method
+## IConsole\.WriteStartedConsoleEvent\(StartedConsoleEvent\) Method
 
-Writes a started console event to the output.
+Writes a started console event to the output\.
 
 ```csharp
 void WriteStartedConsoleEvent(MasterCommander.Core.ConsoleEvents.StartedConsoleEvent started);
@@ -12,6 +12,6 @@ void WriteStartedConsoleEvent(MasterCommander.Core.ConsoleEvents.StartedConsoleE
 
 <a name='MasterCommander.Core.Display.IConsole.WriteStartedConsoleEvent(MasterCommander.Core.ConsoleEvents.StartedConsoleEvent).started'></a>
 
-`started` [StartedConsoleEvent](StartedConsoleEvent.md 'MasterCommander.Core.ConsoleEvents.StartedConsoleEvent')
+`started` [StartedConsoleEvent](StartedConsoleEvent.md 'MasterCommander\.Core\.ConsoleEvents\.StartedConsoleEvent')
 
-The started console event to write.
+The started console event to write\.

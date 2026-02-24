@@ -1,14 +1,14 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Services](MasterCommander.md#MasterCommander.Core.Services 'MasterCommander.Core.Services').[IDirectoryService](IDirectoryService.md 'MasterCommander.Core.Services.IDirectoryService')
+### [MasterCommander\.Core\.Services](MasterCommander.md#MasterCommander.Core.Services 'MasterCommander\.Core\.Services').[IDirectoryService](IDirectoryService.md 'MasterCommander\.Core\.Services\.IDirectoryService')
 
-## IDirectoryService.HomeDirectory Property
+## IDirectoryService\.HomeDirectory Property
 
-Gets the path of the home directory for the current user.
+Gets the path of the home directory for the current user\.
 
 ```csharp
 string HomeDirectory { get; }
 ```
 
 #### Property Value
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')  
-The path of the home directory.
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')  
+The path of the home directory\.

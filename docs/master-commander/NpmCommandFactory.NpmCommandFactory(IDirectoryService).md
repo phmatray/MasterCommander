@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Npm](MasterCommander.md#MasterCommander.Commanders.Npm 'MasterCommander.Commanders.Npm').[NpmCommandFactory](NpmCommandFactory.md 'MasterCommander.Commanders.Npm.NpmCommandFactory')
+### [MasterCommander\.Commanders\.Npm](MasterCommander.md#MasterCommander.Commanders.Npm 'MasterCommander\.Commanders\.Npm').[NpmCommandFactory](NpmCommandFactory.md 'MasterCommander\.Commanders\.Npm\.NpmCommandFactory')
 
-## NpmCommandFactory(IDirectoryService) Constructor
+## NpmCommandFactory\(IDirectoryService\) Constructor
 
-Provides npm related operations.
+Provides npm related operations\.
 
 ```csharp
 public NpmCommandFactory(MasterCommander.Core.Services.IDirectoryService directoryService);
@@ -12,6 +12,6 @@ public NpmCommandFactory(MasterCommander.Core.Services.IDirectoryService directo
 
 <a name='MasterCommander.Commanders.Npm.NpmCommandFactory.NpmCommandFactory(MasterCommander.Core.Services.IDirectoryService).directoryService'></a>
 
-`directoryService` [IDirectoryService](IDirectoryService.md 'MasterCommander.Core.Services.IDirectoryService')
+`directoryService` [IDirectoryService](IDirectoryService.md 'MasterCommander\.Core\.Services\.IDirectoryService')
 
-The directory service to use for working directory operations.
+The directory service to use for working directory operations\.

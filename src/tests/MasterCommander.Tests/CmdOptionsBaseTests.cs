@@ -23,8 +23,10 @@ public class CmdOptionsBaseTests
         var args = options.ToArguments().ToList();
 
         // Assert
-        string[] unexpected = ["--dry-run", "--no-update-check", "--diagnostics"];
-        args.Should().ContainInOrder("dotnet", "new", "sln", "--force", "--name", "AppDemo");
-        args.Should().NotContain(unexpected);
+        var expected = new[] { "dotnet", "new", "sln", "--force", "--name", "AppDemo" };
+        args.ShouldBe(expected);
+        args.ShouldNotContain("--dry-run");
+        args.ShouldNotContain("--no-update-check");
+        args.ShouldNotContain("--diagnostics");
     }
 }

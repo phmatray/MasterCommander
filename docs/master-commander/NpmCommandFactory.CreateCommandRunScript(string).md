@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Npm](MasterCommander.md#MasterCommander.Commanders.Npm 'MasterCommander.Commanders.Npm').[NpmCommandFactory](NpmCommandFactory.md 'MasterCommander.Commanders.Npm.NpmCommandFactory')
+### [MasterCommander\.Commanders\.Npm](MasterCommander.md#MasterCommander.Commanders.Npm 'MasterCommander\.Commanders\.Npm').[NpmCommandFactory](NpmCommandFactory.md 'MasterCommander\.Commanders\.Npm\.NpmCommandFactory')
 
-## NpmCommandFactory.CreateCommandRunScript(string) Method
+## NpmCommandFactory\.CreateCommandRunScript\(string\) Method
 
-Creates a command to run a specific npm script defined in the project's package.json.
+Creates a command to run a specific npm script defined in the project's package\.json\.
 
 ```csharp
 public CliWrap.Command CreateCommandRunScript(string scriptName);
@@ -12,12 +12,12 @@ public CliWrap.Command CreateCommandRunScript(string scriptName);
 
 <a name='MasterCommander.Commanders.Npm.NpmCommandFactory.CreateCommandRunScript(string).scriptName'></a>
 
-`scriptName` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`scriptName` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The name of the script to run.
+The name of the script to run\.
 
-Implements [CreateCommandRunScript(string)](INpmCommandFactory.CreateCommandRunScript(string).md 'MasterCommander.Commanders.Npm.INpmCommandFactory.CreateCommandRunScript(string)')
+Implements [CreateCommandRunScript\(string\)](INpmCommandFactory.CreateCommandRunScript(string).md 'MasterCommander\.Commanders\.Npm\.INpmCommandFactory\.CreateCommandRunScript\(string\)')
 
 #### Returns
-[CliWrap.Command](https://docs.microsoft.com/en-us/dotnet/api/CliWrap.Command 'CliWrap.Command')  
-A command to run the specified npm script.
+[CliWrap\.Command](https://learn.microsoft.com/en-us/dotnet/api/cliwrap.command 'CliWrap\.Command')  
+A command to run the specified npm script\.

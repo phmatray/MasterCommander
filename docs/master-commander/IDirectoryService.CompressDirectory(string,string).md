@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Core.Services](MasterCommander.md#MasterCommander.Core.Services 'MasterCommander.Core.Services').[IDirectoryService](IDirectoryService.md 'MasterCommander.Core.Services.IDirectoryService')
+### [MasterCommander\.Core\.Services](MasterCommander.md#MasterCommander.Core.Services 'MasterCommander\.Core\.Services').[IDirectoryService](IDirectoryService.md 'MasterCommander\.Core\.Services\.IDirectoryService')
 
-## IDirectoryService.CompressDirectory(string, string) Method
+## IDirectoryService\.CompressDirectory\(string, string\) Method
 
-Compresses the specified directory into a ZIP file, including all its files and subdirectories.
+Compresses the specified directory into a ZIP file, including all its files and subdirectories\.
 
 ```csharp
 void CompressDirectory(string directoryPath, string zipFilePath);
@@ -12,12 +12,12 @@ void CompressDirectory(string directoryPath, string zipFilePath);
 
 <a name='MasterCommander.Core.Services.IDirectoryService.CompressDirectory(string,string).directoryPath'></a>
 
-`directoryPath` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`directoryPath` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The path of the directory to compress.
+The path of the directory to compress\.
 
 <a name='MasterCommander.Core.Services.IDirectoryService.CompressDirectory(string,string).zipFilePath'></a>
 
-`zipFilePath` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`zipFilePath` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The path where the resulting ZIP file should be saved.
+The path where the resulting ZIP file should be saved\.

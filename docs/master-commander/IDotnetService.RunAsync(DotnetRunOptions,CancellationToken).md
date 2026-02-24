@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet](MasterCommander.md#MasterCommander.Commanders.Dotnet 'MasterCommander.Commanders.Dotnet').[IDotnetService](IDotnetService.md 'MasterCommander.Commanders.Dotnet.IDotnetService')
+### [MasterCommander\.Commanders\.Dotnet](MasterCommander.md#MasterCommander.Commanders.Dotnet 'MasterCommander\.Commanders\.Dotnet').[IDotnetService](IDotnetService.md 'MasterCommander\.Commanders\.Dotnet\.IDotnetService')
 
-## IDotnetService.RunAsync(DotnetRunOptions, CancellationToken) Method
+## IDotnetService\.RunAsync\(DotnetRunOptions, CancellationToken\) Method
 
-Runs the .NET project.
+Runs the \.NET project\.
 
 ```csharp
 System.Threading.Tasks.Task RunAsync(MasterCommander.Commanders.Dotnet.CmdRun.DotnetRunOptions? options=null, System.Threading.CancellationToken ct=default(System.Threading.CancellationToken));
@@ -12,16 +12,16 @@ System.Threading.Tasks.Task RunAsync(MasterCommander.Commanders.Dotnet.CmdRun.Do
 
 <a name='MasterCommander.Commanders.Dotnet.IDotnetService.RunAsync(MasterCommander.Commanders.Dotnet.CmdRun.DotnetRunOptions,System.Threading.CancellationToken).options'></a>
 
-`options` [DotnetRunOptions](DotnetRunOptions.md 'MasterCommander.Commanders.Dotnet.CmdRun.DotnetRunOptions')
+`options` [DotnetRunOptions](DotnetRunOptions.md 'MasterCommander\.Commanders\.Dotnet\.CmdRun\.DotnetRunOptions')
 
-The options to use.
+The options to use\.
 
 <a name='MasterCommander.Commanders.Dotnet.IDotnetService.RunAsync(MasterCommander.Commanders.Dotnet.CmdRun.DotnetRunOptions,System.Threading.CancellationToken).ct'></a>
 
-`ct` [System.Threading.CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationToken 'System.Threading.CancellationToken')
+`ct` [System\.Threading\.CancellationToken](https://learn.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken 'System\.Threading\.CancellationToken')
 
-The cancellation token.
+The cancellation token\.
 
 #### Returns
-[System.Threading.Tasks.Task](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task 'System.Threading.Tasks.Task')  
-A [System.Threading.Tasks.Task](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task 'System.Threading.Tasks.Task') representing the asynchronous operation.
+[System\.Threading\.Tasks\.Task](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task 'System\.Threading\.Tasks\.Task')  
+A [System\.Threading\.Tasks\.Task](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task 'System\.Threading\.Tasks\.Task') representing the asynchronous operation\.

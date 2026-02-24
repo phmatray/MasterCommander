@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Npm](MasterCommander.md#MasterCommander.Commanders.Npm 'MasterCommander.Commanders.Npm').[NpmService](NpmService.md 'MasterCommander.Commanders.Npm.NpmService')
+### [MasterCommander\.Commanders\.Npm](MasterCommander.md#MasterCommander.Commanders.Npm 'MasterCommander\.Commanders\.Npm').[NpmService](NpmService.md 'MasterCommander\.Commanders\.Npm\.NpmService')
 
-## NpmService(INpmCommandFactory, IConsole) Constructor
+## NpmService\(INpmCommandFactory, IConsole\) Constructor
 
-Provides npm related operations.
+Provides npm related operations\.
 
 ```csharp
 public NpmService(MasterCommander.Commanders.Npm.INpmCommandFactory npmCommandFactory, MasterCommander.Core.Display.IConsole console);
@@ -12,12 +12,12 @@ public NpmService(MasterCommander.Commanders.Npm.INpmCommandFactory npmCommandFa
 
 <a name='MasterCommander.Commanders.Npm.NpmService.NpmService(MasterCommander.Commanders.Npm.INpmCommandFactory,MasterCommander.Core.Display.IConsole).npmCommandFactory'></a>
 
-`npmCommandFactory` [INpmCommandFactory](INpmCommandFactory.md 'MasterCommander.Commanders.Npm.INpmCommandFactory')
+`npmCommandFactory` [INpmCommandFactory](INpmCommandFactory.md 'MasterCommander\.Commanders\.Npm\.INpmCommandFactory')
 
-The factory for creating npm commands.
+The factory for creating npm commands\.
 
 <a name='MasterCommander.Commanders.Npm.NpmService.NpmService(MasterCommander.Commanders.Npm.INpmCommandFactory,MasterCommander.Core.Display.IConsole).console'></a>
 
-`console` [IConsole](IConsole.md 'MasterCommander.Core.Display.IConsole')
+`console` [IConsole](IConsole.md 'MasterCommander\.Core\.Display\.IConsole')
 
-The console to use for output.
+The console to use for output\.

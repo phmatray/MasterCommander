@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Docker](MasterCommander.md#MasterCommander.Commanders.Docker 'MasterCommander.Commanders.Docker').[DockerCommandFactory](DockerCommandFactory.md 'MasterCommander.Commanders.Docker.DockerCommandFactory')
+### [MasterCommander\.Commanders\.Docker](MasterCommander.md#MasterCommander.Commanders.Docker 'MasterCommander\.Commanders\.Docker').[DockerCommandFactory](DockerCommandFactory.md 'MasterCommander\.Commanders\.Docker\.DockerCommandFactory')
 
-## DockerCommandFactory(IDirectoryService) Constructor
+## DockerCommandFactory\(IDirectoryService\) Constructor
 
-Defines the interface for creating Docker command instances.
+Defines the interface for creating Docker command instances\.
 
 ```csharp
 public DockerCommandFactory(MasterCommander.Core.Services.IDirectoryService directoryService);
@@ -12,6 +12,6 @@ public DockerCommandFactory(MasterCommander.Core.Services.IDirectoryService dire
 
 <a name='MasterCommander.Commanders.Docker.DockerCommandFactory.DockerCommandFactory(MasterCommander.Core.Services.IDirectoryService).directoryService'></a>
 
-`directoryService` [IDirectoryService](IDirectoryService.md 'MasterCommander.Core.Services.IDirectoryService')
+`directoryService` [IDirectoryService](IDirectoryService.md 'MasterCommander\.Core\.Services\.IDirectoryService')
 
-The directory service to use for working directory operations.
+The directory service to use for working directory operations\.

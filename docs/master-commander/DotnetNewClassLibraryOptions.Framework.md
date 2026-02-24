@@ -1,15 +1,15 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Dotnet.CmdNew.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander.Commanders.Dotnet.CmdNew.Options').[DotnetNewClassLibraryOptions](DotnetNewClassLibraryOptions.md 'MasterCommander.Commanders.Dotnet.CmdNew.Options.DotnetNewClassLibraryOptions')
+### [MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options](MasterCommander.md#MasterCommander.Commanders.Dotnet.CmdNew.Options 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options').[DotnetNewClassLibraryOptions](DotnetNewClassLibraryOptions.md 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Options\.DotnetNewClassLibraryOptions')
 
-## DotnetNewClassLibraryOptions.Framework Property
+## DotnetNewClassLibraryOptions\.Framework Property
 
-Gets the target framework for the class library.
+Gets the target framework for the class library\.
 
 ```csharp
-public string? Framework { get; set; }
+public string? Framework { get; init; }
 ```
 
-Implements [Framework](IHasFramework.Framework.md 'MasterCommander.Commanders.Dotnet.CmdNew.Abstractions.IHasFramework.Framework')
+Implements [Framework](IHasFramework.Framework.md 'MasterCommander\.Commanders\.Dotnet\.CmdNew\.Abstractions\.IHasFramework\.Framework')
 
 #### Property Value
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')

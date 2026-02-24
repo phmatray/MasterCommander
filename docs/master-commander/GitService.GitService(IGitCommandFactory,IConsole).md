@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Git](MasterCommander.md#MasterCommander.Commanders.Git 'MasterCommander.Commanders.Git').[GitService](GitService.md 'MasterCommander.Commanders.Git.GitService')
+### [MasterCommander\.Commanders\.Git](MasterCommander.md#MasterCommander.Commanders.Git 'MasterCommander\.Commanders\.Git').[GitService](GitService.md 'MasterCommander\.Commanders\.Git\.GitService')
 
-## GitService(IGitCommandFactory, IConsole) Constructor
+## GitService\(IGitCommandFactory, IConsole\) Constructor
 
-Provides an implementation for interacting with Git repositories asynchronously.
+Provides an implementation for interacting with Git repositories asynchronously\.
 
 ```csharp
 public GitService(MasterCommander.Commanders.Git.IGitCommandFactory gitCommandFactory, MasterCommander.Core.Display.IConsole console);
@@ -12,12 +12,12 @@ public GitService(MasterCommander.Commanders.Git.IGitCommandFactory gitCommandFa
 
 <a name='MasterCommander.Commanders.Git.GitService.GitService(MasterCommander.Commanders.Git.IGitCommandFactory,MasterCommander.Core.Display.IConsole).gitCommandFactory'></a>
 
-`gitCommandFactory` [IGitCommandFactory](IGitCommandFactory.md 'MasterCommander.Commanders.Git.IGitCommandFactory')
+`gitCommandFactory` [IGitCommandFactory](IGitCommandFactory.md 'MasterCommander\.Commanders\.Git\.IGitCommandFactory')
 
-The factory for creating git command instances.
+The factory for creating git command instances\.
 
 <a name='MasterCommander.Commanders.Git.GitService.GitService(MasterCommander.Commanders.Git.IGitCommandFactory,MasterCommander.Core.Display.IConsole).console'></a>
 
-`console` [IConsole](IConsole.md 'MasterCommander.Core.Display.IConsole')
+`console` [IConsole](IConsole.md 'MasterCommander\.Core\.Display\.IConsole')
 
-The console to use for output.
+The console to use for output\.

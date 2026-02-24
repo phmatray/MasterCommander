@@ -1,9 +1,9 @@
 #### [MasterCommander](MasterCommander.md 'MasterCommander')
-### [MasterCommander.Commanders.Git](MasterCommander.md#MasterCommander.Commanders.Git 'MasterCommander.Commanders.Git').[IGitCommandFactory](IGitCommandFactory.md 'MasterCommander.Commanders.Git.IGitCommandFactory')
+### [MasterCommander\.Commanders\.Git](MasterCommander.md#MasterCommander.Commanders.Git 'MasterCommander\.Commanders\.Git').[IGitCommandFactory](IGitCommandFactory.md 'MasterCommander\.Commanders\.Git\.IGitCommandFactory')
 
-## IGitCommandFactory.CreateCommandAdd(string, GitAddOptions) Method
+## IGitCommandFactory\.CreateCommandAdd\(string, GitAddOptions\) Method
 
-Creates a command to add a file or directory to the git repository.
+Creates a command to add a file or directory to the git repository\.
 
 ```csharp
 CliWrap.Command CreateCommandAdd(string pathSpec, MasterCommander.Commanders.Git.CmdAdd.GitAddOptions options);
@@ -12,16 +12,16 @@ CliWrap.Command CreateCommandAdd(string pathSpec, MasterCommander.Commanders.Git
 
 <a name='MasterCommander.Commanders.Git.IGitCommandFactory.CreateCommandAdd(string,MasterCommander.Commanders.Git.CmdAdd.GitAddOptions).pathSpec'></a>
 
-`pathSpec` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`pathSpec` [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
-The path to the file or directory to add.
+The path to the file or directory to add\.
 
 <a name='MasterCommander.Commanders.Git.IGitCommandFactory.CreateCommandAdd(string,MasterCommander.Commanders.Git.CmdAdd.GitAddOptions).options'></a>
 
-`options` [GitAddOptions](GitAddOptions.md 'MasterCommander.Commanders.Git.CmdAdd.GitAddOptions')
+`options` [GitAddOptions](GitAddOptions.md 'MasterCommander\.Commanders\.Git\.CmdAdd\.GitAddOptions')
 
-The options for adding the file or directory.
+The options for adding the file or directory\.
 
 #### Returns
-[CliWrap.Command](https://docs.microsoft.com/en-us/dotnet/api/CliWrap.Command 'CliWrap.Command')  
-A command to add a file or directory to the repository.
+[CliWrap\.Command](https://learn.microsoft.com/en-us/dotnet/api/cliwrap.command 'CliWrap\.Command')  
+A command to add a file or directory to the repository\.
