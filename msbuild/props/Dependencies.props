@@ -92,7 +92,7 @@
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
 
-    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+    <PackageVersion Include="coverlet.collector" Version="8.0.0" />
     <PackageReference Include="coverlet.collector" PrivateAssets="all" />
 
     <PackageVersion Include="xunit" Version="2.9.2" />
