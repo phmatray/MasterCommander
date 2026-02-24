@@ -62,7 +62,7 @@
     <PackageVersion Include="System.Reactive" Version="6.1.0" />
     <PackageReference Include="System.Reactive" />
 
-    <PackageVersion Include="System.Reactive.Linq" Version="6.0.0" />
+    <PackageVersion Include="System.Reactive.Linq" Version="6.1.0" />
     <PackageReference Include="System.Reactive.Linq" />
   </ItemGroup>
 
