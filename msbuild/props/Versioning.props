@@ -2,7 +2,7 @@
   <!-- MinVer Configuration -->
   <PropertyGroup>
     <!-- Set the minimum version to be used if no Git tags are found -->
-    <MinVerMinimumMajorMinor>1.0</MinVerMinimumMajorMinor>
+    <MinVerMinimumMajorMinor>1.1</MinVerMinimumMajorMinor>
     <MinVerSkip Condition="'$(Configuration)' == 'Debug'">true</MinVerSkip>
     <MinVerTagPrefix>v</MinVerTagPrefix>
     <MinVerAutoIncrement>patch</MinVerAutoIncrement>
