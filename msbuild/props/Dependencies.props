@@ -69,7 +69,7 @@
   <!-- Universal Development Dependencies -->
   <!-- These dependencies are used in both production and test projects -->
   <ItemGroup>
-    <PackageVersion Include="FluentValidation" Version="11.12.0" />
+    <PackageVersion Include="FluentValidation" Version="12.1.1" />
     <PackageReference Include="FluentValidation" />
 
     <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.2.39" />
