@@ -26,7 +26,7 @@
 
   <!-- Conditional Package Versions for Spectre.Console -->
   <ItemGroup Condition="'$(IncludeSpectreConsole)' == 'true'">
-    <PackageVersion Include="Spectre.Console" Version="0.54.0" />
+    <PackageVersion Include="Spectre.Console" Version="0.55.0" />
     <PackageReference Include="Spectre.Console" />
 
     <PackageVersion Include="Spectre.Console.Cli" Version="0.53.1" />
