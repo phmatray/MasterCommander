@@ -17,8 +17,8 @@
 
   <!-- Package Version Management -->
   <ItemGroup>
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.5" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.5" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.6" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.6" />
     <PackageVersion Include="CliWrap" Version="3.10.1" />
     <PackageVersion Include="Vogen" Version="8.0.5" />
     <PackageVersion Include="Microsoft.CodeCoverage" Version="18.4.0" />
@@ -82,7 +82,7 @@
   <!-- Library-Specific Dependencies -->
   <!-- These dependencies are only used in production projects -->
   <ItemGroup Condition="'$(IsTestProject)' != 'true'">
-    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="10.0.201" />
+    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="10.0.202" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
 
