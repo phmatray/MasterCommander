@@ -9,7 +9,7 @@
       ]
     },
     "meziantou.framework.nugetpackagevalidation.tool": {
-      "version": "1.0.48",
+      "version": "1.0.49",
       "commands": [
         "meziantou.validate-nuget-package"
       ]
