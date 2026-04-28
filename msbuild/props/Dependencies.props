@@ -21,7 +21,7 @@
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.7" />
     <PackageVersion Include="CliWrap" Version="3.10.1" />
     <PackageVersion Include="Vogen" Version="8.0.5" />
-    <PackageVersion Include="Microsoft.CodeCoverage" Version="18.4.0" />
+    <PackageVersion Include="Microsoft.CodeCoverage" Version="18.5.1" />
   </ItemGroup>
 
   <!-- Conditional Package Versions for Spectre.Console -->
@@ -89,7 +89,7 @@
   <!-- Test-Specific Dependencies -->
   <!-- These dependencies are only used in test projects -->
   <ItemGroup Condition="'$(IsTestProject)' == 'true'">
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.4.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.5.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
 
     <PackageVersion Include="coverlet.collector" Version="10.0.0" />
