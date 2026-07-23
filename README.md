@@ -1,3 +1,5 @@
+![MasterCommander banner](.github/banner.png)
+
 # MasterCommander
 
 Write code, not commands. MasterCommander provides a simple, consistent interface for common development tasks.
