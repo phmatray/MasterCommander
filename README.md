@@ -30,6 +30,7 @@ Write code, not commands. MasterCommander provides a simple, consistent interfac
 * [MasterCommander](#mastercommander)
   * [📝 Table of Contents](#-table-of-contents)
   * [🏁 Getting started](#-getting-started)
+  * [🧑‍💻 Usage](#-usage)
   * [📄 Documentation](#-documentation)
     * [🌐 User Documentation](#-user-documentation)
     * [📚 Technical Documentation](#-technical-documentation)
@@ -89,6 +90,47 @@ and technology stacks.
 
 Output from MasterCommander commands is displayed in a clean, readable format:
 > ![MasterCommander Screenshot](https://raw.githubusercontent.com/phmatray/MasterCommander/main/assets/img/output-spectre.png)
+
+## 🧑‍💻 Usage
+
+MasterCommander is a regular `Microsoft.Extensions.DependencyInjection` library: register its services
+with `AddMasterCommanderServices()`, then resolve the commander interface you need (`IGitService`,
+`IDotnetService`, `IDockerService`, `INpmService`) and call its async methods.
+
+```csharp
+using MasterCommander;
+using MasterCommander.Commanders.Git;
+using Microsoft.Extensions.DependencyInjection;
+
+var provider = new ServiceCollection()
+    .AddMasterCommanderServices()
+    .BuildServiceProvider();
+
+var git = provider.GetRequiredService<IGitService>();
+
+await git.InitAsync();
+await git.AddAsync("*");
+await git.CommitAsync("initial commit");
+```
+
+Or use `MainExtensions.CreateMasterCommanderServices()` as a shortcut for `new ServiceCollection().AddMasterCommanderServices()`,
+as the bundled console demo (`src/demo/MasterCommander.ConsoleApp`) does:
+
+```csharp
+using MasterCommander;
+using MasterCommander.Core.Services;
+using Microsoft.Extensions.DependencyInjection;
+
+await MainExtensions
+    .CreateMasterCommanderServices()
+    .BuildServiceProvider()
+    .GetRequiredService<IProjectInitializationService>()
+    .InitializeConsoleProjectAsync();
+```
+
+Every commander method is `async` and accepts an optional `CancellationToken`, so you can compose Git,
+.NET, Docker, and npm operations into your own automation scripts the same way the `Getting started`
+example above chains `git` and `dotnet` calls to scaffold a new solution end-to-end.
 
 ## 📄 Documentation
 
