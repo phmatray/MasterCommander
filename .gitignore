@@ -87,3 +87,6 @@ Thumbs.db
 *.received.*
 
 node_modules
+
+# Nuke build transient output
+.nuke/temp/
