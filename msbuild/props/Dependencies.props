@@ -19,7 +19,7 @@
   <ItemGroup>
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.10" />
-    <PackageVersion Include="CliWrap" Version="3.10.3" />
+    <PackageVersion Include="CliWrap" Version="3.10.4" />
     <PackageVersion Include="Vogen" Version="8.0.6" />
     <PackageVersion Include="Microsoft.CodeCoverage" Version="18.8.1" />
   </ItemGroup>
