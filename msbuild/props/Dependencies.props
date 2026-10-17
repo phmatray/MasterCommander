@@ -17,11 +17,11 @@
 
   <!-- Package Version Management -->
   <ItemGroup>
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.12" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.13" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.13" />
     <PackageVersion Include="CliWrap" Version="3.10.5" />
     <PackageVersion Include="Vogen" Version="8.0.6" />
-    <PackageVersion Include="Microsoft.CodeCoverage" Version="18.10.1" />
+    <PackageVersion Include="Microsoft.CodeCoverage" Version="18.11.0" />
   </ItemGroup>
 
   <!-- Conditional Package Versions for Spectre.Console -->
@@ -69,7 +69,7 @@
   <!-- Universal Development Dependencies -->
   <!-- These dependencies are used in both production and test projects -->
   <ItemGroup>
-    <PackageVersion Include="FluentValidation" Version="12.1.1" />
+    <PackageVersion Include="FluentValidation" Version="12.2.0" />
     <PackageReference Include="FluentValidation" />
 
     <PackageVersion Include="DotNet.ReproducibleBuilds" Version="2.0.5" />
@@ -82,14 +82,14 @@
   <!-- Library-Specific Dependencies -->
   <!-- These dependencies are only used in production projects -->
   <ItemGroup Condition="'$(IsTestProject)' != 'true'">
-    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="10.0.401" />
+    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="10.0.402" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
 
   <!-- Test-Specific Dependencies -->
   <!-- These dependencies are only used in test projects -->
   <ItemGroup Condition="'$(IsTestProject)' == 'true'">
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.10.1" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
 
     <PackageVersion Include="coverlet.collector" Version="10.1.0" />
